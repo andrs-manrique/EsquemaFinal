@@ -2,12 +2,11 @@
 require_once("../3modelo/M_Usuario.php");
  //--------------------------------------
 $dni=$_POST["dni"];
-$tipodocumento=$_POST["tipodni_user"];
+$tipodni_user=$_POST["tipodni_user"];
 $nom_user=$_POST["nom_user"];
 $apell_user=$_POST["apell_user"];
 $clave_user=$_POST["clave_user"];
 $clave_user = md5($clave_user); 
-
 $sex_user=$_POST["sex_user"];
 $mail_user=$_POST["mail_user"];
 $tel_user=$_POST["tel_user"];
@@ -17,26 +16,25 @@ $nac_user=$_POST["nac_user"];
 $localidad_user=$_POST["localidad_user"];
 $estrato_user=$_POST["estrato_user"];
 $barrio_user=$_POST["barrio_user"];
-$archivo_usuario=$_POST["archivo_usuario"];
-                                                       
-       $responsable_user=$_POST["responsable_user"];
-       $cel_respon_user=$_POST["cel_respon_user"];
-       $foto_user=$_POST["foto_user"];
-       $fecha_registro_user=$_POST["fecha_registro_user"];
-       $carrera_user=$_POST["carrera_user"];
-      $universidad_user=$_POST["universidad_user"];
-      $id_colegio=$_POST["id_colegio"];
-      $id_estado=$_POST["id_estado"];
-      $id_jornada=$_POST["id_jornada"];
-      $rol_user=$_POST["rol_user"];
-      $id_materia_user=$_POST["id_materia_user"];
+$archivo_usuario=$_POST["archivo_usuario"];                                                   
+$responsable_user=$_POST["responsable_user"];
+$cel_respon_user=$_POST["cel_respon_user"];
+$foto_user=$_POST["foto_user"];
+$fecha_registro_user=$_POST["fecha_registro_user"];
+$carrera_user=$_POST["carrera_user"];
+$universidad_user=$_POST["universidad_user"];
+$id_colegio=$_POST["id_colegio"];
+$id_estado=$_POST["id_estado"];
+$id_jornada=$_POST["id_jornada"];
+$rol_user=$_POST["rol_user"];
+$id_materia_user=$_POST["id_materia_user"];
     
 
 $operacion=$_POST["txtoperacion"];
 
 
 //-------------
-$objUsuario = new usuario($dni,$tipodocumento,$nom_user,$apell_user,$clave_user,
+$objUsuario = new usuario($dni,$tipodni_user,$nom_user,$apell_user,$clave_user,
         $sex_user,$mail_user,$tel_user,$civil_user,$lugarnac_user,
         $nac_user,$localidad_user,$estrato_user,
         $barrio_user,$archivo_usuario,$responsable_user,$cel_respon_user,
@@ -44,22 +42,10 @@ $objUsuario = new usuario($dni,$tipodocumento,$nom_user,$apell_user,$clave_user,
         $id_estado,$id_jornada,$rol_user,$id_materia_user);
         
         
-        
-        
-
-
-
-
-
-
-$cedula=$_POST["usuario"];
-$nombre=$_POST["nombre"];
-$apellido=$_POST["apellido"];
-$correo=$_POST["correo"];
-$email = filter_var($correo,FILTER_VALIDATE_EMAIL);
-$login=$_POST["login"];
+//$email = filter_var($correo,FILTER_VALIDATE_EMAIL);
+//$login=$_POST["login"];
  //Encriptaacion de CLAVe
-$permiso=$_POST["permiso"];
+//$permiso=$_POST["permiso"];
 
 /////////////////////////////
 //$objUsuario = new usuario($cedula,$nombre,$apellido,$email,$login,$permiso);

@@ -4,8 +4,7 @@ include("conexion.php");
 	class usuario{
             
             
-            
-            private $dni;
+public $dni;
 private $tipodocumento;
 private $nom_user;
 private $apell_user;
@@ -67,79 +66,79 @@ function __construct($dni, $tipodocumento, $nom_user, $apell_user, $clave_user, 
             
        
                 public function __destruct(){}	
-function getDni() {
+public function getDni() {
     return $this->dni;
 }
 
-function getTipodocumento() {
+public function getTipodocumento() {
     return $this->tipodocumento;
 }
 
-function getNom_user() {
+public function getNom_user() {
     return $this->nom_user;
 }
 
-function getApell_user() {
+public function getApell_user() {
     return $this->apell_user;
 }
 
-function getClave_user() {
+public function getClave_user() {
     return $this->clave_user;
 }
 
-function getSex_user() {
+public function getSex_user() {
     return $this->sex_user;
 }
 
-function getMail_user() {
+public function getMail_user() {
     return $this->mail_user;
 }
 
-function getTel_user() {
+public function getTel_user() {
     return $this->tel_user;
 }
 
-function getCivil_user() {
+public function getCivil_user() {
     return $this->civil_user;
 }
 
-function getLugarnac_user() {
+public function getLugarnac_user() {
     return $this->lugarnac_user;
 }
 
-function getNac_user() {
+public function getNac_user() {
     return $this->nac_user;
 }
 
-function getLocalidad_user() {
+public function getLocalidad_user() {
     return $this->localidad_user;
 }
 
-function getEstrato_user() {
+public function getEstrato_user() {
     return $this->estrato_user;
 }
 
-function getBarrio_user() {
+public function getBarrio_user() {
     return $this->barrio_user;
 }
 
-function getArchivo_usuario() {
+public function getArchivo_usuario() {
     return $this->archivo_usuario;
 }
 
-function getResponsable_user() {
+public function getResponsable_user() {
     return $this->responsable_user;
 }
 
-function getCel_respon_user() {
+public function getCel_respon_user() {
     return $this->cel_respon_user;
 }
 
-function getFoto_user() {
+public function getFoto_user() {
     return $this->foto_user;
 }
 
-function getFecha_registro_user() {
+public function getFecha_registro_user() {
     return $this->fecha_registro_user;
 }
 
@@ -210,23 +209,23 @@ $consulta= mysql_query("select*from t_usuario where dni_user='$this->dni' and cl
 
 ///////////////////////////////////////////
                 
-                public function consultarDatos()
+public function consultarDatos()
 		{		
-		$peticion=mysql_query("select * from t_usuarios where nom_user='$this->nom_user'");
+		$peticion=mysql_query("select * from t_usuario where nom_user='$this->nom_user'");
 			
 			while($fila=mysql_fetch_array($peticion))
-			{  $this->dni = $fila['dni_user'];
-			   
-			}
+			{  $this->dni=$fila['dni_user'];}
 		
-		 $consulta=mysql_query("select *from t_usuario where (dni_user='$this->dni')");		
+		 $consulta=mysql_query("select * from t_usuario where (dni_user='$this->dni')");		
 				
 			if($row=mysql_fetch_array($consulta))
 			{
-				//echo "encontro";
-				echo"<script language='javascript'> alert('La consulta es un EXITO');  </script>";
-				echo"<script language='javascript'> location.href=\"../vistas/editarDatos.php?cedula=".$row['usuario_identificador']."\"</script>";
-			}
+				
+	echo"<script language='javascript'> alert('La consulta es un EXITO');  </script>";
+	echo"<script language='javascript'> location.href=\"../vistas/editarDatos.php?dni=".$row['dni_user']."\"</script>";
+                        }else {
+                            echo"<script language='javascript'> alert('ERROR CONSULTAR DATOS');  </script>";
+                        }
 		}
 
                 
@@ -234,10 +233,7 @@ $consulta= mysql_query("select*from t_usuario where dni_user='$this->dni' and cl
                 
                 public function modificar()
 		{		
-$consulta="update t_usuario set nom_user='$this->nom_user',apell_user='$this->apell_user',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
+$consulta="update t_usuario set nom_user='$this->nom_user',tipodni_user='$this->tipodocumento','nom_user='$this->nom_user',apell_user='$this->apell_user','sex_user='$this->sex_user',clave_user='$this->clave_user','nac_user='$this->nac_user',tipodni_user='$this->tipodocumento',"
         . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
         . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
         . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"

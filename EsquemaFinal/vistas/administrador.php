@@ -15,7 +15,7 @@ $identificacion = $_SESSION['identificacion'];
 						while($fila=mysql_fetch_array($consulta))
 						{
                                                    
-							echo "<h1> <font color='white'> ".$fila['nom_user']."</font></h1>";
+							echo "<h1> <font color='white'>Bienvenido:  ".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
 						}
 				   ?>
 				   </a></li>
