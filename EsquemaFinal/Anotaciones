@@ -1,0 +1,25 @@
+Clases – Los nombres de las clases deben ser CamelCase, con la inicial en mayúscula. 
+Es una buena practica usar el “estilo PEAR” para manejar la jerarquía de nuestras clases, esto también ayuda a ubicar los archivos de forma jerárquica y ordenada.
+
+
+Archivos – Solo caracteres alfanuméricos, comenzando en mayúscula, los espacios no están permitidos.
+
+
+Variables, propiedades, funciones y métodos – Estos nombres deberán ser camelCase, con la inicial en minúscula.
+
+Constantes – Las constantes de código (por ejemplo los generados con #define de C/C++ o define() de PHP deberán estar en MAYUSCULAS.
+
+http://wiki.lazos.cl/index.php?title=Nomenclatura_para_el_Dise%C3%B1o_de_Bases_de_Datos
+Bases de datos…  bd_enlaces
+bases de datos minuscula y tablas:   Los nombres de las tablas deben escribirse de la forma: prefijo_nombredelatabla. 
+Utilizar el guión bajo (_) para separar palabras.
+Utilizar palabras en minúsculas, algunos motores te lo convierten automáticamente.
+
+
+Plural: Carros
+Singular: manzana  (tablas yColumnas)
+
+
+Funciones y metodo: obtenerDatos ; registrarUsuario
+
+/////////////////////////////////////////////////////////////////////////////////////////
