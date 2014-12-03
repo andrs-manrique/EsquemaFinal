@@ -5,8 +5,12 @@
 <?php include("BarraNavegacionadmin.php");?>	
 
 <br><br>
+ <br><br>
+ 
+<div class="container" align="center">
+    <h1> <font color='white'> Registrar </font></h1>
 <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
- <table align="center">
+ <table align="center" border="1">
   <tr>
    <td class="registr">No. Documento:</td> 
     <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php  ?>' disabled></td>
@@ -144,7 +148,7 @@
      <td class="registr">Tipo Colegio</td>
      <td>
     <select name="id_colegio" id="id_colegio">
-    <option value="">Seleccione Curso</option>
+    <option value="">Seleccione Colegio</option>
     <?php
     include("../3modelo/conexion.php");
     $consulta=mysql_query("select *from t_colegio");		
@@ -157,53 +161,86 @@
      </tr>
      
      
-     
+     <tr>
      
     <td class="registr">Estado Usuario</td>
-    <td class="registr"><input type="text" name="id_estado" title="¿Ativado?" ></td>
-     <tr>
+    <td class="registr">
+    <select name="id_estado" id="id_colegio">
+    <option value="">Seleccione </option>
+    <?php
+    include("../3modelo/conexion.php");
+    $consulta=mysql_query("select *from t_estado_user");		
+    while($row=mysql_fetch_array($consulta))
+    {
+    echo '<option value="'.$row['id_estado'].'">'.$row['nom_estado'].'</option>';
+    }	
+   ?></select>
+     </td>
+   
     <td class="registr">Jornada </td>
-    <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  ></td>
+    <td class="registr">
+    <select name="id_jornada" id="id_colegio">
+    <option value="">Seleccione </option>
+    <?php
+    include("../3modelo/conexion.php");
+    $consulta=mysql_query("select *from t_jornada");		
+    while($row=mysql_fetch_array($consulta))
+    {
+    echo '<option value="'.$row['id_jornada'].'">'.$row['tipo_jornada'].'</option>';
+    }	
+   ?></select>
+    
+    
+    </td>
     
     <td class="registr">Materia </td>
-    <td class="registr"><input type="text" name="id_materia_user" title="materia" ></td>
+    <td class="registr">
+        <select name="id_materia_user" id="id_colegio">
+    <option value="">Seleccione </option>
+    <?php
+    include("../3modelo/conexion.php");
+    $consulta=mysql_query("select *from t_materia");		
+    while($row=mysql_fetch_array($consulta))
+    {
+    echo '<option value="'.$row['id_materia'].'">'.$row['nom_materia'].'</option>';
+    }	
+   ?></select>
+    
+    </td>
      </tr> <tr>
     <td class="registr"> Rol usuario</td>
-    <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?" ></td>
+    <td class="registr">
+      <select name="rol_user" id="id_colegio">
+    <option value="">Seleccione </option>
+    <?php
+    include("../3modelo/conexion.php");
+    $consulta=mysql_query("select *from t_rol");		
+    while($row=mysql_fetch_array($consulta))
+    {
+    echo '<option value="'.$row['identificador_rol'].'">'.$row['rol_de_usuario'].'</option>';
+    }	
+   ?></select>   
+        
+  
+    </td>
    
      
      </tr>
-    
+     
+ <script language="JavaScript">function ingresar(){document.form1.txtoperacion.value = 'ingresar';}</script>  
+<td colspan="6" align="center" class="registr">
+<input type="submit" name="Submit" value="ingresar" onClick="ingresar()" > 
+<input type='hidden' name='txtoperacion' value='des'></td>
+				   
     
 </table>
 </form>
 <br><br>
 
+</div>
 
-<tr><td class="registr">Curso:</td><td class="registr">
-    <select name="idCurso" id="idCurso">
-    <option value="">Seleccione Curso</option>
-    <?php
-    include("../modelos/conexion.php");
-    $consulta=mysql_query("select *from curso where curso_nombre!='ninguno' and curso_estado='activado'");		
-    while($row=mysql_fetch_array($consulta))
-    {
-    echo '<option value="'.$row['curso_id'].'">'.$row['curso_nombre'].'</option>';
-    }	
-   ?></select></td></tr>
-				   
+				  
 
 
-
-<tr><td class="registr">Perfil</td><td class="registr"><input type="text"name="permiso" title="permiso" value="Estudiante" readonly="readonly"></td></tr>
-				  <script language="JavaScript">function ingresar(){document.form1.txtoperacion.value = 'ingresar';}</script>  
-				   <td colspan="2" align="center" class="registr"><input type="submit" name="Submit" value="ingresar" onClick="ingresar()" > <input type='hidden' name='txtoperacion' value='des'></td>
-				   </tr>
-        </table>
-		</form>
-				  </div>
-				</aside>
-				<div style="clear:both"></div>
-				</div>
-			</section>
+        
 			<?php include("footer.php");?>	
