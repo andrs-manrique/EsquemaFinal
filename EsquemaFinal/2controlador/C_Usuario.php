@@ -67,4 +67,32 @@ if($operacion=="actualizar")
 {
 	$objUsuario->modificar();
 }
+
+//-----------------INGRESAR USER
+if($operacion=="ingresar")
+{
+/*
+	if(($_POST["dni"])=="") 
+	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+	
+	if(!is_numeric($_POST["tipodni_user"]))
+	{ echo " <script language='JavaScript'> alert('Ingrese un valor numerico en el campo Identificación'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+
+	if(($_POST["nom_user"])=="") 
+	{ echo " <script language='JavaScript'> alert('El campo Contraseña Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+	
+	if(($_POST["apell_user"])=="") 
+	{ echo " <script language='JavaScript'> alert('El campo Nombre Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+	
+	if(is_numeric($_POST["nom_user"]))
+	{ echo " <script language='JavaScript'> alert('Ingrese un valor no numerico en el campo Nombre'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+
+	if(($_POST["mail_user"])=="") 
+	{ echo " <script language='JavaScript'> alert('El campo Apellido Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+	
+	if(is_numeric($_POST["localidad_user"]))
+	{ echo " <script language='JavaScript'> alert('Ingrese un valor no numerico en el campo Apellido'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+*/
+	$objUsuario->insertar();
+}
 ?>

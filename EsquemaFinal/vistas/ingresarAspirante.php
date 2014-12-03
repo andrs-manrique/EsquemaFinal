@@ -13,7 +13,7 @@
  <table align="center" border="1">
   <tr>
    <td class="registr">No. Documento:</td> 
-    <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php  ?>' disabled></td>
+    <td class="registr"><input type="text" name="dni" title="Numero de documento identificacion Nacional"></td>
     
     
      <td class="registr">Tipo de documento:</td>
@@ -226,12 +226,12 @@
    
      
      </tr>
-     
+     <tr>
  <script language="JavaScript">function ingresar(){document.form1.txtoperacion.value = 'ingresar';}</script>  
 <td colspan="6" align="center" class="registr">
 <input type="submit" name="Submit" value="ingresar" onClick="ingresar()" > 
 <input type='hidden' name='txtoperacion' value='des'></td>
-				   
+ </tr>			   
     
 </table>
 </form>
