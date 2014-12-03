@@ -21,6 +21,7 @@
                  <li><a href='#'>Ingresar</a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
+                   <li><a href='listarColaboradores.php'>Lista Colaboradores</a></li>
               </ul>
            
         

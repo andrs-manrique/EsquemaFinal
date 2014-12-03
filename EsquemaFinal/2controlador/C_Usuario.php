@@ -67,7 +67,7 @@ if($operacion=="actualizar")
 }
 
 //-----------------INGRESAR USER
-if($operacion=="ingresar")
+if($operacion=="insertar")
 {  echo"HOLA";
     echo"<script language='javascript'> alert('Objeto de Insertar');  </script>";
 

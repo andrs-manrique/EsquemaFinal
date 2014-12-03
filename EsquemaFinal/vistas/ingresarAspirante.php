@@ -227,9 +227,9 @@
      
      </tr>
      <tr>
- <script language="JavaScript">function ingresar(){document.form1.txtoperacion.value = 'ingresar';}</script>  
+ <script language="JavaScript">function insertar(){document.form1.txtoperacion.value ='insertar';}</script>  
 <td colspan="6" align="center" class="registr">
-<input type="submit" name="Submit" value="ingresar" onClick="ingresar()" > 
+<input type="submit" name="Submit" value="insertar" onClick="insertar()" > 
 <input type='hidden' name='txtoperacion' value='des'></td>
  </tr>			   
     
