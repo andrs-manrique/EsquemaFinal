@@ -4,10 +4,8 @@
 		<div>
 				
 				  <ul>
-                                      <font color="white">  <li><a>ADMIN</li> </font>
+                                      <font color="white">  <li><a>COLABORADOR</li> </font>
 				   <li><a><?php
-  $conexion = mysqli_connect("localhost","root","","db_ideaa");
-                                 
 				   //session_start();
  include("../3modelo/conexion.php");
 $identificacion = $_SESSION['identificacion'];
@@ -18,11 +16,7 @@ $identificacion = $_SESSION['identificacion'];
 						{
                                                    
 							echo "<h1> <font color='white'>Bienvenido:  ".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
-						
-                                                        echo "<img src='../fotos/".$fila['foto_user']."' width=150px></td>";
-}
-                                                        
-                                                
+						}
 				   ?>
 				   </a></li>
 				   <li><a href="datosAdministrador.php">Datos personales</a></li>

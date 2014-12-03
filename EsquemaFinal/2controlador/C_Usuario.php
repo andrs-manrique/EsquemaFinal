@@ -65,7 +65,6 @@ if($operacion=="consultarDatos")
 
 if($operacion=="actualizar")
 {
-
 	$objUsuario->modificar();
 }
 ?>

@@ -63,13 +63,13 @@ $id_materia_user=$row["id_materia_user"];
  <table align="center">
   <tr>
     <td class="registr">Identificación</td>
-    <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo $_GET['dni']; ?>' disabled></td>
+    <td class="registr"><input type="text" name="dni" title="usuario" readonly="readonly" value='<?php echo $_GET['dni']; ?>'></td>
   
     <td class="registr">Tipo DNi</td>
-    <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
+    <td class="registr"><input type="text" name="tipodni_user" title="usuario" readonly="readonly" value='<?php echo $tipodni_user; ?>'></td>
   
    <td class="registr">Foto</td>
-    <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
+    <td class="registr"><input type="text" name="foto_user" title="usuario" readonly="readonly" value='<?php echo $tipodni_user; ?>'></td>
   
   </tr>
   
@@ -82,86 +82,86 @@ $id_materia_user=$row["id_materia_user"];
 	</tr>
          <tr>
 	 <td class="registr">Sexo</td>
-	 <td class="registr"><input type="text" name="sex_user" title="genero " value='<?php echo $sex_user;?>'></td>
+	 <td class="registr"><input type="text" name="sex_user" title="apellido" value='<?php echo $sex_user;?>'></td>
 	</tr>
 	<tr>
 	 <td class="registr">Correo</td>
-	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>'></td>
+	 <td class="registr"><input type="text" name="mail_user" title="correo" value='<?php echo $mail_user;?>'></td>
 	
 	 <td class="registr">clave</td>
-	 <td class="registr"><input type="password" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user;?>'></td>
+	 <td class="registr"><input type="text" name="clave_user" title="nac_user" value='<?php echo $clave_user;?>'></td>
 	</tr>      
         
         <tr>
     <td class="registr">Telefono Usuario</td>
-    <td class="registr"><input type="text" name="tel_user" title="Telefono de Contacto" value='<?php echo $tel_user; ?>'></td>
+    <td class="registr"><input type="text" name="tel_user" title="nombre" value='<?php echo $tel_user; ?>'></td>
  
 	 <td class="registr">Estado Civil</td>
-	 <td class="registr"><input type="text" name="civil_user" title="Estado Actual" value='<?php echo $civil_user;?>'></td>
+	 <td class="registr"><input type="text" name="civil_user" title="apellido" value='<?php echo $civil_user;?>'></td>
 	</tr>
         
         
     <tr>
      <td class="registr">Lugar Nacimiento:</td>
-     <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user;?>'></td>
+     <td class="registr"><input type="text" name="lugarnac_user" title="clave_user" readonly="readonly" value='<?php echo $lugarnac_user;?>'></td>
     
      <td class="registr">Fecha Nacimiento:</td>
-     <td class="registr"><input type="text" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user;?>'></td>
+     <td class="registr"><input type="text" name="nac_user" title="clave_user" readonly="readonly" value='<?php echo $nac_user;?>'></td>
     </tr>
 
      <tr>
      <td class="registr">localidad:</td>
-     <td class="registr"><input type="text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user;?>'></td>
+     <td class="registr"><input type="text" name="localidad_user" title="localidad vive" readonly="readonly" value='<?php echo $localidad_user;?>'></td>
     
      <td class="registr">estrato:</td>
-     <td class="registr"><input type="text" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user;?>'></td>
+     <td class="registr"><input type="text" name="estrato_user" title="estrato de vivenci" readonly="readonly" value='<?php echo $estrato_user;?>'></td>
     
      <td class="registr">barrio:</td>
-     <td class="registr"><input type="text" name="barrio_user" title="barrio" value='<?php echo $barrio_user;?>'></td>
+     <td class="registr"><input type="text" name="barrio_user" title="barrio" readonly="readonly" value='<?php echo $barrio_user;?>'></td>
     
      </tr>
 
      <tr>
          
      <td class="registr">Archivo De registro:</td>
-     <td class="registr"><input type="text" name="archivo_usuario" title="localidad vive" value='<?php echo $archivo_usuario;?>'></td>
+     <td class="registr"><input type="text" name="archivo_usuario" title="localidad vive" readonly="readonly" value='<?php echo $archivo_usuario;?>'></td>
     
      </tr>
     <tr>
          
-     <td class="registr">Acudiente Nombre</td>
-     <td class="registr"><input type="text" name="responsable_user" title=" Nombre"  value='<?php echo $responsable_user;?>'></td>
+     <td class="registr">Acudiente</td>
+     <td class="registr"><input type="text" name="responsable_user" title="localidad vive" readonly="readonly" value='<?php echo $responsable_user;?>'></td>
      
      <td class="registr">Cel acudiente</td>
-     <td class="registr"><input type="text" name="cel_respon_user" title="Telefono de Contacto"  value='<?php echo $cel_respon_user;?>'></td>
+     <td class="registr"><input type="text" name="cel_respon_user" title="localidad vive" readonly="readonly" value='<?php echo $cel_respon_user;?>'></td>
     
      </tr>
     
     <tr>
          
      <td class="registr">Fecha Registro</td>
-     <td class="registr"><input type="text" name="fecha_registro_user" title="localidad vive"  value='<?php echo $fecha_registro_user;?>'></td>
+     <td class="registr"><input type="text" name="fecha_registro_user" title="localidad vive" readonly="readonly" value='<?php echo $fecha_registro_user;?>'></td>
      
      <td class="registr">carrera_user</td>
-     <td class="registr"><input type="text" name="carrera_user" title="localidad vive"  value='<?php echo $carrera_user;?>'></td>
+     <td class="registr"><input type="text" name="carrera_user" title="localidad vive" readonly="readonly" value='<?php echo $carrera_user;?>'></td>
     <td class="registr">Universidad </td>
-     <td class="registr"><input type="text" name="universidad_user" title="localidad vive" value='<?php echo $universidad_user;?>'></td>
+     <td class="registr"><input type="text" name="universidad_user" title="localidad vive" readonly="readonly" value='<?php echo $universidad_user;?>'></td>
    
      
      </tr>
      <tr>
          
      <td class="registr">Tipo Colegio</td>
-     <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?  value='<?php echo $id_colegio;?>'></td>
+     <td class="registr"><input type="text" name="id_colegio" title="localidad vive" readonly="readonly" value='<?php echo $id_colegio;?>'></td>
      
      <td class="registr">Estado Usuario</td>
-     <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado;?>'></td>
+     <td class="registr"><input type="text" name="id_estado" title="localidad vive" readonly="readonly" value='<?php echo $id_estado;?>'></td>
     <td class="registr">Jornada </td>
-     <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php echo $id_jornada;?>'></td>
+     <td class="registr"><input type="text" name="id_jornada" title="localidad vive" readonly="readonly" value='<?php echo $id_jornada;?>'></td>
    <td class="registr"> Rol usuario</td>
-     <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user;?>'></td>
+     <td class="registr"><input type="text" name="rol_user" title="localidad vive" readonly="readonly" value='<?php echo $rol_user;?>'></td>
     <td class="registr">Materia </td>
-     <td class="registr"><input type="text" name="id_materia_user" title="materia"  value='<?php echo $id_materia_user;?>'></td>
+     <td class="registr"><input type="text" name="id_materia_user" title="localidad vive" readonly="readonly" value='<?php echo $id_materia_user;?>'></td>
    
      
      </tr>

@@ -186,7 +186,7 @@ $consulta= mysql_query("select*from t_usuario where dni_user='$this->dni' and cl
 					}
 					else if($fila['rol_user']=='3')
 					{
-						header("location: ../vistas/aspirante.php");
+						header("location: ../vistas/estudiante.php");
 					}
                                         else if($fila['rol_user']=='1')
 					{
@@ -232,20 +232,9 @@ public function consultarDatos()
                 //---------------------Funcion No 2-----------------
                 
                 public function modificar()
-		{		
-$consulta="update t_usuario set nom_user='$this->nom_user',tipodni_user='$this->tipodocumento','nom_user='$this->nom_user',apell_user='$this->apell_user','sex_user='$this->sex_user',clave_user='$this->clave_user','nac_user='$this->nac_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-        . "mail_user='$this->mail_user',tipodni_user='$this->tipodocumento',"
-
-
-        . "where(dni_user='$this->dni')";
+		{ //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
+                               // dni_user`=[value-1],`tipodni_user`=[value-2],`           nom_user                   apell_user    `              clave_user`=[value-5],`        sex_user`=[value-6],`       mail_user`=[value-7],`    tel_user`=[value-8],`         civil_user`=[value-9],`lugarnac_user`=[value-10],`nac_user`=[value-11],`localidad_user`=[value-12],`estrato_user`=[value-13],`barrio_user`=[value-14],`archivo_usuario`=[value-15],`                                         responsable_user`=[value-16],`cel_respon_user`=[value-17],`                                                  foto_user`=[value-18],`fecha_registro_user`=[value-19],`carrera_user`=[value-20],`universidad_user`=[value-21],`                                                         id_colegio`=[value-22],`id_estado`=[value-23],`id_jornada`=[value-24],`rol_user`=[value-25],`id_materia_user`=[value-26] WHERE 1                    
+                        $consulta="update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',clave_user='$this->clave_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
 		
 			if(mysql_query($consulta))
 			{ 
@@ -259,5 +248,10 @@ $consulta="update t_usuario set nom_user='$this->nom_user',tipodni_user='$this->
 			}  
 		}
 	
+                
+                
+                
+                
+                //ACTUALIZAAR
 }
 ?>

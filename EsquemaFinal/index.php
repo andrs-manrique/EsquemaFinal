@@ -1,5 +1,13 @@
-<?php include "php/cabecera.inc" ?>
+<?php include('php/header.php'); ?>
+ <?php include('php/BarraNavegacion.php'); ?>
 
-Aqui Pongo mi contenido principal
+
+
+<div class="container" align="center">
+    <br><br>
+    <h1> <font color='white'> CONTENIDO </font></h1>
+
+
+</div>
 
 <?php include('php/footer.php') ?>
