@@ -70,7 +70,10 @@ if($operacion=="actualizar")
 
 //-----------------INGRESAR USER
 if($operacion=="ingresar")
-{
+{  echo"HOLA";
+    echo"<script language='javascript'> alert('Objeto de Insertar');  </script>";
+
+    $objUsuario->insertar();
 /*
 	if(($_POST["dni"])=="") 
 	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
@@ -93,6 +96,6 @@ if($operacion=="ingresar")
 	if(is_numeric($_POST["localidad_user"]))
 	{ echo " <script language='JavaScript'> alert('Ingrese un valor no numerico en el campo Apellido'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
 */
-	$objUsuario->insertar();
+	
 }
 ?>

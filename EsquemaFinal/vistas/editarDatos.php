@@ -152,7 +152,7 @@ $id_materia_user=$row["id_materia_user"];
      <tr>
          
      <td class="registr">Tipo Colegio</td>
-     <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?  value='<?php echo $id_colegio;?>'></td>
+     <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?" value='<?php echo $id_colegio;?>'></td>
      
      <td class="registr">Estado Usuario</td>
      <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado;?>'></td>
@@ -166,9 +166,9 @@ $id_materia_user=$row["id_materia_user"];
      
      </tr>
     
-     <tr>
+     <tr><br>
   <script language="JavaScript">function actualizar(){ document.form.txtoperacion.value = 'actualizar';}</script>    
-    <td colspan="2" align="center" class="registr"> <input type="submit" name="Submit" value="Modificar Datos" onClick="actualizar()" >
+    <td colspan="10" align="center" class="registr"> <input type="submit" name="Submit" value="Modificar Información" onClick="actualizar()" >
     <input type='hidden' name='txtoperacion' value='des'>
     </td></td>
     </tr>
@@ -176,7 +176,6 @@ $id_materia_user=$row["id_materia_user"];
 </form> 					
 				  </div>
 				</aside>
-				<div style="clear:both"></div>
 				</div>
 			</section>
 <?php include("footer.php");?>	

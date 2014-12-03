@@ -258,8 +258,7 @@ public function consultarDatos()
 		public function insertar()
 		{
                     
-                    
-			$consulta="insert into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values ('$this->dni','$this->nom_user','$this->apell_user','$this->clave_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";
+  $consulta="insert into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values ('$this->dni','$this->tipodocumento','$this->nom_user','$this->apell_user','$this->clave_user','$this->sex_user','$this->mail_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";
 			
 			if(mysql_query($consulta))
 			{ 
@@ -269,7 +268,7 @@ public function consultarDatos()
 			else
 			{ 
 				/*echo mysql_error();*/
-				echo"<script language='javascript'>location.href=\"../vistas/ingresarUsuario.php\"</script>";			
+				echo"<script language='javascript'>location.href=\"../vistas/ingresarAspirante.php\"</script>";			
 			}  
 	    }
 }
