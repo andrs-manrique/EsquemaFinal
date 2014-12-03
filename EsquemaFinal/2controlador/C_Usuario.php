@@ -28,8 +28,6 @@ $id_estado=$_POST["id_estado"];
 $id_jornada=$_POST["id_jornada"];
 $rol_user=$_POST["rol_user"];
 $id_materia_user=$_POST["id_materia_user"];
-    
-
 $operacion=$_POST["txtoperacion"];
 
 
@@ -76,7 +74,8 @@ if($operacion=="ingresar")
     $objUsuario->insertar();
 /*
 	if(($_POST["dni"])=="") 
-	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
+	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); 
+ *        location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
 	
 	if(!is_numeric($_POST["tipodni_user"]))
 	{ echo " <script language='JavaScript'> alert('Ingrese un valor numerico en el campo Identificación'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
