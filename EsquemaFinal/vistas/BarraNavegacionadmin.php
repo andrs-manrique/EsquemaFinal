@@ -7,8 +7,8 @@
         <ul>
            <li class='has-sub '><a href='#'>Titulo1</a>
               <ul>
-                 <li><a href='#'>Titulo2</a></li>
-                 <li><a href='#'>Titulo3</a></li>
+                  <li><a href='verDatos.php'>Ver </a></li>
+                  <li><a href='datosAdministrador.php'>modificar</a></li>
               </ul>
            </li>
         </ul>
