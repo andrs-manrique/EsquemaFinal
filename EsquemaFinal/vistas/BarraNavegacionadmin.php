@@ -29,7 +29,7 @@
      <li><a href='#'>Aspirantes</a>
      
       <ul>
-                 <li><a href='#'>Ingresar</a></li>
+                 <li><a href='ingresarAspirante.php'>Ingresar Aspirante</a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
               </ul>
