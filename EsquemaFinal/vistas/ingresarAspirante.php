@@ -52,7 +52,7 @@
 	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" ></td>
 	
 	 <td class="registr">clave</td>
-	 <td class="registr"><input type="password" name="clave_user" title="clavde de Ingreso"></td>
+	 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso"></td>
 	</tr>      
         
         <tr>
@@ -151,8 +151,8 @@
     <option value="">Seleccione Colegio</option>
     <?php
     include("../3modelo/conexion.php");
-    $consulta=mysql_query("select *from t_colegio");		
-    while($row=mysql_fetch_array($consulta))
+    $consulta1=mysql_query("select *from t_colegio");		
+    while($row=mysql_fetch_array($consulta1))
     {
     echo '<option value="'.$row['id_colegio'].'">'.$row['tipo_colegio'].'</option>';
     }	
@@ -169,8 +169,8 @@
     <option value="">Seleccione </option>
     <?php
     include("../3modelo/conexion.php");
-    $consulta=mysql_query("select *from t_estado_user");		
-    while($row=mysql_fetch_array($consulta))
+    $consulta2=mysql_query("select *from t_estado_user");		
+    while($row=mysql_fetch_array($consulta2))
     {
     echo '<option value="'.$row['id_estado'].'">'.$row['nom_estado'].'</option>';
     }	
@@ -183,8 +183,8 @@
     <option value="">Seleccione </option>
     <?php
     include("../3modelo/conexion.php");
-    $consulta=mysql_query("select *from t_jornada");		
-    while($row=mysql_fetch_array($consulta))
+    $consulta3=mysql_query("select *from t_jornada");		
+    while($row=mysql_fetch_array($consulta3))
     {
     echo '<option value="'.$row['id_jornada'].'">'.$row['tipo_jornada'].'</option>';
     }	
@@ -199,8 +199,8 @@
     <option value="">Seleccione </option>
     <?php
     include("../3modelo/conexion.php");
-    $consulta=mysql_query("select *from t_materia");		
-    while($row=mysql_fetch_array($consulta))
+    $consulta4=mysql_query("select *from t_materia");		
+    while($row=mysql_fetch_array($consulta4))
     {
     echo '<option value="'.$row['id_materia'].'">'.$row['nom_materia'].'</option>';
     }	
@@ -227,9 +227,10 @@
      
      </tr>
      <tr>
- <script language="JavaScript">function insertar(){document.form1.txtoperacion.value ='insertar';}</script>  
+ <script language="JavaScript">function insertarDatos(){document.form1.txtoperacion.value = 'insertarDatos';}
+ </script>  
 <td colspan="6" align="center" class="registr">
-<input type="submit" name="Submit" value="insertar" onClick="insertar()" > 
+<input type="submit" name="Submit" value="insertarDatos" onClick="insertar()" > 
 <input type='hidden' name='txtoperacion' value='des'></td>
  </tr>			   
     

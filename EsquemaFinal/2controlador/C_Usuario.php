@@ -66,10 +66,10 @@ if($operacion=="actualizar")
 	$objUsuario->modificar();
 }
 
+echo"InsertarDatos";
 //-----------------INGRESAR USER
-if($operacion=="insertar")
-{  echo"HOLA";
-    echo"<script language='javascript'> alert('Objeto de Insertar');  </script>";
+if($operacion=="insertarDatos")
+{  
 
     $objUsuario->insertar();
 /*
