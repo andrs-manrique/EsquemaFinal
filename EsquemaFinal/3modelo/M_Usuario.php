@@ -262,7 +262,7 @@ public function insertarDatos()
 			if(mysql_query($consulta))
 			{ 
 				echo"<script language='javascript'> alert('El registro es un EXITO');  </script>";
-				echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";		
+				//echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";		
 			} 
 			else{
 				echo"<script language='javascript'>location.href=\"../vistas/ingresarAspirante.php\"</script>";			
