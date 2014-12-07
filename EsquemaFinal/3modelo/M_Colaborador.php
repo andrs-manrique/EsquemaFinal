@@ -76,8 +76,8 @@ class colaborador {
         $consulta = "insert into colaborador(colaborador_id,colaborador_pass,colaborador_email,colaborador_nombre,colaborador_apellido,colaborador_cel,colaborador_materia,colaborador_carrera,colaborador_semestre,colaborador_sexo) values ('$this->identificacion','$this->pass','$this->email','$this->nombre','$this->apellido','$this->celular','$this->materia','$this->carrera','$this->semestre','$this->sexo')";
 
         if (mysql_query($consulta)) {
-            echo"<script language='javascript'> alert('El registro es un EXITO');  </script>";
-            echo"<script language='javascript'>location.href=\"../vistas/menu_admin.php\"   </script>";
+            echo"<script language='javascript'> alert('El registro es un EXITO COLABORADOR');  </script>";
+            echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";
         } else {
             /* echo mysql_error(); */
             echo"<script language='javascript'>location.href=\"../vistas/ingresarColaborador.php\"</script>";
