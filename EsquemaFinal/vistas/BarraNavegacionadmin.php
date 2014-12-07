@@ -9,6 +9,7 @@
               <ul>
                   <li><a href='verDatos.php'>Ver </a></li>
                   <li><a href='datosAdministrador.php'>modificar</a></li>
+                   <li><a href='cambiarContrasena.php'>Cambio Contraseña</a></li>
               </ul>
            </li>
         </ul>

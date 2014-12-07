@@ -1,8 +1,7 @@
-﻿<!doctype html>
-<?php include("header.php"); ?>
-<?php include("../3modelo/autenticacion.php"); ?>
-<?php include("head.php"); ?>	
-<?php include("BarraNavegacionadmin.php"); ?>
+﻿<?php include('header.php'); ?>
+<?php include("BarraNavegacionadmin.php");?>			
+<?php include("../3modelo/autenticacion.php");?>
+		
 
 <div class="container" align="center">
     <div class="margin-top">
