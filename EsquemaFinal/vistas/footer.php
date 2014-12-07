@@ -2,7 +2,7 @@
     <footer class="footer">
       <div class="container" align="center">
 	  <div class="foot-margin">
-        <p><a>2014 todos los derechos reservados AUN </a></p>
+        <p><a>2014 todos los derechos reservados AU </a></p>
       </div>
       </div>
     </footer>

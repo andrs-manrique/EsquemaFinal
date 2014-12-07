@@ -1,5 +1,5 @@
   		
-<?php // include('tooltip.php');  ?>	
+<?php // include('tooltip.php');   ?>	
 
 
 <div id='cssmenu'>
@@ -15,7 +15,7 @@
                     </ul>
                 </li>
                 <li class='has-sub '><a href='#'>Colaboradores </a>
-                    <li class='has-sub '><a href='ingresarColaborador.php'>Ingressar </a>
+                <li class='has-sub '><a href='ingresarColaborador.php'>Ingressar </a>
                     <ul>
                         <li><a href='#'>Ingenieros</a></li>
                         <li><a href='#'>Humanistas</a></li>
