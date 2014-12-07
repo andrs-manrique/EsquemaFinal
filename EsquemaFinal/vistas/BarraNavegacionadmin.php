@@ -33,6 +33,8 @@
                  <li><a href='ingresarAspirante.php'>Ingresar Aspirante</a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
+                                      <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+
               </ul>
      
      </li>

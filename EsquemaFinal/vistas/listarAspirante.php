@@ -1,7 +1,9 @@
-<?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php");?>			
-<?php include("../3modelo/autenticacion.php");?>
-		<div  align="center" >
+﻿<!doctype html>
+<?php include("header.php"); ?>
+<?php include("../3modelo/autenticacion.php"); ?>
+<?php include("head.php"); ?>	
+<?php include("BarraNavegacionadmin.php"); ?>
+
 <div class="container" align="center">
     <div class="margin-top">
         <div class="row">	
@@ -10,10 +12,11 @@
             <table cellpadding="0" cellspacing="0" border="2" class="table  table-bordered" id="example">
                 <div class="alert alert-info">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong><i class="icon-user icon-large"></i>&nbsp;Tabla Colaboradores</strong>
+                 <h1> <font color='white'>    <strong><i class="icon-user icon-large"></i>&nbsp;Tabla ASPIRANTES </strong>
+                 </h1>  </font>
                 </div>
                 <thead>
-                    <tr>S 
+                    <tr>
                         <th>Identificacion</th>
                         <th>Tipo Doc</th>
                         <th>Nombre</th>                                 
@@ -33,7 +36,7 @@
 
                     mysql_select_db('db_ideaa', mysql_connect('localhost', 'root', '')) or die(mysql_error());
 
-                    $user_query = mysql_query("select * from t_usuario where rol_user=2 ORDER BY dni_user ASC ") or
+                    $user_query = mysql_query("select * from t_usuario where rol_user=3 ORDER BY dni_user ASC ") or
                             die(mysql_error());
                     //  $arch =" <a href='Archivos/{$row['archivo_aspi']}' >Ver Documento</a> ";
 

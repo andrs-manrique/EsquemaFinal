@@ -1,16 +1,12 @@
-﻿<!doctype html>
-<?php include("header.php"); ?>
-<?php include("../3modelo/autenticacion.php"); ?>
-<?php include("head.php"); ?>	
-<?php include("BarraNavegacionadmin.php"); ?>	
-
-<br><br>
-<br><br>
+<?php include('header.php'); ?>
+<?php include("BarraNavegacionadmin.php");?>			
+<?php include("../3modelo/autenticacion.php");?>
+	
 
 <div class="container" align="center">
     
     <?php include("../3modelo/M_Usuario.php");?>
-    <h1> <font color='white'> Registrar </font></h1>
+    <h1> <font color='white'> Registrar Aspirantes </font></h1>
     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
         <table align="center" border="1">
             <tr>
