@@ -15,11 +15,11 @@
         <table align="center" border="1">
             <tr>
                 <td class="registr">No. Documento:</td> 
-                <td class="registr"><input type="text" name="dni" title="Numero de documento identificacion Nacional"></td>
+                <td class="registr"><input type="text" name="dni_user" title="Numero de documento identificacion Nacional"></td>
 
 
                 <td class="registr">Tipo de documento:</td>
-                <td class="registr"><select name="tipodni_user" id="tipodni_user">
+                <td class="registr"><select name="tipodni_user" >
                         <option value="">Seleccione</option>
                         <option value="Cedula Ciudadania">CC</option>
                         <option value="Tarjeta Identidad">TI</option>

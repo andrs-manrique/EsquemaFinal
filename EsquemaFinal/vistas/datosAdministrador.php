@@ -1,10 +1,8 @@
-
-<?php include("header.php");?>
-<?php include("head.php");?>	
-<?php include("../3modelo/autenticacion.php");?>
+<?php include('header.php'); ?>
 <?php include("BarraNavegacionadmin.php");?>			
+<?php include("../3modelo/autenticacion.php");?>		
 
-		<div id="contenedor">
+		<div id="contenedor" align="center">
 			<section>
 				<div id="contieneblog">
 				<?php // include("header.php");?>
@@ -31,7 +29,7 @@
 						}?>"> </td>
 						  </tr>
 			                 <input type="hidden" name="tipodni_user" title=" " readonly="readonly" value="">
-                                         <input type="hidden" name="dni" title="dni_user" readonly="readonly" value="">
+                                         <input type="hidden" name="dni_user" title="dni_user" readonly="readonly" value="">
 				         <input type="hidden" name="apell_user" title=" " readonly="readonly" value="">
 		                         <input type="hidden" name="sex_user" title=" " readonly="readonly" value="">
                                          <input type="hidden" name="tel_user" title=" " readonly="readonly" value="">
@@ -74,5 +72,6 @@
 				</aside>
 				</div>
 			</section>
+                </div>
 			                                		<?php include("footer.php");?>		
 

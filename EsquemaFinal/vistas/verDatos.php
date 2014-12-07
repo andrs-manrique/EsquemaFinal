@@ -1,8 +1,6 @@
-﻿<!doctype html>
-<?php include("header.php");?>
+<?php include('header.php'); ?>
+<?php include("BarraNavegacionadmin.php");?>			
 <?php include("../3modelo/autenticacion.php");?>
-<?php include("head.php");?>	
-<?php include("BarraNavegacionadmin.php");?>	
 			<div id="contenedor">
 			
 			<section>
@@ -13,7 +11,7 @@
 					<article  contenteditable="true">
                                             <font color="white"> 	<h3>Bienvenido AMIGO en esta sección usted puede cambiar sus datos personales</h3></font>
 						<br>
-						<div class="imagenarticuloblog" id="imgblog2"></div>
+	
 					</article>
 				  </div>
 				  <?php 
@@ -58,7 +56,7 @@ $id_materia_user=$row["id_materia_user"];
 				  ?>
 				  <div><br>
 				<font color="white">     <h3>DATOS PERSONALES</h3><br>
-                                <p>esta seccion usted puede observar sus datos personales y modificarlos</p><br> </font>
+       <p>esta seccion usted puede observar sus datos personales y modificarlos</p><br> </font>
 <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
  <table align="center">
   <tr>
@@ -88,54 +86,55 @@ $id_materia_user=$row["id_materia_user"];
 	 <td class="registr">Correo</td>
 	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>'></td>
 	
-	 <td class="registr">clave</td>
-	 <td class="registr"><input type="password" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user;?>'></td>
-	</tr>      
+	<!--  <td class="registr">clave</td>-->
+	 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user;?>'></td>
+	      
         
-        <tr>
-    <td class="registr">Telefono Usuario</td>
-    <td class="registr"><input type="text" name="tel_user" title="Telefono de Contacto" value='<?php echo $tel_user; ?>'></td>
+        
+        
+            <!--  <td class="registr">Telefono Usuario</td> -->
+    <td class="registr"><input type="hidden" name="tel_user" title="Telefono de Contacto" value='<?php echo $tel_user; ?>'></td>
  
 	 <td class="registr">Estado Civil</td>
 	 <td class="registr"><input type="text" name="civil_user" title="Estado Actual" value='<?php echo $civil_user;?>'></td>
 	</tr>
         
         
-    <tr>
-     <td class="registr">Lugar Nacimiento:</td>
-     <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user;?>'></td>
+        <tr>
+      <!-- <td class="registr">Lugar Nacimiento:</td> -->
+     <td class="registr"><input type="hidden" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user;?>'></td>
     
-     <td class="registr">Fecha Nacimiento:</td>
-     <td class="registr"><input type="text" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user;?>'></td>
+    <!--  <td class="registr">Fecha Nacimiento:</td> -->
+     <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user;?>'></td>
     </tr>
 
      <tr>
-     <td class="registr">localidad:</td>
-     <td class="registr"><input type="text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user;?>'></td>
+     <!--  <td class="registr">localidad:</td>-->
+     <td class="registr"><input type="HIDDEN" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user;?>'></td>
     
-     <td class="registr">estrato:</td>
-     <td class="registr"><input type="text" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user;?>'></td>
+     <!--  <td class="registr">estrato:</td>-->
+     <td class="registr"><input type="hidden" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user;?>'></td>
     
-     <td class="registr">barrio:</td>
-     <td class="registr"><input type="text" name="barrio_user" title="barrio" value='<?php echo $barrio_user;?>'></td>
+     <!--  <td class="registr">barrio:</td>-->
+     <td class="registr"><input type="hidden" name="barrio_user" title="barrio" value='<?php echo $barrio_user;?>'></td>
     
      </tr>
 
      <tr>
          
-     <td class="registr">Archivo De registro:</td>
-     <td class="registr"><input type="text" name="archivo_usuario" title="localidad vive" value='<?php echo $archivo_usuario;?>'></td>
+     <!-- <td class="registr">Archivo</td> -->
+     <td class="registr"><input type="hidden" name="archivo_usuario" title="localidad vive" value='<?php echo $archivo_usuario;?>'></td>
     
      </tr>
-    <tr>
+    
          
-     <td class="registr">Acudiente Nombre</td>
-     <td class="registr"><input type="text" name="responsable_user" title=" Nombre"  value='<?php echo $responsable_user;?>'></td>
+     <!--  <td class="registr">Acudiente Nombre</td>-->
+     <td class="registr"><input type="hidden" name="responsable_user" title=" Nombre"  value='<?php echo $responsable_user;?>'></td>
      
-     <td class="registr">Cel acudiente</td>
-     <td class="registr"><input type="text" name="cel_respon_user" title="Telefono de Contacto"  value='<?php echo $cel_respon_user;?>'></td>
+     <!-- <td class="registr">Cel acudiente</td>-->
+     <td class="registr"><input type="hidden" name="cel_respon_user" title="Telefono de Contacto"  value='<?php echo $cel_respon_user;?>'></td>
     
-     </tr>
+     
     
     <tr>
          
@@ -150,14 +149,18 @@ $id_materia_user=$row["id_materia_user"];
      
      </tr>
      <tr>
-         
-     <td class="registr">Tipo Colegio</td>
-     <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"  value='<?php echo $id_colegio;?>'></td>
-     
-    <td class="registr">Estado Usuario</td>
+       <td class="registr">Estado Usuario</td>
     <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado;?>'></td>
-    <td class="registr">Jornada </td>
-    <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php echo $id_jornada;?>'></td>
+     
+     <!--  <td class="registr">Tipo Colegio</td> -->
+     <td class="registr"><input type="hidden" name="id_colegio" title="¿Publico o Privado?"  value='<?php echo $id_colegio;?>'></td>
+    
+    <!--  <td class="registr">Jornada </td>-->
+    <td class="registr"><input type="hidden" name="id_jornada" title="Jornada Interes"  value='<?php echo $id_jornada;?>'></td>
+    
+     
+    
+    
     <td class="registr"> Rol usuario</td>
     <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user;?>'></td>
     <td class="registr">Materia </td>

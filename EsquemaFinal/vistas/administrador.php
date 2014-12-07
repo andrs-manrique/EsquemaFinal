@@ -1,11 +1,11 @@
 <?php include('header.php'); ?>
 <?php include("BarraNavegacionadmin.php");?>			
 <?php include("../3modelo/autenticacion.php");?>
-		<div>
+		<div  align="center" >
 				
 				  <ul>
-                                      <font color="white">  <li><a>ADMIN</li> </font>
-				   <li><a><?php
+                                      <font color="white">  <a>ADMIN</font>
+				   <li></a><?php
   $conexion = mysqli_connect("localhost","root","","db_ideaa");
                                  
 				   //session_start();

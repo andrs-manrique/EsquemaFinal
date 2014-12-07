@@ -5,7 +5,7 @@
      
      <li class='has-sub '><a href='datosAdministrador.php'>Mis datos</a>
         <ul>
-           <li class='has-sub '><a href='#'>Titulo1</a>
+           <li class='has-sub '><a href='#'>opciones</a>
               <ul>
                   <li><a href='verDatos.php'>Ver </a></li>
                   <li><a href='datosAdministrador.php'>modificar</a></li>

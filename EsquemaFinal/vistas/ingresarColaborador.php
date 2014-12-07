@@ -1,10 +1,11 @@
 <?php include('header.php'); ?>
-<?php include('head.php'); ?>
-<?php /* include('BarraNavegacionCol.php'); */ ?>
+<?php include("BarraNavegacionadmin.php");?>			
+<?php include("../3modelo/autenticacion.php");?>
+
 
 <div id="contenedor">
     <?php include("../3modelo/M_Colaborador.php"); ?>
-    <h3>INGRESAR NUEVO COLABORADORES HPTA!!!!!!</h3><br>
+    <h3> <font color='white'>Bienvenido: INGRESAR NUEVO COLABORADORES HPTA!!!!!! </font></h3><br>
     <form name="form1" method="post" action="../2controlador/C_Colaborador.php">
         <table align="center">
 

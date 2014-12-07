@@ -5,7 +5,7 @@
 <form name="form1" method="post" action="2controlador/C_Usuario.php">
     <font color="white">   <h3 >INGRESAR</h3> </font>
                   <div> <font color="white">  USUARIO:</div>
-	          <div><input type="text" name="dni"  tilte="Numero de identificacion" value=""></div>
+	          <div><input type="text" name="dni_user"  tilte="Numero de identificacion" value=""></div>
                   
                   <div> <font color="white">  CONTRASEÑA:</div>
 		  <div><input name="clave_user" type="password" title="Escriba su conraseña aqui" value=""></div>

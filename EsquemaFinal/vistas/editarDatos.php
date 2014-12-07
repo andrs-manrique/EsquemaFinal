@@ -63,13 +63,13 @@ $id_materia_user=$row["id_materia_user"];
  <table align="center">
   <tr>
     <td class="registr">Identificación</td>
-    <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo $_GET['dni']; ?>' disabled></td>
+    <td class="registr"><input type="text" name="dni_user" title="Documento Identificacion"  value='<?php echo $_GET['dni']; ?>' ></td>
   
     <td class="registr">Tipo DNi</td>
     <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
   
    <td class="registr">Foto</td>
-    <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
+    <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $foto_user; ?>'></td>
   
   </tr>
   
@@ -168,7 +168,8 @@ $id_materia_user=$row["id_materia_user"];
     
      <tr><br>
   <script language="JavaScript">function actualizar(){ document.form.txtoperacion.value = 'actualizar';}</script>    
-    <td colspan="10" align="center" class="registr"> <input type="submit" name="Submit" value="Modificar Información" onClick="actualizar()" >
+  <td colspan="10" align="center" class="registr"> 
+      <input type="submit" name="Submit" value="Modificar Información" onClick="actualizar()" >
     <input type='hidden' name='txtoperacion' value='des'>
     </td></td>
     </tr>
