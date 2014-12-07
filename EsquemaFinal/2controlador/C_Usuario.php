@@ -35,25 +35,14 @@ $rol_user=$_POST["rol_user"];
 $operacion=$_POST["txtoperacion"];
 
 
-//-------------
-$objUsuario = new usuario($dni,$tipodni_user,$nom_user,$apell_user,$clave_user,
-        $sex_user,$mail_user,$tel_user,$civil_user,$lugarnac_user,
-        $nac_user,$localidad_user,$estrato_user,
-        $barrio_user,$archivo_usuario,$responsable_user,$cel_respon_user,
-        $foto_user,$fecha_registro_user,$carrera_user,$universidad_user,$id_colegio,
-        $id_estado,$id_jornada,$rol_user,$id_materia_user);
-        
-        
 
-
-
-$objUsuario = new usuario($cedula,$nombre,$apellido,$email,$login,$permiso);
-
+$objUsuario= new usuario($dni, $tipodocumento, $foto_user, $nom_user, $apell_user, $clave_user, $sex_user, $mail_user, $tel_user, $civil_user, $lugarnac_user, $nac_user, $localidad_user, $estrato_user, $barrio_user, $archivo_usuario, $responsable_user, $cel_respon_user, $fecha_registro_user, $carrera_user, $universidad_user, $id_colegio, $id_estado, $id_jornada, $id_materia_user, $rol_user);
+$objUsuario->insertarDatos();
 /////////////////////////////
 //funcion 
 
 
-if($operacion=="verificar")
+/*if($operacion=="verificar")
 {
 	$objUsuario->verificar();
 }
@@ -74,9 +63,12 @@ if($operacion=="actualizar")
 echo"InsertarDatos";
 //-----------------INGRESAR USER
 if($operacion=="insertarDatos")
-{  
+{  */
 
-    $objUsuario->insertar();
+    
+    
+    
+    
 /*
 	if(($_POST["dni"])=="") 
 	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); 
@@ -101,5 +93,5 @@ if($operacion=="insertarDatos")
 	{ echo " <script language='JavaScript'> alert('Ingrese un valor no numerico en el campo Apellido'); location.href=\"../vistas/ingresarUsuario.php\"; </script>"; exit();}
 */
 	
-}
+//}
 ?>
