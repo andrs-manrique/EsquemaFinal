@@ -9,15 +9,15 @@
             <br><br>			     	 
 
             <table cellpadding="0" cellspacing="0" border="2" class="table  table-bordered" id="example">
-                <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                 <h1> <font color='white'>    <strong><i class="icon-user icon-large"></i>&nbsp;Tabla ASPIRANTES </strong>
+             
+                 
+                 <h1> <font color='white'>    <strong>Tabla ASPIRANTES </strong>
                  </h1>  </font>
-                </div>
+                
                 <thead>
                     <tr>
                         <th>Identificacion</th>
-                        <th>Tipo Doc</th>
+                        <th>Genero</th>
                         <th>Nombre</th>                                 
                         <th>Apellido</th> 
                         <th>Contacto</th>                                 
@@ -43,8 +43,8 @@
                         $id = $row['dni_user'];
                         ?>
                         <tr class="del<?php echo $id ?>">
-                            <td><?php echo $row['dni_user']; ?></td> 
-                            <td><?php echo $row['nom_user']; ?></td> 
+                            <td><?php echo "<b>   <font color='white'> ".$row['dni_user']."</font></b>"; ?></td> 
+                            <td><?php echo $row['sex_user']; ?></td> 
 
                             <td><?php echo $row['nom_user']; ?></td> 
                             <td><?php echo $row['apell_user']; ?></td> 
@@ -59,12 +59,19 @@
                                 <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
                                    href="#delete_user<?php echo $id; ?>" data-toggle="modal"  
                                    class="btn btn-danger"><i class="icon-trash icon-large"></i></a>
-    <?php echo"<a href='info_col.php?dni=$id'>Borrar</a>"; // include('modal_delete_Colabor.php');  ?>
+    <?php echo"<a href='editarDatos.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');  ?>
 
                                 <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                    href="#edit<?php echo $id; ?>" data-toggle="modal" 
                                    class="btn btn-success"><i class="icon-pencil icon-large"></i></a>
-    <?php echo"<a href='info_col.php?dni=$id'>Editar</a>"; //include('modal_edit_Colabor.php');  ?>
+    <?php echo"<a href='updateEstado.php?dni=$id'>   <img src='../img/bloqueado.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');  ?>
+                            
+                            
+                              <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                   href="#edit<?php echo $id; ?>" data-toggle="modal" 
+                                   class="btn btn-success"><i class="icon-pencil icon-large"></i></a>
+    <?php echo"<a href='Delete.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');  ?>
+                            
                             </td>
 
 
