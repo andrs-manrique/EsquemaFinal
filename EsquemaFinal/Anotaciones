@@ -2,7 +2,8 @@ Clases – Los nombres de las clases deben ser CamelCase, con la inicial en may�
 Es una buena practica usar el “estilo PEAR” para manejar la jerarquía de nuestras clases, esto también ayuda a ubicar los archivos de forma jerárquica y ordenada.
 
 
-Archivos – Solo caracteres alfanuméricos, comenzando en mayúscula, los espacios no están permitidos.
+Archivos – Solo caracteres alfanuméricos, 
+comenzando en mayúscula, los espacios no están permitidos.
 
 
 Variables, propiedades, funciones y métodos – Estos nombres deberán ser camelCase, con la inicial en minúscula.
