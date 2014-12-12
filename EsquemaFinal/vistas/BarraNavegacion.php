@@ -23,7 +23,7 @@
         </ul>
      </li>
      
-     <li><a href='consultar_estado.php'>Consultar Estado</a></li>
+     <li><a href='estado_aspirante.php'>Consultar Estado</a></li>
      <li><a href='ingresarUsuario.php'>Iniciar Sesion</a></li>
      <li><a href='#'>Contacto</a></li>
   </ul>
