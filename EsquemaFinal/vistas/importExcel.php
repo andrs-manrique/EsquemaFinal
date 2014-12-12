@@ -24,10 +24,10 @@
 
 <?php
 //<!– CARGA LA MISMA PAGINA MANDANDO LA VARIABLE upload –>
-
-extract($_POST);
-if ($action == "upload") //si action tiene como valor UPLOAD haga algo (el value de este hidden es es UPLOAD iniciado desde el value
-{
+if (isset($_POST['enviar'])){
+//extract($_POST);
+//if ($action == "upload") //si action tiene como valor UPLOAD haga algo (el value de este hidden es es UPLOAD iniciado desde el value
+//{
 //cargamos el archivo al servidor con el mismo nombre(solo le agregue el sufijo bak_)
 $archivo = $_FILES['excel']['name']; //captura el nombre del archivo
 $tipo = $_FILES['excel']['type']; //captura el tipo de archivo (2003 o 2007)
