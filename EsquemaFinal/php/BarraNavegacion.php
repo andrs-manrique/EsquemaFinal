@@ -4,7 +4,7 @@
 
 <div id='cssmenu'>
     <ul>
-        <li class='active'><a href='index.php'>Inicio</a></li>
+        <li class='active'><a href='../index.php'>Inicio</a></li>
 
         <li class='has-sub '><a href='#'>Nosotros</a>
             <ul>
@@ -24,7 +24,7 @@
             </ul>
         </li>
 
-        <li><a href='#'>Consultar Estado</a></li>
+        <li><a href='./vistas/estado_aspirante.php'>Consultar Estado</a></li>
         <li><a href='ingresarUsuario.php'>Iniciar Sesion</a></li>
         <li><a href='#'>Contacto</a></li>
     </ul>

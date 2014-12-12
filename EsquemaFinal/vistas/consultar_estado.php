@@ -1,4 +1,4 @@
-<?php include('dbcon.php'); ?>
+<?php include('../3modelo/conexion.php'); ?>
 <?php
 if (isset($_POST['submit'])){
 session_start();
