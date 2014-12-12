@@ -1,5 +1,5 @@
   		
-<div id='cssmenu'>
+<div id='cssmenu' align="center">
   <ul>
       <li class='active'><a href='administrador.php'>Inicio</a></li>
      
@@ -31,10 +31,55 @@
      <li><a href='#'>Aspirantes</a>
      
       <ul>
+          <li><a href='importExcel.php'>ImportarLista</a></li> 
                  <li><a href='ingresarAspirante.php'>Ingresar Aspirante</a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
                                       <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+
+              </ul>
+     
+     </li>
+     <li><a href='#'>Materias</a>
+     
+      <ul>
+                 <li><a href='#'>Ingresar </a></li>
+                 <li><a href='#'>Listar</a></li>
+                   <li><a href='#'>Modificar</a></li>
+                                     
+
+              </ul>
+     
+     </li>
+     <li><a href='#'>Horario</a>
+     
+      <ul>
+                 <li><a href='#'>Ingresar </a></li>
+                 <li><a href='#'>Listar</a></li>
+                   <li><a href='#'>Modificar</a></li>
+                                    
+
+              </ul>
+     
+     </li>
+     <li><a href='#'>Novedades</a>
+     
+      <ul>
+                 <li><a href='#'>Ingresar </a></li>
+                 <li><a href='#'>Listar</a></li>
+                   <li><a href='#'>Modificar</a></li>
+                                      <li><a href='#'>Listar </a></li>
+
+              </ul>
+     
+     </li>
+     <li><a href='#'>CASO DE USO</a>
+     
+      <ul>
+                 <li><a href='#'>Ingresar </a></li>
+                 <li><a href='#'>Listar</a></li>
+                   <li><a href='#'>Modificar</a></li>
+                                      <li><a href='#'>Listar </a></li>
 
               </ul>
      
