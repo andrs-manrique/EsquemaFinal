@@ -9,18 +9,15 @@
 				<aside id="articuloss">
 				
 <div><br>
-    <h3> <font color="white"> DATOS PERSONALES </font></h3><br>
-	<font color="white"><p>en esta sección usted puede ver sus datos personales como tambien modificarlos</p>
-        </font><br>
-  
-        <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
-            
-            <?php  // se genera un fomulario de mostrar datos de la DB?>
-	<table align="center">
+    <h3> <font color="white"> DATOS PERSONALES </font></h3>
+	<font color="white"><p>..::Verificar Su Nombre::..</p>
+        </font>
+        <form name="form" method="post" action="../2controlador/C_Usuario.php" >           
+        <table align="center">
 	<tr>
-        <td class="registr">Nombre</td>
+     
 	<td class="registr">
-        <input type="text" name="nom_user" title="nombre" readonly="readonly" value="<?php include("../3modelo/conexion.php");
+        <input type="text" align="middle" name="nom_user" title="nombre" readonly="readonly" value="<?php include("../3modelo/conexion.php");
 		$identificacion = $_SESSION['identificacion'];
 		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
 		while($fila=mysql_fetch_array($consulta))
@@ -62,7 +59,7 @@
                  function consultarDatos(){ document.form.txtoperacion.value = 'consultarDatos';}
                               </script>    
 						    <td colspan="2" align="center" class="registr"> 
-                      <input type="submit" name="Submit" value="Consultar Datos" onClick="consultarDatos()" >
+                      <input type="submit" name="Submit" value="Ver" onClick="consultarDatos()" >
 						    <input type='hidden' name='txtoperacion' value='des'>
 						    </td></td>
 						    </tr>

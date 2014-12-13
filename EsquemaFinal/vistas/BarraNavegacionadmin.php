@@ -5,11 +5,11 @@
      
      <li class='has-sub '><a href='datosAdministrador.php'>Mis datos</a>
         <ul>
-           <li class='has-sub '><a href='#'>opciones</a>
+           <li class='has-sub '><a href='#'>Información</a>
               <ul>
-                  <li><a href='verDatos.php'>Ver </a></li>
-                  <li><a href='datosAdministrador.php'>modificar</a></li>
-                   <li><a href='cambiarContrasena.php'>Cambio Contraseña</a></li>
+                  <li><a href='verDatos.php'>Ver Información</a></li>
+                  <li><a href='datosAdministrador.php'>Modificar Información</a></li>
+                   <li><a href='cambiarContrasena.php'>Modificar Clave</a></li>
               </ul>
            </li>
         </ul>

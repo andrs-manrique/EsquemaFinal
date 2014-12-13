@@ -18,11 +18,11 @@
         
         $objPassword= new password($idprueba, $usuario, $encrypted_password, $passwordNueva, $passwordRepeat);
         
-        
+        if($operacion=="cambioContrasena"){
 		$objPassword->actualizar();
-                
-                
-                echo 'aqui estamos';
+        }
+                else {
+                echo 'aqui estamos';}
 	
 
 

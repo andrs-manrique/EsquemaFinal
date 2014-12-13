@@ -1,7 +1,6 @@
 ﻿<!doctype html>
 <?php include("header.php");?>
 <?php include("../3modelo/autenticacion.php");?>
-<?php include("head.php");?>	
 <?php include("BarraNavegacionadmin.php");?>	
 			<div id="contenedor">
 			
@@ -22,7 +21,7 @@
 
 				    $identificacion = $_SESSION['identificacion'];
 
-				    $consulta=mysql_query("select *from t_usuario where (dni_user='$identificacion')");		
+	 $consulta=mysql_query("select *from t_usuario where (dni_user='$identificacion')");		
 				
 	if($row=mysql_fetch_array($consulta))
 						{
@@ -57,9 +56,9 @@ $id_materia_user=$row["id_materia_user"];
 
 				  ?>
 				  <div><br>
-				<font color="white">     <h3>DATOS PERSONALES</h3><br>
-                                <p>esta seccion usted puede observar sus datos personales y modificarlos</p><br> </font>
-<form name="form" method="post" action="../2controlador/C_Usuario.php" > 
+<font color="white">     <h3>DATOS PERSONALES</h3><br>
+<p>esta seccion usted puede observar sus datos personales y modificarlos</p><br> </font>
+<form name="form" method="post" action="../2controlador/C_Usuario.php" enctype="multipart/form-data"> 
  <table align="center">
   <tr>
     <td class="registr">Identificación</td>
@@ -68,8 +67,14 @@ $id_materia_user=$row["id_materia_user"];
     <td class="registr">Tipo DNi</td>
     <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
   
-   <td class="registr">Foto</td>
-    <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $foto_user; ?>'></td>
+   <td class="registr">Modificar Foto</td> 
+    <td class="registr">
+      <input type="text"  value='<?php echo $foto_user; ?>'>
+
+        <h4>..::Adjuntar Documentos::..</h4>
+	<input type="file" name="foto_user" >
+
+    </td>
   
   </tr>
   

@@ -15,14 +15,9 @@ $identificacion = $_SESSION['identificacion'];
 		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
                 
 						while($fila=mysql_fetch_array($consulta))
-						{
-                                                   
-							echo "<h1> <font color='white'>Bienvenido:  ".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
-						
-                                                        echo "<img src='../fotos/".$fila['foto_user']."' width=150px></td>";
-}
-                                                        
-                                                
+						{echo "<h1> <font color='white'>Bienvenido:  ".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
+						 echo "<img src='../fotos/".$fila['foto_user']."' width=150px></td>";
+}      
 				   ?>
 				   </a></li>
 				   <li><a href="datosAdministrador.php">Datos personales</a></li>

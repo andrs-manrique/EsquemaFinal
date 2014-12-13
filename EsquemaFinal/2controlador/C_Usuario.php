@@ -1,6 +1,10 @@
 <?php
 require_once("../3modelo/M_Usuario.php");
  //--------------------------------------
+$fechahoy=getdate();
+$FechaActual= $fechahoy["mday"] ."-".$fechahoy["mon"]."-".$fechahoy["year"];
+$FechaRegistro=$fechahoy["year"]."-".$fechahoy["mon"]."-".$fechahoy["mday"];
+echo $FechaActual;
 $dni=$_POST["dni_user"];
 $tipodni_user=$_POST["tipodni_user"];
 $nom_user=$_POST["nom_user"];
@@ -19,7 +23,7 @@ $barrio_user=$_POST["barrio_user"];
 $archivo_usuario=$_POST["archivo_usuario"];                                                   
 $responsable_user=$_POST["responsable_user"];
 $cel_respon_user=$_POST["cel_respon_user"];
-$foto_user=$_POST["foto_user"];
+//$foto_user=$_POST["foto_user"]; //Linea 22
 $fecha_registro_user=$_POST["fecha_registro_user"];
 $carrera_user=$_POST["carrera_user"];
 $universidad_user=$_POST["universidad_user"];
@@ -29,6 +33,32 @@ $id_jornada=$_POST["id_jornada"];
 $rol_user=$_POST["rol_user"];
 $id_materia_user=$_POST["id_materia_user"];
 $operacion=$_POST["txtoperacion"];
+
+//Ruta donde se guardarán las imágenes
+   
+// Recibo los datos de la archivo 
+$directorio ="../fotos";
+$formatos = array ('.png', '.jpg','.gif','.docx');
+$nombreArchivo =$_FILES['foto_user']['name']; // obtener la extension del archivo
+$nombreTmparchivo =$_FILES['foto_user']['tmp_name'];
+$foto_user=$nombreArchivo;
+// manejar la cadena o extraer dps lo del PUNTO
+$ext = substr($nombreArchivo, strrpos($nombreArchivo, '.'));
+if (in_array($ext, $formatos)){
+if (move_uploaded_file($nombreTmparchivo, "../fotos/$nombreArchivo")){
+
+	echo "Felicidades , Foto  $nombreArchivo  subido <br> ";
+      
+} else {
+
+	echo "Ocurrio un error.";
+}
+}else {
+
+	echo " Error FOTO <br> Contacte al ADMINISTRADOR "; 
+}
+
+
 //-------------
 $objUsuario = new usuario($dni,$tipodni_user,$nom_user,$apell_user,$clave_user,
         $sex_user,$mail_user,$tel_user,$civil_user,$lugarnac_user,
