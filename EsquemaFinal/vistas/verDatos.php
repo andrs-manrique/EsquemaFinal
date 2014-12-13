@@ -52,7 +52,8 @@ $id_materia_user=$row["id_materia_user"];
     <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo$dni ?>' disabled></td>
   
     <td class="registr">Tipo DNI:</td>
-    <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
+    <td class="registr">
+    <input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
  <?php $consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
 while($fila=mysql_fetch_array($consulta))
 {echo "<h1> <font color='white'>".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
@@ -151,7 +152,9 @@ while($fila=mysql_fetch_array($consulta))
     <td class="registr"></td>
     <td class="registr"><input type="hidden" name="id_materia_user" title="materia"  value='<?php echo $id_materia_user;?>'></td>
    
-     
+     <td class="registr"></td>
+    <td class="registr"><input type="hidden" name="foto_user" title="materia"  value='<?php echo $foto_user;?>'></td>
+   
      </tr>
     
     

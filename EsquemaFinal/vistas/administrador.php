@@ -19,7 +19,18 @@ $identificacion = $_SESSION['identificacion'];
 						 echo "<img src='../fotos/".$fila['foto_user']."' width=150px></td>";
 }      
 				   ?>
-				   </a></li>
+<form method="post" action="modificar_foto.php" enctype="multipart/form-data"> 
+     <table aling="center">
+     <tr>
+ <td class="registr">Modificar Foto</td> 
+   <td class="registr" >
+   <input type="file" name="fotografia" />
+    </td>
+    </tr>
+    <tr><td><input type="submit" value="Subir archivo" /> </td></tr>
+     </table>
+    </form>
+				   </li>
 				   <li><a href="datosAdministrador.php">Datos personales</a></li>
 				   <li><a href="cambiarContrasena.php">Cambiar Contraseña</a></li>
 				  </ul>
