@@ -17,32 +17,54 @@
                                         <th>Identificacion</th>
                                         <th>Nombre</th>                                 
                                         <th>Apellido</th>     
-                                        <th>Archivo</th>  
-                                         <th>Estado </th>     
-                                        <th>Calificar1</th>  
-                                      
-                                         
-                                        <th>Observaciones</th>                             
+                                        <th>Sexo</th>  
+                                         <th>Telefono </th>     
+                                        <th>Estado</th>  
+                                       <th>Archivo</th> 
+                                        <th>Consultar</th> 
+                                       <th>Acciones</th>                             
                                     </tr>
                                 </thead>
                                 <tbody>
 								 
                                   <?php
-$user_query2=mysql_query("select *FROM t_usuario where rol_user='1'")or die(mysql_error());
-									while($row=mysql_fetch_array($user_query2)){
-									$id=$row['dni_user']; ?>
-									 <tr class="del<?php echo $id ?>">
+$user_query2=mysql_query("select *FROM t_usuario where rol_user='3' ORDER BY dni_user ASC")or die(mysql_error());
+				 while($row=mysql_fetch_array($user_query2)){
+				 $id=$row['dni_user']; ?>
+				 <tr class="del<?php echo $id ?>">
                                     <td><?php echo $row['dni_user']; ?></td> 
                                     <td><?php echo $row['nom_user']; ?></td> 
                                     <td><?php echo $row['apell_user']; ?></td>
-                                    <td> <?php// echo "<a href='../Archivos/{$row['archivo_aspi']}' >Ver Documento</a> " ?></td> 
-                                    <td><?php echo $row['rol_user']; ?></td> 
-                                    <td><?php echo "<a href='archivo.php?id=$id'><button>Calificar</button> </a>";?></td> 
-                                   <td><?php echo "<a href='archivo2.php?id=$id'><button>Calificar2</button> </a>";?></td>
+                                    <td><?php echo $row['sex_user']; ?></td><td>
+                                        <?php echo $row['tel_user']; ?></td>
+                                    <td><?php echo $row['id_estado']; ?></td>
+                                    <td><?php echo $row['archivo_usuario']; ?></td> 
+                                     <td><?php echo"<a href='info_col.php?id=$id'>Ver Más</a>"; ?></td>
+                            <td width="100">
 
-                                        
-                           </tr>
- <?php } ?>
+   <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+    href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
+    <?php echo"<a href='editarDatos.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');  ?>
+
+                                <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                   href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+    <?php echo"<a href='updateEstado.php?dni=$id'>   <img src='../img/bloqueado.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');  ?>
+                            
+                            
+                              <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                   href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+    <?php echo"<a href='Delete.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');  ?>
+                            
+                            </td>
+
+
+
+    <?php //include('toolttip_edit_delete.php');  ?>
+                            <!-- Modal edit user -->
+
+                        </tr>
+<?php } ?>
+
                                 </tbody>
                             </table>
 			</div>		
