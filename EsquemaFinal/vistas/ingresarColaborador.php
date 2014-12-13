@@ -7,7 +7,7 @@
     <?php include("../3modelo/M_Usuario.php");?>
     <h1> <font color='white'> Registrar Colaborador </font></h1>
     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
-        <table align="center" border="1">
+        <table align="center" >
             <tr>
                 <td class="registr">No. Documento:</td> 
                 <td class="registr"><input type="text" name="dni_user" title="Numero de documento identificacion Nacional"></td>

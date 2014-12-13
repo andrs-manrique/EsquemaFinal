@@ -20,9 +20,7 @@
            
               <ul>
                  <li><a href='ingresarColaborador.php'>Ingresar</a></li>
-                 <li><a href='#'>Listar</a></li>
-                   <li><a href='#'>Modificar</a></li>
-                   <li><a href='listarColaboradores.php'>Lista Colaboradores</a></li>
+                 <li><a href='ListasColaborador.php'>Listar</a></li>
               </ul>
            
         

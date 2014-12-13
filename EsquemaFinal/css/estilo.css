@@ -26,12 +26,12 @@ and open the template in the editor.
 */
 
 body{	
-	background:url(../img/fondo3.jpg);
+	background:url(../img/fondo2.jpg);
 }
 
 #cssmenu {
-  background: #333;
-  border-bottom: 4px solid #1b9bff;
+  background: #333; 
+  border-bottom: 1px solid #1b9bff;
   font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
   font-size: 12px; 
 }
@@ -53,7 +53,7 @@ body{
 #cssmenu ul { text-transform: uppercase; }
 
     #cssmenu ul ul {
-      border-top: 4px solid #1b9bff;
+      border-top: 1px solid #1b9bff;
       text-transform: none;
       min-width: 190px; 
 }
@@ -78,7 +78,7 @@ body{
           border-radius: 0 0 3px 3px;
           box-shadow: 0 1px 0 #1b9bff; 
 }
-        #cssmenu ul ul li:last-child:hover > a { border-radius: 0 0 0 3px; }
+        #cssmenu ul ul li:last-child:hover > a { border-radius: 0 0 0 1px; }
 
         #cssmenu ul ul li.has-sub > a:after {
           content: '+';
