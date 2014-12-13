@@ -50,8 +50,8 @@ while($fila=mysql_fetch_array($consulta))
 }   ?>
   </tr>
      <tr>
-    <td class="registr">No. Identificación:</td>
-    <td class="registr"><input type="text" name="dni_user" title="usuario"  value='<?php echo $_GET['dni'];?>'></td>
+    <td class="registr">No. Identificación:</td>                                  
+    <td class="registr"><input type="text" name="dni_user" title="usuario"  value='<?php echo base64_decode($_GET['dni']);?>'></td>
   
     <td class="registr">Tipo DNI:</td>
     <td>
@@ -158,8 +158,10 @@ while($fila=mysql_fetch_array($consulta))
      
      </tr>
      <tr>
-         <td class="registr">  </td>
+      <td class="registr">  </td>
      <td class="registr"><input type="hidden" name="id_materia_user" title="materia"  value='<?php echo $id_materia_user;?>'></td>
+      <td class="registr">  </td>
+     <td class="registr"><input type="hidden" name="foto_user" title="materia"  value='<?php echo $foto_user;?>'></td>
      
     
      </tr>

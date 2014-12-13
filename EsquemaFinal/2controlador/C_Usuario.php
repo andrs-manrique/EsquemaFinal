@@ -57,13 +57,19 @@ if($operacion=="consultarDatos")
 {
 	$objUsuario->consultarDatos();
 }
+if($operacion=="consultarDatosCol")
+{
+	$objUsuario->consultarDatosCol();
+}
 if($operacion=="actualizar")
 {
 	$objUsuario->modificar();
 }
+
+
 //echo"InsertarDatos";
-//if($operacion=="insertarDatos")
-$objUsuario->insertarDatos();
+if($operacion=="insertarDatos"){
+$objUsuario->insertarDatos();}
 /*
 	if(($_POST["dni"])=="") 
 	{ echo " <script language='JavaScript'> alert('El campo Identificación Es Oblicatorio Diligenciar'); 

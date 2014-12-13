@@ -53,7 +53,7 @@ $id_materia_user=$row["id_materia_user"];
   
     <td class="registr">Tipo DNI:</td>
     <td class="registr">
-    <input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>'></td>
+    <input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
  <?php $consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
 while($fila=mysql_fetch_array($consulta))
 {echo "<h1> <font color='white'>".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
@@ -63,37 +63,37 @@ while($fila=mysql_fetch_array($consulta))
   
   <tr>
     <td class="registr">Nombre:</td>
-    <td class="registr"><input type="text" name="nom_user" title="nombre" value='<?php echo $nom_user; ?>'></td>
+    <td class="registr"><input type="text" name="nom_user" title="nombre" value='<?php echo $nom_user; ?>' disabled></td>
  
 	 <td class="registr">Apellido:</td>
-	 <td class="registr"><input type="text" name="apell_user" title="apellido" value='<?php echo $apell_user;?>'></td>
+	 <td class="registr"><input type="text" name="apell_user" title="apellido" value='<?php echo $apell_user;?>' disabled></td>
   </tr><tr>
 	 <td class="registr">Sexo:</td>
-	 <td class="registr"><input type="text" name="sex_user" title="genero " value='<?php echo $sex_user;?>'></td>
+	 <td class="registr"><input type="text" name="sex_user" title="genero " value='<?php echo $sex_user;?>' disabled></td>
 	
 	 <td class="registr">Correo</td>
-	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>'></td>
+	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>' disabled></td>
   </tr>
   
    <tr>
          
      <td class="registr">Fecha Registro</td>
-     <td class="registr"><input type="text" name="fecha_registro_user" title="localidad vive"  value='<?php echo $fecha_registro_user;?>'></td>
+     <td class="registr"><input type="text" name="fecha_registro_user" title="localidad vive"  value='<?php echo $fecha_registro_user;?>' disabled></td>
    
     
      <td class="registr">Imagen:</td>
-     <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $foto_user; ?>'></td>
+     <td class="registr"><input type="text" name="foto_user" title="usuario" value='<?php echo $foto_user; ?>' disabled></td>
   
    </tr>
    <tr>
      <td class="registr">Pregrado:</td>
-     <td class="registr"><input type="text" name="carrera_user" title="¿QUE ESTUDIA?"  value='<?php echo $carrera_user;?>'></td>
+     <td class="registr"><input type="text" name="carrera_user" title="¿QUE ESTUDIA?"  value='<?php echo $carrera_user;?>' disabled></td>
     <td class="registr">Universidad:</td>
-     <td class="registr"><input type="text" name="universidad_user" title="¿QUE uNIVERSIDAD?" value='<?php echo $universidad_user;?>'></td>
+     <td class="registr"><input type="text" name="universidad_user" title="¿QUE uNIVERSIDAD?" value='<?php echo $universidad_user;?>'disabled></td>
      </tr>
      <tr>
     <td class="registr">Contacto:</td>
-    <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>'></td>
+    <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>' disabled></td>
     
     <td class="registr">Rol:</td>
     <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user;?>'></td>

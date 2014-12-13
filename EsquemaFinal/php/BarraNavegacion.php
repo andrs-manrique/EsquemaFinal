@@ -25,7 +25,7 @@
         </li>
 
         <li><a href='./vistas/estado_aspirante.php'>Consultar Estado</a></li>
-        <li><a href='ingresarUsuario.php'>Iniciar Sesion</a></li>
+        <li><a href='./ingresarUsuario.php'>Iniciar Sesion</a></li>
         <li><a href='#'>Contacto</a></li>
     </ul>
 </div>

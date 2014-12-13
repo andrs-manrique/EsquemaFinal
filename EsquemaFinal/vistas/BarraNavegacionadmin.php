@@ -19,8 +19,9 @@
      
            
               <ul>
-                 <li><a href='ingresarColaborador.php'>Ingresar</a></li>
-                 <li><a href='ListasColaborador.php'>Listar</a></li>
+                 <li><a href='ingresarColaborador.php'>Ingresar Colaborador</a></li>
+                 <li><a href='Consultar_Colaborador.php'>Consultar Colaborador</a></li>
+                 <li><a href='ListasColaborador.php'>Listar Colaborador</a></li>
               </ul>
            
         
@@ -31,9 +32,9 @@
       <ul>
           <li><a href='importExcel.php'>ImportarLista</a></li> 
                  <li><a href='ingresarAspirante.php'>Ingresar Aspirante</a></li>
-                 <li><a href='#'>Listar</a></li>
-                   <li><a href='#'>Modificar</a></li>
-                                      <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+                 <li><a href='#'>Consultar Aspirante</a></li>
+                 <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+
 
               </ul>
      

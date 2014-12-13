@@ -31,6 +31,8 @@ echo "Ha ocurrido un error, trate de nuevo!";
 $consultafoto="update t_usuario set foto_user='$nombreArchivo' where(dni_user='$identificacion')";                 
 if ( mysql_query($consultafoto)){
 echo " <br> Envio correcto de informacion  a la BD";
+echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";		
+
 }else { echo"ERORRRR UPDATE FOTO";}
 /* 
  * To change this license header, choose License Headers in Project Properties.

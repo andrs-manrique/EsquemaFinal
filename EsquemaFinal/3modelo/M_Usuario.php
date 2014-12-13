@@ -190,8 +190,31 @@ public function consultarDatos()
 			{
 				
 	echo"<script language='javascript'> alert('..:: Procesando la Informacion Exitosa ::..');  </script>";
-	echo"<script language='javascript'> location.href=\"../vistas/editarDatos.php?dni=".$row['dni_user']."\"</script>";
+	echo"<script language='javascript'> location.href=\"../vistas/editarDatos.php?dni=".base64_encode($row['dni_user'])."\"</script>";
+        
                         }else {
+                            echo"<script language='javascript'> alert('ERROR CONSULTAR DATOS');  </script>";
+                        }
+		}
+                
+                
+                
+                public function consultarDatosCol()
+		{		
+		$peticion=mysql_query("select * from t_usuario where nom_user='$this->nom_user'");
+			
+			while($fila=mysql_fetch_array($peticion))
+			{  $this->dni=$fila['dni_user'];}
+		
+		 $consulta=mysql_query("select * from t_usuario where (dni_user='$this->dni' )");		
+				
+			if($row=mysql_fetch_array($consulta))
+			{
+				
+	echo"<script language='javascript'> alert('..:: Procesando la Informacion Exitosa ::..');  </script>";
+	echo"<script language='javascript'> location.href=\"../vistas/editarDatosColaborador.php?dni=".$row['dni_user']."\"</script>";
+                        }else {	echo"<script language='javascript'> location.href=\"../vistas/editarDatosColaborador.php?dni=".$row['dni_user']."\"</script>";
+
                             echo"<script language='javascript'> alert('ERROR CONSULTAR DATOS');  </script>";
                         }
 		}

@@ -1,31 +1,18 @@
 ﻿<!doctype html>
 <?php include("header.php");?>
 <?php include("../3modelo/autenticacion.php");?>
-<?php include("head.php");?>	
 <?php include("BarraNavegacionadmin.php");?>	
-			<div id="contenedor">
-			
-			<section>
-				<div id="contieneblog">
-				
-				<aside id="articuloss">
-				  <div>
-					<article  contenteditable="true">
-                                            <font color="white"> 	<h3>Bienvenido AMIGO en esta sección usted puede cambiar sus datos personales</h3></font>
-						<br>
-						<div class="imagenarticuloblog" id="imgblog2"></div>
-					</article>
-				  </div>
+<div aling="center">
+
 				  <?php 
                                   
 				  	include("../3modelo/conexion.php");
 
 				    $identificacion = $_SESSION['identificacion'];
-
-				    $consulta=mysql_query("select *from t_usuario where (dni_user='$identificacion')");		
-				
-	if($row=mysql_fetch_array($consulta))
-						{
+$id_col = $_GET['dni'];
+$consulta=mysql_query("select *from t_usuario where (dni_user='$id_col')");		
+if($row=mysql_fetch_array($consulta))
+		{
 $dni=$row["dni_user"];
 $tipodni_user=$row["tipodni_user"];
 $nom_user=$row["nom_user"];
@@ -52,13 +39,11 @@ $id_estado=$row["id_estado"];
 $id_jornada=$row["id_jornada"];
 $rol_user=$row["rol_user"];
 $id_materia_user=$row["id_materia_user"];
-							
-						}
-
+}
 				  ?>
-				  <div><br>
-				<font color="white">     <h3>DATOS PERSONALES</h3><br>
-                                <p>esta seccion usted puede observar sus datos personales y modificarlos</p><br> </font>
+				  <div>
+	<font color="white">     <h3>DATOS PERSONALES</h3>
+          <p>Modificar Datos COLABORADR</p></font>
 <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
  <table align="center">
   <tr>
@@ -67,9 +52,10 @@ $id_materia_user=$row["id_materia_user"];
   
     <td class="registr">Tipo DNi</td>
     <td class="registr"><input type="text" name="tipodni_user" title="usuario" readonly="readonly" value='<?php echo $tipodni_user; ?>'></td>
-  
-   <td class="registr">Foto</td>
-    <td class="registr"><input type="text" name="foto_user" title="usuario" readonly="readonly" value='<?php echo $tipodni_user; ?>'></td>
+  </tr>
+  <td>
+   <td class="registr"></td>
+    <td class="registr"><input type="hidden" name="foto_user" title="usuario" readonly="readonly" value='<?php echo $tipodni_user; ?>'></td>
   
   </tr>
   
@@ -80,6 +66,7 @@ $id_materia_user=$row["id_materia_user"];
 	 <td class="registr">Apellido</td>
 	 <td class="registr"><input type="text" name="apell_user" title="apellido" value='<?php echo $apell_user;?>'></td>
 	</tr>
+        
          <tr>
 	 <td class="registr">Sexo</td>
 	 <td class="registr"><input type="text" name="sex_user" title="apellido" value='<?php echo $sex_user;?>'></td>
@@ -87,7 +74,8 @@ $id_materia_user=$row["id_materia_user"];
 	<tr>
 	 <td class="registr">Correo</td>
 	 <td class="registr"><input type="text" name="mail_user" title="correo" value='<?php echo $mail_user;?>'></td>
-	
+        </tr>
+        <tr>
 	 <td class="registr">clave</td>
 	 <td class="registr"><input type="text" name="clave_user" title="nac_user" value='<?php echo $clave_user;?>'></td>
 	</tr>      
@@ -158,7 +146,11 @@ $id_materia_user=$row["id_materia_user"];
      <td class="registr"><input type="text" name="id_estado" title="localidad vive" readonly="readonly" value='<?php echo $id_estado;?>'></td>
     <td class="registr">Jornada </td>
      <td class="registr"><input type="text" name="id_jornada" title="localidad vive" readonly="readonly" value='<?php echo $id_jornada;?>'></td>
-   <td class="registr"> Rol usuario</td>
+     </tr>
+         
+         
+     <tr>
+     <td class="registr"> Rol usuario</td>
      <td class="registr"><input type="text" name="rol_user" title="localidad vive" readonly="readonly" value='<?php echo $rol_user;?>'></td>
     <td class="registr">Materia </td>
      <td class="registr"><input type="text" name="id_materia_user" title="localidad vive" readonly="readonly" value='<?php echo $id_materia_user;?>'></td>
@@ -174,9 +166,6 @@ $id_materia_user=$row["id_materia_user"];
     </tr>
 </table>
 </form> 					
-				  </div>
-				</aside>
-				<div style="clear:both"></div>
-				</div>
-			</section>
+</div>
+
 <?php include("footer.php");?>	
