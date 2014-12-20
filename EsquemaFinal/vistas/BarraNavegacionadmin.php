@@ -42,7 +42,7 @@
      <li><a href='#'>Materias</a>
      
       <ul>
-                 <li><a href='#'>Ingresar </a></li>
+                 <li><a href='ingresarMateria.php'>Ingresar </a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
                                      
@@ -53,7 +53,7 @@
      <li><a href='#'>Horario</a>
      
       <ul>
-                 <li><a href='#'>Ingresar </a></li>
+          <li><a href='horario.php'>Ingresar </a></li>
                  <li><a href='#'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
                                     

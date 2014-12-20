@@ -10,9 +10,6 @@ class password {
     private $passwordNueva;
     private $passwordRepeat;
 
-    
-    
-    
     function __construct($idprueba, $usuario, $encrypted_password, $passwordNueva, $passwordRepeat) {
         $this->idprueba = $idprueba;
         $this->usuario = $usuario;
@@ -20,8 +17,6 @@ class password {
         $this->passwordNueva = $passwordNueva;
         $this->passwordRepeat = $passwordRepeat;
     }
-    
-    
 
     public function getIdprueba() {
         return $this->idprueba;
@@ -43,14 +38,17 @@ class password {
         return $this->passwordRepeat;
     }
 
-        
-   
     public function actualizar() {
-
-        $consulta = mysql_query("select*from t_usuario where dni_user='$this->idprueba' and clave_user='$this->encrypted_password'");
-
-        if ($fila = mysql_fetch_array($consulta)) {
-            $passwordNueva = $this->passwordNueva;
+        
+        
+        //busca en la BD el dni and la clave de ese dni 
+ 
+        $consulta = mysql_query("select*from t_usuario where dni_user='$this->idprueba' and clave_user='$this->encrypted_password'"); 
+        
+       // if ($fila=mysql_fetch_array($consulta)) {
+            
+        
+           $passwordNueva = $this->passwordNueva;
             $passwordRepeat = $this->passwordRepeat;
 
             if ($passwordNueva == $passwordRepeat) {
@@ -63,16 +61,23 @@ class password {
 
                 echo"<script language='javascript'> alert('Tu contraseña a sido cambiada');  </script>";
                 echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"   </script>";
-            } else {
+            } 
+            
+            
+            else {
+                
                 echo"<script language='javascript'> alert('Las dos contraseñas nuevas no coinciden'); </script>";
                 echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"   </script>";
             }
-        } 
         
-        /*else {
+         /* else {
             echo"<script language='javascript'> alert('La contraseña no es correcta'); </script>";
-            echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"   </script>";
-        }*/
-    }
+            echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"</script>";
+          }*/
 
+    
+    }
+    
 }
+    
+    ?>

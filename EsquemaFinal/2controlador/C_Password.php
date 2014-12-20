@@ -10,8 +10,8 @@
 
 	//encriptación del atributo password por medio de md5 almacenando en la base de datos el atributo encriptado
 	$encrypted_password=md5($password);
-	$passwordNueva=md5($passwordNueva);
-	$passwordRepeat=md5($passwordRepeat);
+	$passwordNueva=md5($passwordNueva);//nueva
+	$passwordRepeat=md5($passwordRepeat);// repeat  
 
 	$operacion = $_POST["txtoperacion"];
         

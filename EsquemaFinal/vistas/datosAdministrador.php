@@ -56,7 +56,7 @@
                                                                                 
                                                                      <tr>    
 		 <script language="JavaScript">
-                 function consultarDatos(){ document.form.txtoperacion.value = 'consultarDatos';}
+                 function   consultarDatos(){ document.form.txtoperacion.value = 'consultarDatos';}
                               </script>    
 						    <td colspan="2" align="center" class="registr"> 
                       <input type="submit" name="Submit" value="Ver" onClick="consultarDatos()" >
