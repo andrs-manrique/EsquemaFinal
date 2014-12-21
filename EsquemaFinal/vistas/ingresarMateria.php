@@ -30,20 +30,20 @@
                             <article  contenteditable="true">
                                 <p>Bienvenido ADMINISTRADOR,<br> 
                                     Aqui podrá ingresar
-                                   una nueva Materia de Estudio.<p><br>
+                                    una nueva Materia de Estudio.<p><br>
 
                                 <div class="imagenarticuloblog" id="imgblog3"></div>
                             </article>
                         </div>
                         <div><br>
-                            <h3><center>INGRESAR NUEVA MATERIA</center></h3><br>
+                            <h3> <center> INGRESAR NUEVA MATERIA</center></h3><br>
                             <form name="form1" method="post" action="../2controlador/C_Materia.php">
                                 <table align="center">  
 
                                     <tr><td class="registr">Identificacion de la Materia: </td><td class="registr"><input name="id_materia" type="text" title="Identificacion Materia" value="" size="10" maxlength="20" /></td></tr>
                                     <tr><td class="registr">Materia: </td><td class="registr"><input name="Materia" type="text" title="Materia" value="" size="20" maxlength="2048" /></td></tr>
                                     <tr><td class="registr">Objetivos de la Materia: </td><td class="registr"><textarea id="element_3" name="obj_materia" class="element textarea medium"></textarea> 
-                                            </div> </td></tr>
+                                        </td></tr>
                                     <tr><td class="registr">Descripcion de la Materia: </td><td class="registr"><textarea id="element_3" name="desc_materi" class="element textarea medium"></textarea> 
                                             </div> 
                                     <tr><td class="registr" colspan="2" align="center"><input type="submit" name="Submit" value="Guardar Materia" onClick="insertarMateria()" > 
@@ -56,7 +56,7 @@
             </section>
             <div style="clear:both"></div>
             <footer>
-           <?php include("footer.php"); ?>	
+                <?php include("footer.php"); ?>	
             </footer>
         </div>
     </body>

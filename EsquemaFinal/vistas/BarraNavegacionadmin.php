@@ -43,7 +43,7 @@
      
       <ul>
                  <li><a href='ingresarMateria.php'>Ingresar </a></li>
-                 <li><a href='#'>Listar</a></li>
+                 <li><a href='listarMaterias.php'>Listar</a></li>
                    <li><a href='#'>Modificar</a></li>
                                      
 

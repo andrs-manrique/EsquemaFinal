@@ -39,5 +39,15 @@ function __construct($materia_id, $materia_nom, $materia_obj, $materia_des) {
             echo"<script language='javascript'>location.href=\"../vistas/ingresarColaborador.php\"</script>";
         }
     }
+    
+    
+    
+    
+   /* public function modifcarMateria() {
+        
+        $consulta=
+        
+        
+    }*/
 
 }
