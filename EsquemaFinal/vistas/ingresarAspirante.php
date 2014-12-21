@@ -25,7 +25,7 @@
             </tr>
             <tr>
                 <td class="registr">Foto</td>
-                <td class="registr"><input type="text" name="foto_user" title="foto" ></td>
+                <td class="registr"><input type="text" name="foto_user" title="foto" value="estudiante.png"></td>
 
             </tr>
 
