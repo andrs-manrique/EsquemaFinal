@@ -1,10 +1,7 @@
 <?php include('header.php'); ?>
 <?php include("BarraNavegacionadmin.php");?>			
 <?php include("../3modelo/autenticacion.php");?>
-	
-
 <div class="container" align="center">
-    
     <?php include("../3modelo/M_Usuario.php");?>
     <h1> <font color='white'> Registrar Aspirantes </font></h1>
     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
@@ -12,8 +9,6 @@
             <tr>
                 <td class="registr">No. Documento:</td> 
                 <td class="registr"><input type="text" name="dni_user" title="Numero de documento identificacion Nacional"></td>
-
-
                 <td class="registr">Tipo de documento:</td>
                 <td class="registr"><select name="tipodni_user" >
                         <option value="">Seleccione</option>
@@ -26,13 +21,10 @@
             <tr>
                 <td class="registr">Foto</td>
                 <td class="registr"><input type="text" name="foto_user" title="foto" value="estudiante.png"></td>
-
             </tr>
-
             <tr>
                 <td class="registr">Nombre(s):</td>
                 <td class="registr"><input type="text" name="nom_user" title="nombre"></td>
-
                 <td class="registr">Apellido(s):</td>
                 <td class="registr"><input type="text" name="apell_user" title="apellido" ></td>
             </tr>
@@ -56,11 +48,6 @@
             <tr>
                 <td class="registr">Telefono Usuario</td>
                 <td class="registr"><input type="text" name="tel_user" title="Telefono de Contacto" ></td>
-
-
-
-
-
                 <td class="registr">Estado Civil</td>
                 <td class="registr"><select name="civil_user" id="civil_user">
                         <option value="">Seleccione</option>
