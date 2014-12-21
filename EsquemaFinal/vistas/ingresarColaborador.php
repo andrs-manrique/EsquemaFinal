@@ -76,7 +76,7 @@
                 <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?" ></td>
 
                 <td class="registr">Fecha Nacimiento:</td>
-                <td class="registr"><input type="text" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" ></td>
+                <td class="registr"><input type="date" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" ></td>
             </tr>
 
             <tr>
@@ -142,20 +142,20 @@
 
 
             </tr>
-            
+
             <tr><td>
-                
-          <input type="hidden" name="clave_user" title="clavde de Ingreso" value='clave1234'>
-          <input type="hidden" name="localidad_user" title="clavde de Ingreso" value="">
-          <input type="hidden" name="estrato_user" title="clavde de Ingreso" value="">
-          <input type="hidden" name="barrio_user" title="clavde de Ingreso" value="">
-          <input type="hidden" name="archivo_usuario" title="" value="N/A">
-          <input type="hidden" name="responsable_user" title="" value="">
-          <input type="hidden" name="cel_respon_user" title="" value="">
-          <input type="hidden" name="foto_user" title="" value="">
-          <input type="hidden" name="id_colegio" title="" value="">
-           <input type="hidden" name="id_jornada" title="" value="N/A">
-                    
+
+                    <input type="hidden" name="clave_user" title="clavde de Ingreso" value='clave1234'>
+                    <input type="hidden" name="localidad_user" title="clavde de Ingreso" value="">
+                    <input type="hidden" name="estrato_user" title="clavde de Ingreso" value="">
+                    <input type="hidden" name="barrio_user" title="clavde de Ingreso" value="">
+                    <input type="hidden" name="archivo_usuario" title="" value="N/A">
+                    <input type="hidden" name="responsable_user" title="" value="">
+                    <input type="hidden" name="cel_respon_user" title="" value="">
+                    <input type="hidden" name="foto_user" title="" value="">
+                    <input type="hidden" name="id_colegio" title="" value="0">
+                    <input type="hidden" name="id_jornada" title="" value="0">
+
                 </td>
             </tr>   
             <tr>

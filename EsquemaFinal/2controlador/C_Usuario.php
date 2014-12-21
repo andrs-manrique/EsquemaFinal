@@ -45,12 +45,17 @@ $objUsuario = new usuario(
         $nac_user,$localidad_user,$estrato_user,$barrio_user,$archivo_usuario,
         $responsable_user,$cel_respon_user,$foto_user,$fecha_registro_user,$carrera_user,
         $universidad_user,$id_colegio,$id_estado,$id_jornada,$rol_user,$id_materia_user);
-        
+       
+
+
+
 $objUsuario->insertarDatos();
 
+/*if($operacion=="insertarDatos"){
 
+}*/
 
-if($operacion=="verificar")
+/*if($operacion=="verificar")
 {
 	$objUsuario->verificar();
 }
