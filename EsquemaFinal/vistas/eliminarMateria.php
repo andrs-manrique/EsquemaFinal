@@ -1,8 +1,18 @@
+
+<?php include('header.php'); ?>
+<?php include("BarraNavegacionadmin.php"); ?>			
+<?php include("../3modelo/autenticacion.php"); ?>
+<div align="center">
+    
+    <script>//alert("Quiere eliminar este aspirante")</script>
 <?php
+//<?php
+include("../3modelo/conexion.php");
+$identificacion=$_GET['id'];
+mysql_query("delete from t_materia where id_materia='$identificacion'")  or die(mysql_error());
+//header('location:listarMaterias.php');
+?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+</div>		
+    
+<?php include("footer.php"); ?>	
