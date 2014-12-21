@@ -26,3 +26,11 @@ Funciones y metodo: obtenerDatos ; registrarUsuario
 /////////////////////////////////////////////////////////////////////////////////////////
 
  <font color="white"> 
+
+
+//<?php
+include('dbcon.php');
+$id=$_GET['id'];
+mysql_query("delete from tabla_colaborador where id_colaborador='$id'") or die(mysql_error());
+header('location:colabor.php');
+?>
