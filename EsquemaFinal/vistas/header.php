@@ -25,4 +25,6 @@
     <script type="text/javascript" charset="utf-8" language="javascript" src="js/DT_bootstrap.js"></script>
 			 	
 </head>
+<?php include('head.php'); ?>
+
 <body>

@@ -2,7 +2,7 @@
 <div class="span12" align="center" >
 				<div class="header">
 				<div class="pull-left">
-				<img class="stilogo" src="imagenes/Banner1.png"> 
+                                    <img class="stilogo" src="../img/head.jpg"> 
 				</div>
 				</div>
 			
