@@ -95,7 +95,7 @@ while ($fila = mysql_fetch_array($consulta)) {
                                 <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>' disabled></td>
 
                                 <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>'></td>
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>' disabled></td>
 
     <!--  <td class="registr">clave</td>-->
                                 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>

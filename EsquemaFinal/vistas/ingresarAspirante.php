@@ -8,7 +8,7 @@
     <?php include("../3modelo/M_Usuario.php");?>
     <h1> <font color='white'> Registrar Aspirantes </font></h1>
     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
-        <table align="center" border="1">
+        <table align="center" border="0">
             <tr>
                 <td class="registr">No. Documento:</td> 
                 <td class="registr"><input type="text" name="dni_user" title="Numero de documento identificacion Nacional"></td>
@@ -129,18 +129,14 @@
 
             </tr>
 
-            <tr>
+            
 
-                <td class="registr">  </td>
-                <td class="registr"><input type="hidden" name="fecha_registro_user" title="Fecha de registro "></td>
-
-                <td class="registr">Pregrado Estudia</td>
-                <td class="registr"><input type="text" name="carrera_user" title=" Carrera"  ></td>
-                <td class="registr">Universidad </td>
-                <td class="registr"><input type="text" name="universidad_user" title="Universidad " ></td>
+            <input type="hidden" name="fecha_registro_user" title="Fecha de registro ">
+            <input type="hidden" name="carrera_user" title=" Carrera"  >
+            <input type="hidden" name="universidad_user" title="Universidad " >
 
 
-            </tr>
+            
             <tr>
 
                 <td class="registr">Tipo Colegio</td>
@@ -187,7 +183,8 @@
 
 
                 </td>
-
+            </tr>
+            <tr>
                 <td class="registr">Materia </td>
                 <td class="registr">
                     <select name="id_materia_user" id="id_colegio">

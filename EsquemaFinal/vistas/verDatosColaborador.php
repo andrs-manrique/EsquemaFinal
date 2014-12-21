@@ -79,9 +79,25 @@
                             </tr>
 
                             <tr>
+                                <td class="registr">Pregrado:</td>
+                                <td class="registr"><input type="text" name="carrera_user" title="¿QUE ESTUDIA?"  value='<?php echo $carrera_user; ?>'disabled></td>
+                                <td class="registr">Universidad:</td>
+                                <td class="registr"><input type="text" name="universidad_user" title="¿QUE uNIVERSIDAD?" value='<?php echo $universidad_user; ?>' disabled></td>
+                            </tr>
+                            <tr>
+                                <td class="registr">Contacto:</td>
+                                <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>' disabled></td>
+
+                                <td class="registr">Rol:</td>
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>' disabled></td>
+
+    <!--  <td class="registr">clave</td>-->
+                                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
+                            </tr>
+                            <tr>
 
                                 <td class="registr">Fecha Registro</td>
-                                <td class="registr"><input type="text" name="fecha_registro_user" title="localidad vive"  value='<?php echo $fecha_registro_user; ?>'disabled></td>
+                                <td class="registr"><input type="text" name="fecha_registro_user" title="Fecha de Registro"  value='<?php echo $fecha_registro_user; ?>'disabled></td>
 
 
                                 <td class="registr">Imagen:</td>
@@ -89,27 +105,18 @@
 
                             </tr>
                             <tr>
-                                <td class="registr">Pregrado:</td>
-                                <td class="registr"><input type="text" name="carrera_user" title="¿QUE ESTUDIA?"  value='<?php echo $carrera_user; ?>'diabled></td>
-                                <td class="registr">Universidad:</td>
-                                <td class="registr"><input type="text" name="universidad_user" title="¿QUE uNIVERSIDAD?" value='<?php echo $universidad_user; ?> ' disabled></td>
+                                <td class="registr">Lugar Nacimiento:</td> 
+                                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'disabled></td>
+
+
+                                <td class="registr">Fecha Nacimiento:</td> 
+                                <td class="registr"><input type="text" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>' disabled></td>
                             </tr>
                             <tr>
-                                <td class="registr">Contacto:</td>
-                                <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>'></td>
 
-                                <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>'></td>
 
-    <!--  <td class="registr">clave</td>-->
-                                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
-
-                            <tr>
-                          <!-- <td class="registr">Lugar Nacimiento:</td> -->
-                                <td class="registr"><input type="hidden" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'></td>
-
-<!--  <td class="registr">Fecha Nacimiento:</td> -->
-                                <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'></td>
+                                <td class="registr">Estado  Civil:</td>
+                                <td class="registr"><input type="text" name="civil_user" title="Estado Civil"  value='<?php echo $civil_user; ?>' disabled=""></td>
                             </tr>
 
                             <tr>
@@ -158,7 +165,7 @@
 
                             </tr>
 
-                                
+
                         </table>
                     </form> 					
                 </div>
