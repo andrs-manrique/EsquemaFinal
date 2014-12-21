@@ -46,19 +46,21 @@ $objUsuario = new usuario(
         $responsable_user,$cel_respon_user,$foto_user,$fecha_registro_user,$carrera_user,
         $universidad_user,$id_colegio,$id_estado,$id_jornada,$rol_user,$id_materia_user);
        
+if($operacion=="verificar")
+{
+	$objUsuario->verificar();
+}
+if($operacion=="consultarDatos")
+{
+	$objUsuario->consultarDatos();
+}
 
-
-
-$objUsuario->insertarDatos();
 
 /*if($operacion=="insertarDatos"){
 
 }*/
 
-/*if($operacion=="verificar")
-{
-	$objUsuario->verificar();
-}
+/*
 if($operacion=="consultarDatos")
 {
 	$objUsuario->consultarDatos();
