@@ -53,9 +53,9 @@
      <li><a href='#'>Horario</a>
      
       <ul>
-          <li><a href='horario.php'>Ingresar </a></li>
-                 <li><a href='#'>Listar</a></li>
-                   <li><a href='#'>Modificar</a></li>
+          <li><a href='horarioM.php'>Mañana </a></li>
+                 <li><a href='horario.php'>Tarde</a></li>
+                   <li><a href='#'></a></li>
                                     
 
               </ul>
