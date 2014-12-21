@@ -81,8 +81,8 @@
 
             <tr>
 
-                <td class="registr">Carrrera</td>
-                <td class="registr"><input type="text" name="fecha_registro_user" title="Carrrera "></td>
+                <td class="registr">Carrera</td>
+                <td class="registr"><input type="text" name="carrera_user" title="Carrrera "></td>
 
 
                 <td class="registr">Universidad </td>
@@ -142,13 +142,29 @@
 
 
             </tr>
+            
+            <tr><td>
+                
+          <input type="hidden" name="clave_user" title="clavde de Ingreso" value='clave1234'>
+          <input type="hidden" name="localidad_user" title="clavde de Ingreso" value="">
+          <input type="hidden" name="estrato_user" title="clavde de Ingreso" value="">
+          <input type="hidden" name="barrio_user" title="clavde de Ingreso" value="">
+          <input type="hidden" name="archivo_usuario" title="" value="N/A">
+          <input type="hidden" name="responsable_user" title="" value="">
+          <input type="hidden" name="cel_respon_user" title="" value="">
+          <input type="hidden" name="foto_user" title="" value="">
+          <input type="hidden" name="id_colegio" title="" value="">
+           <input type="hidden" name="id_jornada" title="" value="N/A">
+                    
+                </td>
+            </tr>   
             <tr>
             <script language="JavaScript">function insertarDatos() {
-                    document.form1.txtoperacion.value = 'Insertar Datos';
+                    document.form1.txtoperacion.value = 'insertarDatos';
                 }
             </script>  
             <td colspan="6" align="center" class="registr">
-                <input type="submit" name="Submit" value="insertarDatos" onClick="insertar()" > 
+                <input type="submit" name="Submit" value="Registrar la informacion" onClick="insertar()" > 
                 <input type='hidden' name='txtoperacion' value='des'></td>
             </tr>			   
 

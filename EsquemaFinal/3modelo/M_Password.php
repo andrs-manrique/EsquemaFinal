@@ -57,7 +57,7 @@ class password {
 
                 $identificacion = $this->idprueba;
 
-                mysql_query("UPDATE t_usuario SET clave_user='$nuevoPassword' WHERE usuario_codigo='$this->idprueba' ");
+                mysql_query("UPDATE t_usuario SET clave_user='$nuevoPassword' WHERE dni_user='$this->idprueba' ");
 
                 echo"<script language='javascript'> alert('Tu contraseña a sido cambiada');  </script>";
                 echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"   </script>";

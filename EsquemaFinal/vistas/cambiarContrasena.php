@@ -1,29 +1,11 @@
 <!doctype html>
-<?//php include('header.php'); ?>
+<?php include('header.php'); ?>
 <?php include("BarraNavegacionadmin.php");?>
-
-
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="../js/jquery.js"></script>
-
-    </head>
-    <body>
         <?php include("../3modelo/autenticacion.php"); ?>
         <div id="contenedor">
-            <header>
-                <div id="titulo">
-                    <div id="logo">
-                    </div>
-
-                    <h2>Aspirantes UNAl</h2>
-                </div>
-                <div style="clear:both;"></div>
-            </header>
             <section>
                 <div id="contieneblog">
-                    <?php include("header.php"); ?>
+                    <?php //include("header.php"); ?>
 
                     <aside id="articuloss">
                         <div>
