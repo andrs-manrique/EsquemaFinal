@@ -37,12 +37,12 @@ $user_query2=mysql_query("select *FROM t_usuario where rol_user='2' ORDER BY dni
                                     <td><?php echo $row['sex_user']; ?></td><td>
                                         <?php echo $row['tel_user']; ?></td>
                                     <td><?php echo $row['id_estado']; ?></td>
-                                     <td><?php echo"<a href='info_col.php?id=$id'>Ver Más</a>"; ?></td>
+                                     <td><?php echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>"; ?></td>
                             <td width="100">
 
    <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
     href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='editarDatos.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');  ?>
+    <?php echo"<a href='modif_colaborador.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');  ?>
 
                                 <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                    href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
@@ -51,7 +51,7 @@ $user_query2=mysql_query("select *FROM t_usuario where rol_user='2' ORDER BY dni
                             
                               <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                    href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='Delete.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');  ?>
+    <?php echo"<a href='Borrar_col.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');  ?>
                             
                             </td>
 

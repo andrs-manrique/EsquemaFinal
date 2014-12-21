@@ -54,7 +54,10 @@ if($operacion=="consultarDatos")
 {
 	$objUsuario->consultarDatos();
 }
-
+if($operacion=="actualizar")
+{
+	$objUsuario->modificar();
+}
 
 /*if($operacion=="insertarDatos"){
 

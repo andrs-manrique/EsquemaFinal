@@ -152,7 +152,7 @@
                     <input type="hidden" name="archivo_usuario" title="" value="N/A">
                     <input type="hidden" name="responsable_user" title="" value="">
                     <input type="hidden" name="cel_respon_user" title="" value="">
-                    <input type="hidden" name="foto_user" title="" value="">
+                    <input type="hidden" name="foto_user" title="" value="default.jpg">
                     <input type="hidden" name="id_colegio" title="" value="0">
                     <input type="hidden" name="id_jornada" title="" value="0">
 
