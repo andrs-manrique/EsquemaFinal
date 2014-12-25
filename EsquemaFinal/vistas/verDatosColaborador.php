@@ -117,6 +117,11 @@
 
                                 <td class="registr">Estado  Civil:</td>
                                 <td class="registr"><input type="text" name="civil_user" title="Estado Civil"  value='<?php echo $civil_user; ?>' disabled=""></td>
+                         
+                                <td class="registr"> Estado</td>
+                                <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado; ?>' disabled></td>
+
+                            
                             </tr>
 
                             <tr>
@@ -147,8 +152,6 @@
 
 
                             <tr>
-                                <td class="registr"></td>
-                                <td class="registr"><input type="hidden" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado; ?>'></td>
 
 <!--  <td class="registr">Tipo Colegio</td> -->
                                 <td class="registr"><input type="hidden" name="id_colegio" title="¿Publico o Privado?"  value='<?php echo $id_colegio; ?>'></td>

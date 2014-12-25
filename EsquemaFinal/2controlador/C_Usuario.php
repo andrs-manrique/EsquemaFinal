@@ -6,6 +6,8 @@ $FechaActual= $fechahoy["mday"] ."-".$fechahoy["mon"]."-".$fechahoy["year"];
 $fecha_registro_user=$fechahoy["year"]."-".$fechahoy["mon"]."-".$fechahoy["mday"];
 
 echo $FechaActual;
+
+
 $dni=$_POST["dni_user"];
 $tipodni_user=$_POST["tipodni_user"];
 $nom_user=$_POST["nom_user"];
@@ -45,19 +47,33 @@ $objUsuario = new usuario(
         $nac_user,$localidad_user,$estrato_user,$barrio_user,$archivo_usuario,
         $responsable_user,$cel_respon_user,$foto_user,$fecha_registro_user,$carrera_user,
         $universidad_user,$id_colegio,$id_estado,$id_jornada,$rol_user,$id_materia_user);
-       
-if($operacion=="verificar")
-{
-	$objUsuario->verificar();
+    
+ //$objUsuario->insertarDatos();
+switch ($operacion) {
+    case "verificar":
+       $objUsuario->verificar();
+        break;
+    case "consultarDatos":
+       	$objUsuario->consultarDatos();
+        break;
+    case "actualizar":
+       	$objUsuario->modificar();
+        break;
+    
+    case "desac":
+       	$objUsuario->modificar();
+        break;
+    
+    
+    case "insertarDatos":
+        echo 'insertarDatos';
+        	$objUsuario->insertarDatos();
+        break;
+
 }
-if($operacion=="consultarDatos")
-{
-	$objUsuario->consultarDatos();
-}
-if($operacion=="actualizar")
-{
-	$objUsuario->modificar();
-}
+
+
+
 
 /*if($operacion=="insertarDatos"){
 

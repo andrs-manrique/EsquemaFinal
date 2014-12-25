@@ -1,5 +1,4 @@
-  
-	
+  		
 <div id='cssmenu' align="center">
     <ul>
         <li class='active'><a href='administrador.php'>Inicio</a></li>
@@ -49,11 +48,32 @@
             </ul>
 
         </li>
+        <li><a href='#'>Horario</a>
 
+            <ul>
+                <li><a href='horarioM.php'>Mañana </a></li>
+                <li><a href='horario.php'>Tarde</a></li>                                    
+
+            </ul>
+
+        </li>
         <li><a href='#'>Novedades</a>
 
             <ul>
-                <li><a href='listaNovedades.php'>Listar</a></li>
+                <li><a href='#'>Ingresar </a></li>
+                <li><a href='#'>Listar</a></li>
+                <li><a href='#'>Modificar</a></li>
+            </ul>
+
+        </li>
+        <li><a href='#'>CASO DE USO</a>
+
+            <ul>
+                <li><a href='#'>Ingresar </a></li>
+                <li><a href='#'>Listar</a></li>
+                <li><a href='#'>Modificar</a></li>
+                <li><a href='#'>Listar </a></li>
+
             </ul>
 
         </li>

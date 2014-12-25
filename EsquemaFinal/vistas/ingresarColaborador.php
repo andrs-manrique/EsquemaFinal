@@ -149,7 +149,7 @@
                     <input type="hidden" name="localidad_user" title="clavde de Ingreso" value="">
                     <input type="hidden" name="estrato_user" title="clavde de Ingreso" value="">
                     <input type="hidden" name="barrio_user" title="clavde de Ingreso" value="">
-                    <input type="hidden" name="archivo_usuario" title="" value="N/A">
+                    <input type="hidden" name="archivo_usuario" title="" value="">
                     <input type="hidden" name="responsable_user" title="" value="">
                     <input type="hidden" name="cel_respon_user" title="" value="">
                     <input type="hidden" name="foto_user" title="" value="profesor.png">
@@ -159,12 +159,12 @@
                 </td>
             </tr>   
             <tr>
-            <script language="JavaScript">function insertarDatos() {
-                    document.form1.txtoperacion.value = 'insertarDatos';
+            <script language="JavaScript">function insertarDatos(){
+                    document.form1.txtoperacion.value= 'insertarDatos';
                 }
             </script>  
             <td colspan="6" align="center" class="registr">
-                <input type="submit" name="Submit" value="Registrar la informacion" onClick="insertar()" > 
+                <input type="submit" name="Submit" value="Registrar la informacion" onClick=""> 
                 <input type='hidden' name='txtoperacion' value='des'></td>
             </tr>			   
 

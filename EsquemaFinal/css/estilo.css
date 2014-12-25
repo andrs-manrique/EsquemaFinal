@@ -32,7 +32,7 @@ body{
 #cssmenu {
   background: #333; 
   border-bottom: 1px solid #1b9bff;
-  font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+  font-family: 'Times New Roman', Tahoma, Arial, sans-serif;
   font-size: 12px; 
 }
 
@@ -49,6 +49,7 @@ body{
     background: #333;
     color: #CBCBCB;
     padding: 0 20px; 
+    width: 150px; //Centrar Plabras
 }
 #cssmenu ul { text-transform: uppercase; }
 

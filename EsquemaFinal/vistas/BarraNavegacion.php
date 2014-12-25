@@ -1,7 +1,7 @@
   		
 	<?php// include('tooltip.php'); ?>	
 
-
+<center>
 <div id='cssmenu'>
   <ul>
      <li class='active'><a href='../index.php'>Inicio</a></li>

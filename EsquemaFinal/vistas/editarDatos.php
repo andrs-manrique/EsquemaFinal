@@ -171,7 +171,7 @@ while($fila=mysql_fetch_array($consulta))
   <script language="JavaScript">function actualizar(){ document.form.txtoperacion.value = 'actualizar';}</script>    
   <td colspan="4" align="center" class="registr"> 
       <input type="submit" name="Submit" value="Modificar Información" onClick="actualizar()" >
-    <input type='hidden' name='txtoperacion' value='des'>
+    <input type='hidden' name='txtoperacion' value=''>
     </td></td>
     </tr>
 </table>
