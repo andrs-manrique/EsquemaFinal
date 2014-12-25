@@ -159,10 +159,7 @@
                 </td>
             </tr>   
             <tr>
-            <script language="JavaScript">function insertarDatos(){
-                    document.form1.txtoperacion.value= 'insertarDatos';
-                }
-            </script>  
+            
             <td colspan="6" align="center" class="registr">
                 <input type="submit" name="Submit" value="Registrar la informacion" onClick=""> 
                 <input type='hidden' name='txtoperacion' value='des'></td>
