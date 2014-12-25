@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>ideaa</title>
-    	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    	<meta http-equiv="Content-type" content="text/html;  charset=UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap FORMA Y LETRA DE LA TABLA-->
@@ -24,6 +24,6 @@
 
 
 </head>
-<?php  include("../3modelo/conexion.php");
- ?>
+<?php  include("../3modelo/conexion.php");?>
+
 <body>

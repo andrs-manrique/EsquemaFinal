@@ -22,7 +22,7 @@
             <ul>
                 <li><a href='ingresarColaborador.php'>Ingresar Colaborador</a></li>
                 <!--<li><a href='Consultar_Colaborador.php'>Consultar Colaborador</a></li> -->
-                <li><a href='ListasColaborador.php'>Listar Colaborador</a></li>
+                <li><a href='ListarColaborador.php'>Listar Colaborador</a></li>
             </ul>
 
 
@@ -50,12 +50,7 @@
 
         </li>
 
-        <li><a href='#'>Novedades</a>
-
-            <ul>
-                <li><a href='listaNovedades.php'>Listar</a></li>
-            </ul>
-
+        <li><a href='listaNovedades.php'>Novedades</a>
         </li>
         <li><a href='../3modelo/cerrar.php'>Cerrar</a></li>
     </ul>

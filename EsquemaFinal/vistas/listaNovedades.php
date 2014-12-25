@@ -15,40 +15,42 @@
                         </div>
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>Fecha Novedad</th>
                                 <th>Titulo</th>                                 
                                 <th>Desc</th>     
-                                <th>Url</th>                             
+                                <th>Url</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
 
                             <?php
-                            $user_query2 = mysql_query("select *FROM t_novedad  id ASC") or die(mysql_error());
+                            $user_query2 = mysql_query("select * FROM t_novedad  ORDER BY Fecha_Novedad ASC") or die(mysql_error());
                             while ($row = mysql_fetch_array($user_query2)) {
                                 $id = $row['id'];
                                 ?>
                                 <tr class="del<?php echo $id ?>">
-                                    <td><?php echo $row['id']; ?></td> 
-                                    <td><?php echo $row['Fecha_Novedad']; ?></td> 
-                                    <td><?php echo $row['Titulo_Novedad']; ?></td>
-                                    <td><?php echo"<a href='ContenidoNov.php?id=$id'>Ver Más</a>"; ?></td>
-                                     <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
-                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='modif_novedad.php?id=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
-                                        <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                    <td><?php echo $row['Fecha_novedad']; ?></td> 
+                                    <td><?php echo $row['Titulo_Novedad']; ?></td> 
+                                    <td><?php echo $row['Descripcion_novedad']; ?></td>
+                                    <td><?php echo"<a href='ContenidoNov.php?id=$id'>Ver</a>"; ?></td>
+                                    <td> 
+                                    <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                            href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
+                                            <?php echo"<a href='modif_novedad.php?id=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
+                                    <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                            href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='borrar_novedad.php?id=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   ?>
+                                           <?php echo"<a href='borrar_novedad.php?id=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   ?>
 
                                     </td>
 
 
 
-    <?php //include('toolttip_edit_delete.php');   ?>
+                                    <?php //include('toolttip_edit_delete.php');   ?>
                                     <!-- Modal edit user -->
 
                                 </tr>
-<?php } ?>
+                            <?php } ?>
 
                         </tbody>
                     </table>
