@@ -30,9 +30,10 @@
                                     <tr><td class="registr">Imagen </td>
                                         <td class="registr"><input name="Img_novedad" type="text" title=" " value="" size="20" maxlength="2048" /></td></tr>
                                     <tr><td class="registr">descr </td>
-                                        <td class="registr"><textarea id="element_3" name="desc_novedad" class="element textarea medium" style="width: 400px; height: 50px;"></textarea> 
+                                        <td class="registr"><textarea id="element_3" name="desc_novedad" style="width: 400px; height: 50px;"></textarea> 
                                         </td></tr>
-                                    <tr><td class="registr">Contenido</td><td class="registr"><textarea id="element_3" name="conte_novedad" class="element textarea medium" style="width: 800px; height: 150px;  resize: vertical;"></textarea> 
+                                    <tr><td class="registr">Contenido</td>
+                                        <td class="registr"><textarea id="element_3" name="conte_novedad" class="element textarea medium" style="width: 800px; height: 150px;  resize: vertical;"></textarea> 
                                             </div> 
 
                                     <tr>

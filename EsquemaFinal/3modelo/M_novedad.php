@@ -23,8 +23,12 @@ class novedad {
 
 
 public function agregarNovedad() {
-        $consulta = "insert into t_novedad (id,Fecha_novedad,Titulo_Novedad,Imagen_novedad,Descripcion_novedad,Contenido_Novedad) VALUES (values ('$this->id_novedad','$this->fecha_novedad','$this->titulo_novedad','$this->imagen_novedad','$this->desc_novedad','$this->contenido_novedad')";
+    
+                echo"confirm('¿Estas seguro de Desactivar el Colaborador?')";
+
+        $consulta = "insert into t_novedad (id,Fecha_novedad,Titulo_Novedad,Imagen_novedad,Descripcion_novedad,Contenido_Novedad) VALUES('$this->id_novedad','$this->fecha_novedad','$this->titulo_novedad','$this->imagen_novedad','$this->desc_novedad','$this->contenido_novedad')";
         if (mysql_query($consulta)) {
+            
             echo"<script language='javascript'> alert('El registro es un EXITO ');  </script>";
             echo"<script language='javascript'>location.href=\"../vistas/listaNovedades.php\"   </script>";
         } else {

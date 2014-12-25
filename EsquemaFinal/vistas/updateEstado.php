@@ -33,9 +33,12 @@
 					 <input type="hidden" name="rol_user"  readonly="readonly" value="">
                                          <input type="hidden" name="id_materia_user"  readonly="readonly" value="">
                                          
-                   <tr>   
-						    <script language="JavaScript">function desac(){if (confirm('¿Estas seguro de Desactivar el Colaborador?')){ document.form.txtoperacion.value = 'desac';} else {} } </script>  
-						    <td class="registr" colspan="2" align="center"><input type="submit" name="Submit" value="Desactivar" onClick="desac()" ><input type='hidden' name='txtoperacion' value='des'></td>
+                   <tr>  			    
+                   <script language="JavaScript">
+                       function desac(){if (confirm('¿Estas seguro de Desactivar el Colaborador?')){ document.form.txtoperacion.value = 'desac';} 
+                           else {} } </script>  
+						    <td class="registr" colspan="2" align="center">
+                                                        <input type="submit" name="Submit" value="Desactivar" onClick="desac()" ><input type='hidden' name='txtoperacion' value='des'></td>
 						    </tr>
 						</table>        
 					</form>		                       
