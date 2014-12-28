@@ -2,6 +2,7 @@
 <?php include("./BarrNavCol.php"); ?>			
 <?php include("../3modelo/autenticacion.php"); ?>
 <br><br><br>
+<center>
 <div aling="center">
     <div class="container">
         <div class="margin-top">
@@ -34,31 +35,7 @@
                                     <td><?php echo $row['id_materia']; ?></td> 
                                     <td><?php echo $row['nom_materia']; ?></td> 
                                     <td><?php echo $row['objetivo_materia']; ?></td>
-                                    <td><?php echo $row['desc_materia']; ?></td><td>
-
-
-                                    <td><?php //echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>";  ?></td>
-                                    <td width="100">
-
-                                        <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
-                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-                                           <?php echo"<a href='modif_colaborador.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
-
-                                        <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                           href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-                                           <?php echo"<a href='updateEstado.php?dni=$id'>   <img src='../img/bloqueado.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   ?>
-
-
-                                        <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                           href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-                                           <?php echo"<a href='eliminarMateria.php?id=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   ?>
-
-                                    </td>
-
-
-
-                                    <?php //include('toolttip_edit_delete.php');   ?>
-                                    <!-- Modal edit user -->
+                                    <td><?php echo $row['desc_materia']; ?></td>
 
                                 </tr>
                             <?php } ?>
@@ -70,4 +47,5 @@
         </div>
     </div>
 </div>
-<?php include('footer.php') ?>
+</center>
+    <?php include('footer.php') ?>

@@ -54,10 +54,10 @@
                                                                                 
                                                                      <tr>    
 		 <script language="JavaScript">
-                 function   consultarDatos(){ document.form.txtoperacion.value = 'consultarDatos';}
+                 function   consultarDatosCol(){ document.form.txtoperacion.value = 'consultarDatosCol';}
                               </script>    
 						    <td colspan="2" align="center" class="registr"> 
-                      <input type="submit" name="Submit" value="Ver" onClick="consultarDatos()" >
+                      <input type="submit" name="Submit" value="Ver" onClick="consultarDatosCol()" >
 						    <input type='hidden' name='txtoperacion' value='des'>
 						    </td></td>
 						    </tr>

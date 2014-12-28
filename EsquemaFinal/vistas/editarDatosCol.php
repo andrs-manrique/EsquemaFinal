@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <?php include("header.php");?>
 <?php include("../3modelo/autenticacion.php");?>
-<?php include("BarraNavegacionadmin.php");?>					
+<?php include("./BarrNavCol.php");?>					
  <?php 
  include("../3modelo/conexion.php");
  $identificacion = $_SESSION['identificacion'];

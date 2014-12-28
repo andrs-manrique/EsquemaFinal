@@ -4,9 +4,7 @@
 <div align="center">
     <section>
         <div id="contieneblog">
-
             <aside id="articuloss">
-
                 <?php
                 include("../3modelo/conexion.php");
                 $identificacion = $_SESSION['identificacion'];

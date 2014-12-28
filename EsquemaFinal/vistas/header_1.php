@@ -3,6 +3,8 @@
 
 <html>
 <head>
+    
+    
     <title>ideaa</title>
     	<meta http-equiv="Content-type" content="text/html;  charset=UTF-8" />
 
@@ -21,6 +23,10 @@
 	 <script type="text/javascript" charset="utf-8" language="javascript" src="../js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8" language="javascript" src="../js/DT_bootstrap.js"></script>
 <script type='text/javascript' src='../scripts/diapo.js'></script> 
+
+
+
+
 
 
 </head>

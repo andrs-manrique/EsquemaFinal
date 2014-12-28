@@ -158,12 +158,13 @@
 
                 </td>
             </tr>   
-            <tr>
-            
-            <td colspan="6" align="center" class="registr">
-                <input type="submit" name="Submit" value="Registrar la informacion" onClick=""> 
-                <input type='hidden' name='txtoperacion' value='des'></td>
-            </tr>			   
+    <tr><br>
+  <script language="JavaScript">function insertarDatos(){ document.form.txtoperacion.value = 'insertarDatos';}</script>    
+  <td colspan="4" align="center" class="registr"> 
+      <input type="submit" name="Submit" value="Insertar Información" onClick="insertarDatos()" >
+    <input type='hidden' name='txtoperacion' value=''>
+    </td></td>
+    </tr>			   
 
         </table>
     </form>

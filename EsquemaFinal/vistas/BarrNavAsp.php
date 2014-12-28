@@ -7,9 +7,9 @@
             <ul>
                 <li class='has-sub '><a href='#'>Información</a>
                     <ul>
-                        <li><a href='verDatos.php'>Ver Información</a></li>
+                        <li><a href='verDatosAspirante.php'>Ver Información</a></li>
                         <li><a href='#.php'>Modificar Información</a></li>
-                        <li><a href='cambiarContrasena.php'>Modificar Clave</a></li>
+                        <li><a href='cambiarContrasenasp.php'>Modificar Clave</a></li>
                     </ul>
                 </li>
             </ul>

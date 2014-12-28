@@ -7,9 +7,9 @@
             <ul>
                 <li class='has-sub '><a href='#'>Información</a>
                     <ul>
-                        <li><a href='verDatos.php'>Ver Información</a></li>
+                        <li><a href='verDatosColaborador.php'>Ver Información</a></li>
                         <li><a href='datosColaborador.php'>Modificar Información</a></li>
-                        <li><a href='cambiarContrasena.php'>Modificar Clave</a></li>
+                        <li><a href='cambiarContrasenaCol.php'>Modificar Clave</a></li>
                     </ul>
                 </li>
             </ul>
@@ -29,7 +29,7 @@
         <li><a href='#'>Aspirantes</a>
 
             <ul>
-                <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+                <li><a href='listarAspirantes.php'>Listar Aspirantes</a></li>
 
 
             </ul>
@@ -38,7 +38,7 @@
         <li><a href='#'>Materias</a>
 
             <ul>
-                <li><a href='listarMaterias.php'>Listar</a></li>
+                <li><a href='listarMaterias1.php'>Listar</a></li>
 
 
             </ul>
@@ -56,7 +56,7 @@
         <li><a href='#'>Novedades</a>
 
             <ul>
-                <li><a href='#'>Listar</a></li>
+                <li><a href='listaNovedades1.php'>Listar</a></li>
             </ul>
 
         </li>

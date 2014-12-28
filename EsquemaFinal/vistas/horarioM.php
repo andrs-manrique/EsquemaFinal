@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php"); ?>	
+<?php include("./BarrNavCol.php"); ?>	
 <?php include("../3modelo/autenticacion.php"); ?>
 
 <div aling="center">
