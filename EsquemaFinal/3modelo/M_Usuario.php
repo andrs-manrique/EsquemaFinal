@@ -170,15 +170,15 @@ class usuario {
 
     public function verificar() {
         session_start();
-        $consulta = mysql_query("select*from t_usuario where dni_user='$this->dni' and clave_user='$this->clave_user' and id_estado=1");
+        $consulta = mysql_query("select*from t_usuario where dni_user='$this->dni' and clave_user='$this->clave_user' and id_estado='1'");
 
         if ($fila = mysql_fetch_array($consulta)) {
             $_SESSION['autenticado'] = "SI";
             $_SESSION['identificacion'] = $fila['dni_user'];
             if ($fila['rol_user'] == '2') {
                 header("location: ../vistas/colaborador.php");
-            } else if ($fila['rol_user'] == '3') {
-                header("location: ../vistas/estudiante.php");
+            } else if ($fila['rol_user'] == '3' ) {
+                header("location: ../vistas/aspirante.php");
             } else if ($fila['rol_user'] == '1') {
 
                 echo"<script language='javascript'> alert('ADMINISTRADOR');  </script>";
@@ -188,6 +188,7 @@ class usuario {
                 echo"<script language='javascript'> alert('Error de Inicio');  </script>";
             }
         } else {
+            
             header("location: ../index.php");
         }
     }

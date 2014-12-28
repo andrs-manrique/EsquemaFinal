@@ -1,38 +1,29 @@
+<?php include('header.php'); ?>
+<?php include("BarraNavegacionadmin.php");?>			
+<?php include("../3modelo/autenticacion.php");?>
+		<div>
+				
+				  <ul>
+                                      <font color="white">  <li><a>Aspirante</li> </font>
+				   <li><a><?php
+				   //session_start();
+ include("../3modelo/conexion.php");
+$identificacion = $_SESSION['identificacion'];
+                             
+		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
+                
+						while($fila=mysql_fetch_array($consulta))
+						{
+                                                   
+							echo "<h1> <font color='white'>Bienvenido:  ".$fila['nom_user']." ".$fila['apell_user']."</font></h1>";
+						}
+				   ?>
+				   </a></li>
+				   <li><a href="datosAdministrador.php">Datos personales</a></li>
+				   <li><a href="cambiarContrasena.php">Cambiar Contraseña</a></li>
+				  </ul>
+				 
+				</div><br>
+                                		<?php include("footer.php");?>		
 
-<!doctype html>
-<html lang=''>
-<head>
-   <meta charset='utf-8'>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="styles.css">
-   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-   <script src="script.js"></script>
-   <title>Aspirante</title>
-</head>
-<body>
-
-<div id='cssmenu'>
-<ul>
-   <li class='active'><a href='#'><span>Informacion Personal</span></a></li>
-   <li class='has-sub'><a href='#'><span>Colaboradores</span></a>
-      <ul>
-         <li><a href='#'><span>Novedades</span></a></li>
-         <li><a href='#'><span>Horarios</span></a></li>
-         <li class='last'><a href='#'><span>Material</span></a></li>
-      </ul>
-   </li>
-   <li class='has-sub'><a href='#'><span>Novedades</span></a>
-      <ul>
-         <li><a href='#'><span></span></a></li>
-         <li class='last'><a href='#'><span>Contact</span></a></li>
-      </ul>
-   </li>
-   <li class='last'><a href='#'><span>Cerrar sesion</span></a></li>
-</ul>
-</div>
-
-</body>
-<html>
-    
- 
+	 
