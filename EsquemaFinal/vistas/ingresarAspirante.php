@@ -203,16 +203,13 @@
 
 
             </tr>
-            <tr>
-            <script language="JavaScript">function insertarDatos() {
-                    document.form1.txtoperacion.value = 'insertarDatos';
-                }
-            </script>  
-            <td colspan="6" align="center" class="registr">
-                <input type="submit" name="Submit" value="insertarDatos" onClick="insertar()" > 
-                <input type='hidden' name='txtoperacion' value='des'></td>
-            </tr>			   
-
+<tr><br>
+  <script language="JavaScript">function insertarDatos(){ document.form.txtoperacion.value = 'insertarDatos';}</script>    
+  <td colspan="4" align="center" class="registr"> 
+      <input type="submit" name="Submit" value="Insertar Información" onClick="insertarDatos()" >
+    <input type='hidden' name='txtoperacion' value=''>
+    </td></td>
+    </tr>
         </table>
     </form>
     <br><br>
