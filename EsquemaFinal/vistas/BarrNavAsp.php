@@ -1,14 +1,14 @@
   		
 <div id='cssmenu' align="center">
     <ul>
-        <li class='active'><a href='#.php'>Inicio</a></li>
+        <li class='active'><a href='aspirante.php'>Inicio</a></li>
 
         <li class='has-sub '><a href='datosAdministrador.php'>Mis datos</a>
             <ul>
                 <li class='has-sub '><a href='#'>Información</a>
                     <ul>
                         <li><a href='verDatosAspirante.php'>Ver Información</a></li>
-                        <li><a href='#.php'>Modificar Información</a></li>
+                        <li><a href='datosApirante.php'>Modificar Información</a></li>
                         <li><a href='cambiarContrasenasp.php'>Modificar Clave</a></li>
                     </ul>
                 </li>
@@ -20,7 +20,7 @@
 
             <ul>
                 <!--<li><a href='Consultar_Colaborador.php'>Consultar Colaborador</a></li> -->
-                <li><a href='ListasColaborador.php'>Listar Colaborador</a></li>
+                <li><a href='ListarColaboradores1.php'>Listar Colaborador</a></li>
             </ul>
 
 
@@ -30,7 +30,7 @@
 
             <ul>
                 
-                <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
+                <li><a href='listarAspirante1.php'>Listar Aspirantes</a></li>
 
 
             </ul>
