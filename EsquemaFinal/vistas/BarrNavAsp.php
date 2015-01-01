@@ -30,7 +30,7 @@
 
             <ul>
                 
-                <li><a href='listarAspirante1.php'>Listar Aspirantes</a></li>
+                <li><a href='listarAspirantes1.php'>Listar Aspirantes</a></li>
 
 
             </ul>
