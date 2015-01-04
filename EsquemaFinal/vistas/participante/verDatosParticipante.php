@@ -48,7 +48,7 @@
                         <table align="center" >
                             <tr>
                               
-                                <input type="hidden" name="dni" title="usuario"  value='<?php echo $idaspi ?>' disabled>                             
+                                <input type="hidden" name="dni" title="usuario"  value='<?php echo ""; // $idaspi ?>' disabled>                             
                                <input type="hidden" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled>
                                 <?php
                                 $consulta = mysql_query("select * from t_usuario where dni_user='$idaspi'");
