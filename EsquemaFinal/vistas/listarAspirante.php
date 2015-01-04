@@ -38,7 +38,7 @@ $user_query2=mysql_query("select *FROM t_usuario where rol_user='3' ORDER BY dni
                                     <td><?php echo $row['apell_user']; ?></td>
                                     <td><?php echo $row['sex_user']; ?></td><td>
                                         <?php echo $row['tel_user']; ?></td>
-                                    <td><?php echo $row['id_estado']; ?></td>
+                                    <td><?php echo $row['archivo_usuario']; ?></td>
                                        <td><?php echo $row['id_estado']; ?></td>
 
                                      <td><?php echo"<a href='verDatosAspirante.php?id=$id'>Ver Más</a>"; ?></td>
