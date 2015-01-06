@@ -11,7 +11,7 @@
 		  <div><input name="clave_user" type="password" title="Escriba su conraseña aqui" value=""></div>
                  <span>
                      <input type="checkbox" name="1" value="1"> 
-                     Recordar <a href="#"> <br>¿Olvido Contraseña?</a>
+                     Recordar <a href="olvido.php"> <br>¿Olvido Contraseña?</a>
                  </span><div></div>
                   <br>
 <div align="center">

@@ -23,7 +23,7 @@ $nac_user=$_POST["nac_user"];
 $localidad_user=$_POST["localidad_user"];
 $estrato_user=$_POST["estrato_user"];
 $barrio_user=$_POST["barrio_user"];
-$archivo_usuario=$_POST["archivo_usuario"];                                                   
+$archivo_usuario=$_POST["archivo_usuario"];  
 $responsable_user=$_POST["responsable_user"];
 $cel_respon_user=$_POST["cel_respon_user"];
 $foto_user=$_POST["foto_user"]; //Linea 22
@@ -48,25 +48,48 @@ $objUsuario = new usuario(
         $responsable_user,$cel_respon_user,$foto_user,$fecha_registro_user,$carrera_user,
         $universidad_user,$id_colegio,$id_estado,$id_jornada,$rol_user,$id_materia_user);
     
+            echo"<script language='javascript'> alert('..:: Entra al Switch::..');  </script>";
+
  //$objUsuario->insertarDatos();
 switch ($operacion) {
+
     case "verificar":
        $objUsuario->verificar();
         break;
     case "consultarDatos":
        	$objUsuario->consultarDatos();
         break;
+    
+     case "consultarDatosCol":
+      echo"<script language='javascript'> alert('..Entro:..');  </script>";
+       	$objUsuario->consultarDatosCol();
+        break; 
+    
+    case "consultarDatosPar":
+      echo"<script language='javascript'> alert('..Entro:..');  </script>";
+       	$objUsuario->consultarDatosPar();
+        break; 
+
     case "actualizar":
        	$objUsuario->modificar();
         break;
+    case "actualizarPar":
+       	$objUsuario->modificarPar();
+        break;
     
-    case "desac":
-       	$objUsuario->modificar();
+    case "actualizarCol":
+       	$objUsuario->actualizarCol();
         break;
     
     
+    
+    
+    case "desac":
+       	$objUsuario->desactivar();
+        break;
+    
     case "insertarDatos":
-        echo 'insertarDatos';
+      echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
         	$objUsuario->insertarDatos();
         break;
 

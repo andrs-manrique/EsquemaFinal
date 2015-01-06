@@ -11,7 +11,7 @@
                 <?php
                 include("../3modelo/conexion.php");
 
-                $idcol = $_GET['id'];
+                $idcol =  base64_decode($_GET['id']);
                 $identificacion = $_SESSION['identificacion'];
                 $consulta = mysql_query("select *from t_usuario where (dni_user='$idcol')");
 
@@ -50,11 +50,11 @@
                     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
                         <table align="center" >
                             <tr>
-                                <td class="registr">No. Identificación:</td>
-                                <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo$dni ?>' disabled></td>
+                              
+                                <td class="registr"><input type="hidden" name="dni" title="usuario"  value='<?php //echo$dni ?>' disabled></td>
 
-                                <td class="registr">Tipo DNI:</td>
-                                <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
+                                <td class="registr"></td>
+                                <td class="registr"><input type="hidden" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
                                 <?php
                                 $consulta = mysql_query("select * from t_usuario where dni_user='$idcol'");
                                 while ($fila = mysql_fetch_array($consulta)) {

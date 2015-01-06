@@ -9,7 +9,7 @@
                     <ul>
                         <li><a href='verDatosAspirante.php'>Ver Información</a></li>
                         <li><a href='datosApirante.php'>Modificar Información</a></li>
-                        <li><a href='cambiarContrasenasp.php'>Modificar Clave</a></li>
+                        <li><a href='cambiarContrasena.php'>Modificar Clave</a></li>
                     </ul>
                 </li>
             </ul>
@@ -47,7 +47,7 @@
 
         </li>
         
-         <li><a href='#'>Material Estudio</a>
+        <li><a href='listaMaterial.php'>Material Estudio</a>
 
                </li>
         

@@ -51,7 +51,7 @@ while($fila=mysql_fetch_array($consulta))
   </tr>
   <tr><br>
     <td class="registr">No. Identificación:</td>                                  
-    <td class="registr"><input type="text" name="dni_user" title="usuario"  value='<?php echo base64_decode($_GET['dni']);?>' disabled></td>
+    <td class="registr"><input type="text" name="dni_user" title="usuario"  value='<?php echo base64_decode($_GET['dni']);?>' readonly="readonly"></td>
   
     <td class="registr">Tipo DNI:</td>
     <td>
@@ -65,17 +65,17 @@ while($fila=mysql_fetch_array($consulta))
     
   <tr>
     <td class="registr">Nombre</td>
-    <td class="registr"><input type="text" name="nom_user" title="nombre" value='<?php echo $nom_user; ?>'disabled></td>
+    <td class="registr"><input type="text" name="nom_user" title="nombre" value='<?php echo $nom_user; ?>'readonly="readonly"></td>
  
 	 <td class="registr">Apellido</td>
-	 <td class="registr"><input type="text" name="apell_user" title="apellido" value='<?php echo $apell_user;?>'disabled></td>
+         <td class="registr"><input type="text" name="apell_user" title="apellido" value='<?php echo $apell_user;?>'readonly="readonly" ></td>
 	</tr>
          <tr>
 	 <td class="registr">Sexo</td>
 	 <td class="registr">
          <select name="sex_user" id="tipodni_user">
                         <option value='<?php echo $sex_user;?>'><?php echo $sex_user;?></option>
-                        <option value="Msculino">Masculino</option>
+                        <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select>
          
@@ -85,17 +85,27 @@ while($fila=mysql_fetch_array($consulta))
 	
          </tr>
 	<tr>
-	
-	 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user;?>'></td>
+            <td>clave</td>
+            <td class="registr"><input type="text" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user;?>' readonly=""></td>
 	</tr>      
         
         <tr>
     <td class="registr">Contacto:</td>
     <td class="registr"><input type="text" name="tel_user" title="Telefono de Contacto" value='<?php echo $tel_user; ?>'></td>
  
-	 <td class="registr"> Estado Civil</td>
-	 <td class="registr"><input type="Text" name="civil_user" title="Estado Actual" value='<?php echo $civil_user;?>'></td>
-	</tr>
+	 <td class="registr"> Estado Civil</td>	
+          <td class="registr"><select name="civil_user" id="civil_user" readonly="readonly" >
+                        <option value="<?php echo $civil_user;?>"><?php echo $civil_user;?></option>
+                        <option value="Solter@">Solter@</option>
+                        <option value="union_Libre">Union_Libre</option>
+                        <option value="Comprometid@">Comprometid@</option>
+                        <option value="Casad@">Casad@</option>
+                        <option value="Divorciad@">Divorciad@</option>
+                    </select>
+                </td>
+        
+        
+        </tr>
        
     <tr>
      <td class="registr">Lugar Nacimiento:</td>
@@ -106,12 +116,33 @@ while($fila=mysql_fetch_array($consulta))
     </tr>
 
      <tr>
-     <td class="registr">Localidad</td>
-     <td class="registr"><input type="Text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user;?>'></td>
     
+                <td class="registr">Localidad:</td>
+                <td class="registr"><select  name="localidad_user" readonly="readonly">
+                        <option value="<?php echo $localidad_user;?>" > <?php echo $localidad_user;?> </option>
+                        <option value="1.Usaquen" >1.Usaquen</option>
+                        <option value="2. Chapinero" >2. Chapinero</option>
+                        <option value="3.Santafe" >3.Santa fe</option>
+                        <option value="4. San Cristobal" >4.San Cristobal</option>
+                        <option value="5. Usme" >5.Usme</option>                <option value="6. Tunjuelito" >6. Tunjuelito</option>
+                        <option value="7. Bosa" >7. Bosa</option>             <option value="8. Kennedy" >8. Kenendy</option>
+                        <option value="9. Fontibon" >9. Fontibon</option>
+                        <option value="10. Engativa" >10. Engativa</option>         <option value="11. Suba" >11.Suba</option>
+                        <option value="12. B. Unidos" >12.B. Unidos</option>
+                        <option value="13. Teusaquillo" >13. Teusaquillo</option>     <option value="14. Martires" >14. Martires</option>     <option value="15 Antonio Nariño" >15. Antonio Nariño</option>
+                        <option value="16. Puente Aranda" >16. Puente Aranda</option>    <option value="17. Candelaria" >17. La Candelaria</option>  <option value="18 R. uribe uribe" >18. R. uribe uribe</option>
+                        <option value="19 C. bolivar" >19. ciudad Bolivar</option>    <option value="20. Sumapaz" >20. Sumapaz</option>
+                    </select>
+                </td>
+           
+     
+     
+     
+     
+     
      <td class="registr">Estrato</td>
-     <td class="registr"><input type="number" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user;?>'></td>
-    
+    <td class="registr"><input type="number" min="1" max="6" value="<?php echo $estrato_user;?>" name="estrato_user" title="Estrato de Vivienda"  ></td>
+
      
      </tr>
      <tr>

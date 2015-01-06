@@ -1,6 +1,0 @@
-<?php
-
-/* 
- *consulta estado
- */
-

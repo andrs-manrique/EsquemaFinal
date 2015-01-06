@@ -39,10 +39,10 @@
             </tr>
             <tr>
                 <td class="registr">Correo</td>
-                <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" ></td>
+                <td class="registr"><input type="email" name="mail_user" title="correo electronico de contacto" ></td>
 
-                <td class="registr">clave</td>
-                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso"></td>
+                <td class="registr">Clave</td>
+                <td class="registr"><input type="password" name="clave_user" title="clavde de Ingreso"></td>
             </tr>      
 
             <tr>

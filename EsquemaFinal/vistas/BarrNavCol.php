@@ -38,8 +38,8 @@
         <li><a href='#'>Material</a>
 
             <ul>
-                <li><a href='listarMaterias1.php'>Listar</a></li>
-                <li><a href='insertarMaterial.php'>Agregar</a></li>
+                <li><a href='./participante/listaMaterial.php'>listar</a></li>
+                <li><a href='./participante/#.php'>Agregar</a></li>
 
             </ul>
 

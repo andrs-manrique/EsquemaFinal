@@ -6,7 +6,7 @@
 <div>
 				
 				  <ul>
-                                      <font color="white">  <li><a>COLABORADOR</li> </font>
+                                  <li><a>COLABORADOR</li> 
 				   <li><a><?php
 				   //session_start();
  include("../3modelo/conexion.php");
@@ -15,7 +15,7 @@ $identificacion = $_SESSION['identificacion'];
 		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
            
              while ($fila = mysql_fetch_array($consulta)) {
-            echo "<h1> <font color='white'>Bienvenido:  " . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h1>";
+            echo "<h3> <font color=''>Bienvenido:  " . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h3>";
             echo "<img src='../fotos/" . $fila['foto_user'] . "' width=150px></td>";
         }
 				   ?>
@@ -25,10 +25,10 @@ $identificacion = $_SESSION['identificacion'];
                 <tr>
                     <td class="registr">Modificar Foto</td> 
                     <td class="registr" >
-                        <input type="file" name="fotografia" />
+                        <input type="file" name="fotografia" required=""/>
                     </td>
                 </tr>
-                <tr><td><input type="submit" value="Subir archivo" /> </td></tr>
+                <tr><td><input type="submit" value="Subir archivo"  /> </td></tr>
             </table>
         </form>
 				   <li><a href="datosColaborador.php">Datos personales</a></li>

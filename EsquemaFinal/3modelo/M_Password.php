@@ -3,29 +3,23 @@
 include ("conexion.php");
 
 class password {
-
-    private $idprueba;
-    private $usuario;
+    private $dni_user;
     private $encrypted_password;
     private $passwordNueva;
     private $passwordRepeat;
 
-    function __construct($idprueba, $usuario, $encrypted_password, $passwordNueva, $passwordRepeat) {
-        $this->idprueba = $idprueba;
-        $this->usuario = $usuario;
+    function __construct( $dni_user, $encrypted_password, $passwordNueva, $passwordRepeat) {
+        $this->dni_user = $dni_user;
         $this->encrypted_password = $encrypted_password;
         $this->passwordNueva = $passwordNueva;
         $this->passwordRepeat = $passwordRepeat;
     }
 
-    public function getIdprueba() {
-        return $this->idprueba;
+    function getDni_user() {
+        return $this->dni_user;
     }
 
-    public function getUsuario() {
-        return $this->usuario;
-    }
-
+    
     public function getEncrypted_password() {
         return $this->encrypted_password;
     }
@@ -39,20 +33,19 @@ class password {
     }
 
     public function actualizar() {
-        //busca en la BD el dni and la clave de ese dni 
-        $consulta = mysql_query("select * from t_usuario where dni_user='$this->idprueba' and clave_user='$this->encrypted_password'");
-        if (mysql_query($consulta)) {
+      
         
+        //busca en la BD el dni and la clave de ese dni 
+        $consulta = mysql_query("select * from t_usuario where (dni_user='$this->dni_user' and clave_user='$this->encrypted_password')");
+        if (mysql_query($consulta)) {
+        echo "ntro a consulta 1";
         $passwordNueva = $this->passwordNueva;
         $passwordRepeat = $this->passwordRepeat;
 
         if ($passwordNueva == $passwordRepeat) {
-
             $nuevoPassword = $passwordNueva;
-
-            $identificacion = $this->idprueba;
-
-            $consulta2 = "UPDATE t_usuario SET clave_user='$nuevoPassword' WHERE dni_user='$this->idprueba'";
+            $identificacion = $this->dni_user;
+            $consulta2 = "UPDATE t_usuario SET clave_user='$nuevoPassword' WHERE dni_user='$this->dni_user'";
 
             if (mysql_query($consulta2)) {
                 echo"<script language='javascript'> alert('La CLave Cambio');  </script>";
@@ -63,10 +56,6 @@ class password {
             }
         }
 
-        /* else {
-          echo"<script language='javascript'> alert('La contraseña no es correcta'); </script>";
-          echo"<script language='javascript'>location.href=\"../vistas/cambiarContrasena.php\"</script>";
-          } */
     } else { echo "error consulta1";}
 
 }

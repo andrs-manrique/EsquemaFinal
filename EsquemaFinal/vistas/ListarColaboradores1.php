@@ -1,5 +1,5 @@
 <?php include('header_1.php'); ?>
-<?php include("./BarrNavCol.php"); ?>			
+<?php include("./BarrNavAsp.php"); ?>			
 <?php include("../3modelo/autenticacion.php"); ?>
 <br><br><br>
 <div aling="center">
@@ -14,11 +14,12 @@
                         </div>
                         <thead>
                             <tr>
+                                <th>Identificacion</th>
                                 <th>Nombre</th>                                 
                                 <th>Apellido</th>     
                                 <th>Sexo</th>  
-                                <th>Correo </th>     
-                                <th>Universidad</th>  
+                                <th>Telefono </th>     
+                                <th>Estado</th>  
                                 <th>Consultar</th> 
                                                         
                             </tr>
@@ -31,14 +32,13 @@
                                 $id = $row['dni_user'];
                                 ?>
                                 <tr class="del<?php echo $id ?>">
-                                   <td><?php echo $row['nom_user']; ?></td> 
+                                    <td><?php echo $row['dni_user']; ?></td> 
+                                    <td><?php echo $row['nom_user']; ?></td> 
                                     <td><?php echo $row['apell_user']; ?></td>
                                     <td><?php echo $row['sex_user']; ?></td><td>
-    <?php echo $row['mail_user']; ?></td>
-                                    <td> <?php echo $row['universidad_user']; ?></td>
-
-                                           <td><?php  echo"<a href=\"verDatosColaboradores.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
-
+    <?php echo $row['tel_user']; ?></td>
+                                    <td><?php echo $row['id_estado']; ?></td>
+                                    <td><?php echo"<a href='verDatosColaboradores1.php?id=$id'>Ver Más</a>"; ?></td>
                                    
 
 

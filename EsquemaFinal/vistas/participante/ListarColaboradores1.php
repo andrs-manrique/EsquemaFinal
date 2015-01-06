@@ -34,8 +34,8 @@
                                     <td><?php echo $row['apell_user']; ?></td>
                                     <td><?php echo $row['sex_user']; ?></td>
                                     <td><?php echo $row['carrera_user']; ?> </td>
-                                    <td><?php echo $row['mail_user']; ?></td>
-                                    <td><?php echo"<a href='verDatosColaboradores1.php?id=$id'>Ver Más</a>"; ?></td>
+                                    <td><?php echo $row['mail_user']; ?></td> 
+                                    <td><?php  echo"<a href=\"../participante/verDatosColaboradores1.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
                                    
 
 
