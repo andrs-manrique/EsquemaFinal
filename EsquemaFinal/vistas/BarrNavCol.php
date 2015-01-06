@@ -35,11 +35,11 @@
             </ul>
 
         </li>
-        <li><a href='#'>Materias</a>
+        <li><a href='#'>Material</a>
 
             <ul>
                 <li><a href='listarMaterias1.php'>Listar</a></li>
-
+                <li><a href='insertarMaterial.php'>Agregar</a></li>
 
             </ul>
 
