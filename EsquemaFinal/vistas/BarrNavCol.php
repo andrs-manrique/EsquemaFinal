@@ -39,7 +39,7 @@
 
             <ul>
                 <li><a href='./participante/listaMaterial.php'>listar</a></li>
-                <li><a href='./participante/#.php'>Agregar</a></li>
+                <li><a href='./material.php'>Agregar</a></li>
 
             </ul>
 

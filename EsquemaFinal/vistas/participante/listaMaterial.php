@@ -19,9 +19,9 @@
                                 <th>Contenido</th>   
                                 <th>Materia</th>   
                                 <th>TipoMaterial</th> 
-                                                                <th>url</th>   
+                                <th>url</th>   
 
-                               <th>Autor</th>   
+                                <th>Autor</th>   
 
 
 
@@ -36,13 +36,12 @@
                                 ?>
                                 <tr class="del<?php echo $id ?>">
                                     <td><?php echo $row['fecha_material']; ?></td> 
-                                    <td><?php echo  "<a href='ContenidoNov.php?id=".$id."'>".$row['Titulo_material']."</a>"; ?>
-                                    </td>
-                                   <td><?php echo $row['Contenido']; ?></td> 
-                                   <td><?php echo $row['area_material']; ?></td> 
-                                   <td><?php echo $row['tipo_material']; ?></td> 
-                                   <td><?php echo $row['url_material']; ?></td> 
-                                   <td><?php echo $row['autor_material']; ?></td>                                </tr>
+                                    <td><?php echo$row['Titulo_material']; ?></td>
+                                    <td><?php echo $row['Contenido']; ?></td> 
+                                    <td><?php echo $row['area_material']; ?></td> 
+                                    <td><?php echo $row['tipo_material']; ?></td> 
+                                    <td><?php echo "<a target='_blank' href=" . $row['url_material'] . ">Ver Link</a>"; ?></td> 
+                                    <td><?php echo $row['autor_material']; ?></td>                                </tr>
                             <?php } ?>
 
                         </tbody>

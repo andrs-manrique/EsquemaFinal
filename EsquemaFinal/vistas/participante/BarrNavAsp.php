@@ -59,6 +59,15 @@
             </ul>
 
         </li>
+          
+        <li><a href='#'>DIPA</a>
+
+            <ul>
+                <li><a href='Dipa.php'>Mostrar</a></li>
+             
+            </ul>
+
+        </li>
        
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
     </ul>
