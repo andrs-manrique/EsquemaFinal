@@ -49,10 +49,15 @@
             </ul>
 
         </li>
+        <li><a href='materiales.php'>Material de Estudio</a> </li>
 
         <li><a href='listaNovedades.php'>Novedades</a>
         </li>
+                <li><a href='#'>Base de Datos</a> </li>
+
         <li><a href='../3modelo/cerrar.php'>Cerrar</a></li>
+        <li><a href='administrador.php'>Bienvenido: Admin</a></li>
+
     </ul>
 </div>
 
