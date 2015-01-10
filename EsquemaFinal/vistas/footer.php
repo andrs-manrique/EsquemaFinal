@@ -1,7 +1,9 @@
 
     <footer class="footer">
       <div class="container" align="center">
+          <HR>
 	  <div class="foot-margin">
+              
         <p><a> copyright 2015 U.NAL </a></p>
       </div>
       </div>

@@ -1,21 +1,14 @@
-
 <?php include('header.php'); ?>
 <?php include("./BarrNavCol.php"); ?>			
-<?php include("../3modelo/autenticacion.php"); ?>
+<?php include("../../3modelo/autenticacion.php"); ?>
 <div align="center">
     <section>
         <div id="contieneblog">
-
             <aside id="articuloss">
-
                 <?php
-                include("../3modelo/conexion.php");
-
-                $idcol =  base64_decode($_GET['id']);
+                include("../../3modelo/conexion.php");
                 $identificacion = $_SESSION['identificacion'];
-                $consulta = mysql_query("select *from t_usuario where (dni_user='$idcol')");
-
-
+                $consulta = mysql_query("select *from t_usuario where (dni_user='$identificacion')");
                 if ($row = mysql_fetch_array($consulta)) {
                     $dni = $row["dni_user"];
                     $tipodni_user = $row["tipodni_user"];
@@ -47,19 +40,19 @@
                 ?>
                 <div>
                     <font color="white"><h3>DATOS PERSONALES COLABORADOR</h3></font>
-                    <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
+                    <form name="form" method="post" action="../../2controlador/C_Usuario.php" > 
                         <table align="center" >
                             <tr>
-                              
-                                <td class="registr"><input type="hidden" name="dni" title="usuario"  value='<?php //echo$dni ?>' disabled></td>
+                                <td class="registr">No. Identificación:</td>
+                                <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo$dni ?>' disabled></td>
 
-                                <td class="registr"></td>
-                                <td class="registr"><input type="hidden" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
+                                <td class="registr">Tipo DNI:</td>
+                                <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
                                 <?php
-                                $consulta = mysql_query("select * from t_usuario where dni_user='$idcol'");
+                                $consulta = mysql_query("select * from t_usuario where dni_user='$identificacion'");
                                 while ($fila = mysql_fetch_array($consulta)) {
                                     echo "<h1> <font color='white'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h1>";
-                                    echo "<img src='../fotos/" . $fila['foto_user'] . "' width=150px></td>";
+                                    echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
                                 }
                                 ?>
                             </tr>
@@ -117,11 +110,11 @@
 
                                 <td class="registr">Estado  Civil:</td>
                                 <td class="registr"><input type="text" name="civil_user" title="Estado Civil"  value='<?php echo $civil_user; ?>' disabled=""></td>
-                         
+
                                 <td class="registr"> Estado</td>
                                 <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado; ?>' disabled></td>
 
-                            
+
                             </tr>
 
                             <tr>
@@ -177,4 +170,4 @@
         </div>
     </section>
 </div>
-<?php include("footer.php"); ?>
+<?php include("../footer.php"); ?>

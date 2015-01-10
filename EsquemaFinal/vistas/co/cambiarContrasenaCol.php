@@ -1,7 +1,7 @@
 <!doctype html>
 <?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php");?>
-        <?php include("../3modelo/autenticacion.php"); ?>
+<?php include("./BarrNavCol.php");?>
+        <?php include("../../3modelo/autenticacion.php"); ?>
             <section>
                 <div id="contieneblog">
                     <?php //include("header.php"); ?>
@@ -9,20 +9,20 @@
                     <aside id="articuloss">
                         <div>
                             <article  contenteditable="true">
-                                <h3>Bienvenido ADMINISTRADOR en esta sección usted puede cambiar su contraseña</h3><br>
+                                <h3>Bienvenido COLABORADOR en esta sección usted puede cambiar su contraseña</h3><br>
                                 <div class="imagenarticuloblog" id="imgblog2"></div>
                             </article>
                         </div>
                         <div><br>
                             <h3>CAMBIAR CONTRASEÑA</h3><br>
                             
-                            <form name="form3" method="post" action="../2controlador/C_Password.php">
+                            <form name="form3" method="post" action="../../2controlador/C_Password.php">
                                 <table align="center">
                                     <input type="text" name="estado" value="<?php echo $_SESSION['autenticado'];?>">
                                     <tr><td class="registr">Usuario</td><td class="registr">
                                             
                                          <input name="nom_user" title="cedula" value="<?php
-                                            include("../3modelo/conexion.php");
+                                            include("../../3modelo/conexion.php");
 
                                             $identificacion = $_SESSION['identificacion'];
 
@@ -36,7 +36,7 @@
                                      <tr><td class="registr">Documento</td><td class="registr">
                                             
                                          <input name="dni_user" title="cedula" value="<?php
-                                            include("../3modelo/conexion.php");
+                                            include("../../3modelo/conexion.php");
 
                                             $identificacion = $_SESSION['identificacion'];
 
@@ -58,4 +58,4 @@
                     <div style="clear:both"></div>
                 </div>
             </section>
-           <?php                                            include './footer.php'; ?>
+           <?php                                            include '../footer.php'; ?>

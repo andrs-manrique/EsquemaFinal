@@ -43,7 +43,7 @@
                                         <td> <?php echo "<a href='../Archivos/{$row['archivo_usuario']}'>" . $row['archivo_usuario'] . "</a> " ?></td>
 
 
-                                        <td><?php echo"<a href='verDatosAspirante.php?id=$id'>Ver Más</a>"; ?></td>
+                            <td><?php  echo"<a href=\"verDatosAspirante_1.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
                                         <td width="100">
 
                                             <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  

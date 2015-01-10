@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 <?php include("./BarrNavCol.php"); ?>			
-<?//php include("../3modelo/autenticacion.php");?>
+<?php include("../../3modelo/autenticacion.php");?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,7 +18,7 @@
 
                         <div><br>
                             <h3> <center> Ingresa Material</center></h3><br>
-                            <form name="form1" method="post" action="../2controlador/C_novedad.php">
+                            <form name="form1" method="post" action="../../2controlador/C_novedad.php">
                                 <table align="center">  
 
                                     <tr><td class="registr"></td>
@@ -55,4 +55,4 @@
                     <div style="clear:both"></div>
                 </div>
             </section>
-                            <?php include("footer.php"); ?>	
+                            <?php include("../footer.php"); ?>	

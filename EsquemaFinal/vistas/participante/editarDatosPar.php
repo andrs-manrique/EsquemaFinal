@@ -81,7 +81,7 @@ while($fila=mysql_fetch_array($consulta))
          
          </td>
 	 <td class="registr">Correo</td>
-	 <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>'></td>
+	 <td class="registr"><input type="email" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user;?>'></td>
 	
          </tr>
 	<tr>

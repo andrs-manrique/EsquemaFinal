@@ -176,7 +176,7 @@ class usuario {
             $_SESSION['autenticado'] = "SI";
             $_SESSION['identificacion'] = $fila['dni_user'];
             if ($fila['rol_user'] == '2') {
-                header("location: ../vistas/colaborador.php");
+                header("location: ../vistas/co/colaborador.php");
             } else if ($fila['rol_user'] == '3') {
                 header("location: ../vistas/participante/aspirante.php");
             } else if ($fila['rol_user'] == '1') {
@@ -225,11 +225,11 @@ class usuario {
         if ($row = mysql_fetch_array($consulta)) {
 
             echo"<script language='javascript'> alert('..:: Procesando la Informacion Exitosa ::..');  </script>";
-            echo"<script language='javascript'> location.href=\"../vistas/editarDatosCol.php?dni=" . base64_encode($row['dni_user']) . "\"</script>";
+            echo"<script language='javascript'> location.href=\"../vistas/co/editarDatosCol.php?dni=" . base64_encode($row['dni_user']) . "\"</script>";
         } else {
             echo"<script language='javascript'> alert('ERROR CONSULTAR DATOS');  </script>";
 
-            echo"<script language='javascript'> location.href=\"../vistas/editarDatosColaborador.php?dni=" . base64_encode($row['dni_user']) . "\"</script>";
+            echo"<script language='javascript'> location.href=\"../vistas/co/editarDatosColaborador.php?dni=" . base64_encode($row['dni_user']) . "\"</script>";
         }
     }
 //------------------------consultar datos Participante
@@ -297,7 +297,7 @@ public function modificarPar() { //                                             
        if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
               
-                echo"<script language='javascript'>location.href=\"../vistas/verDatosColaborador.php\"   </script>";
+                echo"<script language='javascript'>location.href=\"../vistas/co/verDatosColaborador.php\"   </script>";
        }else{
             echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
             echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";

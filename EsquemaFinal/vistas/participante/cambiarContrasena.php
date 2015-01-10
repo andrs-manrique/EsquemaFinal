@@ -1,7 +1,7 @@
 <!doctype html>
 <?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php");?>
-        <?php include("../3modelo/autenticacion.php"); ?>
+<?php include("./BarrNavAsp.php");?>
+        <?php include("../../3modelo/autenticacion.php"); ?>
             <section>
                 <div id="contieneblog">
                     <?php //include("header.php"); ?>
@@ -9,20 +9,20 @@
                     <aside id="articuloss">
                         <div>
                             <article  contenteditable="true">
-                                <h3>Bienvenido ADMINISTRADOR en esta sección usted puede cambiar su contraseña</h3><br>
+                                <h3>Bienvenido PARTICI en esta sección usted puede cambiar su contraseña</h3><br>
                                 <div class="imagenarticuloblog" id="imgblog2"></div>
                             </article>
                         </div>
                         <div><br>
                             <h3>CAMBIAR CONTRASEÑA</h3><br>
                             
-                            <form name="form3" method="post" action="../2controlador/C_Password.php">
+                            <form name="form3" method="post" action="../../2controlador/C_Password.php">
                                 <table align="center">
                                     <input type="text" name="estado" value="<?php echo $_SESSION['autenticado'];?>">
                                     <tr><td class="registr">Usuario</td><td class="registr">
                                             
                                          <input name="nom_user" title="cedula" value="<?php
-                                            include("../3modelo/conexion.php");
+                                            include("../../3modelo/conexion.php");
 
                                             $identificacion = $_SESSION['identificacion'];
 
@@ -36,7 +36,7 @@
                                      <tr><td class="registr">Documento</td><td class="registr">
                                             
                                          <input name="dni_user" title="cedula" value="<?php
-                                            include("../3modelo/conexion.php");
+                                            include("../../3modelo/conexion.php");
 
                                             $identificacion = $_SESSION['identificacion'];
 
@@ -49,16 +49,19 @@
 
                                     <tr><td class="registr">Digite contraseña actual: </td><td class="registr"><input name="password" type="password" title="login" value="" size="30" maxlength="2048" /></td></tr>
                                     <tr><td class="registr">Digite la nueva contraseña: </td><td class="registr"><input name="passwordNueva" type="password" title="login" value="" size="30" maxlength="2048" /></td></tr>
-                                    <tr><td class="registr">Verifique la nueva contraseña: </td><td class="registr"><input name="passwordRepeat" type="password" title="login" value="" size="30" maxlength="2048" /></td></tr>
-                                    <tr><td class="registr" colspan="2" align="center"><input type="submit" name="Submit" value="Cambiar Contraseña" onClick="cambioContrasena()" > <input type='hidden' name='txtoperacion' value='cambioContrasena'></td></tr>
+                                    <tr><td class="registr">Verifique la nueva contraseña: </td><td class="registr">
+                                            <input name="passwordRepeat" type="password" title="login" value="" size="30" maxlength="2048" /></td></tr>
+                                    <tr><td class="registr" colspan="2" align="center">
+                                    <input type="submit" name="Submit" value="Cambiar Contraseña" onClick="cambioContrasena()" > 
+                                    <input type='hidden' name='txtoperacion' value='clave_par'></td></tr>
                                 </table>
                             </form>
                         </div>
                     </aside>
-                    <div style="clear:both"></div>
+              
                 </div>
             </section>
-           <?php                                            include './footer.php'; ?>
+           <?php                                            include '../footer.php'; ?>
 
 
 

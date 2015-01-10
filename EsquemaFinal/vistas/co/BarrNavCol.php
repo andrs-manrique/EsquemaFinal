@@ -1,3 +1,4 @@
+
   		
 <div id='cssmenu' align="center">
     <ul>
@@ -35,11 +36,10 @@
             </ul>
 
         </li>
-        <li><a href='#'>Material</a>
+        <li><a href='#'>Material Estudio</a>
 
             <ul>
-                <li><a href='./participante/listaMaterial.php'>listar</a></li>
-                <li><a href='./material.php'>Agregar</a></li>
+                <li><a href='./listaMaterial.php'>Listar Material</a></li>
 
             </ul>
 
@@ -53,15 +53,12 @@
             </ul>
 
         </li>
-        <li><a href='#'>Novedades</a>
-
-            <ul>
-                <li><a href='listaNovedades1.php'>Listar</a></li>
-            </ul>
-
+        <li><a href='listaNovedades1.php'>Novedades</a>
         </li>
      
-        <li><a href='../3modelo/cerrar.php'>Cerrar</a></li>
+        <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
+        
+        <li><a>Rol: Colaborador </a></li>
     </ul>
 </div>
 

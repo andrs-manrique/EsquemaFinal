@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include("bar.php"); ?>			
+<?php include("./BarrNavCol.php"); ?>			
 <?php include("../../3modelo/autenticacion.php"); ?>
 
 <?php
@@ -12,8 +12,6 @@ include("../../3modelo/conexion.php");
 $identificadorNovedad = $_GET['id'];
 $consulta = mysql_query("select * from t_novedad where id='$identificadorNovedad'");
 while ($fila = mysql_fetch_array($consulta)) {
-    
-    
     //http://www.bienestarbogota.unal.edu.co/ver_noticia.php?id_noticia=319
     
     

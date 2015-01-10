@@ -1,9 +1,9 @@
 ﻿<!doctype html>
 <?php include("header.php"); ?>
-<?php include("../3modelo/autenticacion.php"); ?>
+<?php include("../../3modelo/autenticacion.php"); ?>
 <?php include("./BarrNavCol.php"); ?>					
 <?php
-include("../3modelo/conexion.php");
+include("../../3modelo/conexion.php");
 $identificacion = $_SESSION['identificacion'];
 $consulta = mysql_query("select *from t_usuario where (dni_user='$identificacion')");
 if ($row = mysql_fetch_array($consulta)) {
@@ -39,14 +39,14 @@ if ($row = mysql_fetch_array($consulta)) {
     <section>
         <div id="contieneblog">
             <font color="white"><h3>DATOS PERSONALES</h3> <p>Modificar</p></font>
-            <form name="form" method="post" action="../2controlador/C_Usuario.php" enctype="multipart/form-data"> 
+            <form name="form" method="post" action="../../2controlador/C_Usuario.php" enctype="multipart/form-data"> 
                 <table align="center" >
                     <tr> 
                         <?php
                         $consulta = mysql_query("select * from t_usuario where dni_user='$identificacion'");
                         while ($fila = mysql_fetch_array($consulta)) {
                             echo "<h1> <font color='white'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h1>";
-                            echo "<img src='../fotos/" . $fila['foto_user'] . "' width=150px></td>";
+                            echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
                         }
                         ?>
                     </tr>
@@ -203,4 +203,4 @@ if ($row = mysql_fetch_array($consulta)) {
     </section>
 
 </div>
-<?php include("footer.php"); ?>	
+<?php include("../footer.php"); ?>	

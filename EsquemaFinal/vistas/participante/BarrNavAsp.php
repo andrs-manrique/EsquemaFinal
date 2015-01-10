@@ -70,6 +70,7 @@
         </li>
        
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
+        <li><a>Bienvenido: Aspirante</a></li>
     </ul>
 </div>
 

@@ -1,22 +1,22 @@
 <?php include('header.php'); ?>
 <?php include("BarrNavCol.php");?>			
-<?php include("../3modelo/autenticacion.php");?>
+<?php include("../../3modelo/autenticacion.php");?>
 <div  align="center" >
 		
 <div>
 				
 				  <ul>
-                                  <li><a>COLABORADOR</li> 
-				   <li><a><?php
+                                  <li>COLABORADOR</li> 
+				   <li><?php
 				   //session_start();
- include("../3modelo/conexion.php");
+ include("../../3modelo/conexion.php");
 $identificacion = $_SESSION['identificacion'];
                              
 		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
            
              while ($fila = mysql_fetch_array($consulta)) {
             echo "<h3> <font color=''>Bienvenido:  " . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h3>";
-            echo "<img src='../fotos/" . $fila['foto_user'] . "' width=150px></td>";
+            echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
         }
 				   ?>
 				   </li>
@@ -37,7 +37,7 @@ $identificacion = $_SESSION['identificacion'];
 				 
 				</div>
 </div>
-                                		<?php include("footer.php");?>		
+                                		<?php include("../footer.php");?>		
 
 	
 				

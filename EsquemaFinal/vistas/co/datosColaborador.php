@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 <?php include("./BarrNavCol.php");?>			
-<?php include("../3modelo/autenticacion.php");?>		
+<?php include("../../3modelo/autenticacion.php");?>		
 
 		<div id="contenedor" align="center">
 			<section>
@@ -12,12 +12,12 @@
     <h3> <font color="white"> DATOS PERSONALES </font></h3>
 	<font color="white"><p>..::Verificar Su Nombre::..</p>
         </font>
-        <form name="form" method="post" action="../2controlador/C_Usuario.php" >           
+        <form name="form" method="post" action="../../2controlador/C_Usuario.php" >           
         <table align="center">
 	<tr>
      
 	<td class="registr">
-        <input type="text" align="middle" name="nom_user" title="nombre" readonly="readonly" value="<?php include("../3modelo/conexion.php");
+        <input type="text" align="middle" name="nom_user" title="nombre" readonly="readonly" value="<?php include("../../3modelo/conexion.php");
 		$identificacion = $_SESSION['identificacion'];
 		$consulta=mysql_query("select * from t_usuario where dni_user='$identificacion'");
 		while($fila=mysql_fetch_array($consulta))
@@ -68,5 +68,5 @@
 				</div>
 			</section>
                 </div>
-			                                		<?php include("footer.php");?>		
+			                                		<?php include("../footer.php");?>		
 

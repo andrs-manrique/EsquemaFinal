@@ -2,7 +2,8 @@
 <?php include("BarraNavegacionadmin.php");?>			
 <?php include("../3modelo/autenticacion.php");?>
 		<div  align="center" >
-				
+						$enlace = $_SERVER["SERVER_NAME"].'/restablecer.php?idusuario='.($idusuario). & .'token='.$token;
+	
 				  <ul>
                                       <font color="white">  <a>ADMIN</font>
 				   <li></a>

@@ -1,6 +1,6 @@
 <?php include('header_1.php'); ?>
 <?php include("./BarrNavCol.php"); ?>			
-<?php include("../3modelo/autenticacion.php"); ?>
+<?php include("../../3modelo/autenticacion.php"); ?>
 <br><br><br>
 <div aling="center">
     <div class="container">
@@ -56,4 +56,4 @@
         </div>
     </div>
 </div>
-<?php include('footer.php') ?>
+<?php include('../footer.php') ?>
