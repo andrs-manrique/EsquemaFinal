@@ -2,8 +2,6 @@
 <?php include("BarraNavegacionadmin.php"); ?>			
 <?php include("../3modelo/autenticacion.php"); ?>
 <div  align="center" >
-
-    <ul>
         <font color="white"> <h1>ADMINISTRADOR </h1></font>
             <li></a><?php
         //session_start();
@@ -29,11 +27,7 @@
             </table>
         </form>
         </li>
-        <li><a href="datosAdministrador.php">Datos personales</a></li>
-        <li><a href="cambiarContrasena.php">Cambiar Contraseña</a></li>
-    </ul>
-
-</div><br>
+</div>
 <?php include("footer.php"); ?>		
 
 

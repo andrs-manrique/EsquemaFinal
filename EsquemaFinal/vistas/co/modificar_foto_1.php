@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php");?>			
-<?php include("../3modelo/autenticacion.php");?>
+<?php include("./BarrNavCol.php");?>			
+<?php include("../../3modelo/autenticacion.php");?>
 		<div  align="center" >
 						$enlace = $_SERVER["SERVER_NAME"].'/restablecer.php?idusuario='.($idusuario). & .'token='.$token;
 	
@@ -9,10 +9,10 @@
 				   <li></a>
  <?php
 //session_start();
-include("../3modelo/conexion.php");
+include("../../3modelo/conexion.php");
 $identificacion = $_SESSION['identificacion'];
 
-$directorio ="../fotos";
+$directorio ="../../fotos";
 $formatos = array ('.jpg', '.png','.gif','.docx');
 $nombreArchivo =$_FILES['fotografia']['name'];
 $nombreTmparchivo =$_FILES['fotografia']['tmp_name'];
@@ -20,7 +20,7 @@ $nombreTmparchivo =$_FILES['fotografia']['tmp_name'];
 // manejar la cadena o extraer dps lo del PUNTO
 $ext = substr($nombreArchivo, strrpos($nombreArchivo, '.'));
 if (in_array($ext, $formatos)){
-if (move_uploaded_file($nombreTmparchivo, "../fotos/$nombreArchivo")){
+if (move_uploaded_file($nombreTmparchivo, "../../fotos/$nombreArchivo")){
          echo "El archivo ". basename( $_FILES['fotografia']['name']). " ha sido subido";
 }
         
@@ -32,7 +32,7 @@ echo "Ha ocurrido un error, trate de nuevo!";
 $consultafoto="update t_usuario set foto_user='$nombreArchivo' where(dni_user='$identificacion')";                 
 if ( mysql_query($consultafoto)){
 echo " <br> Envio correcto de informacion  a la BD";
-echo"<script language='javascript'>location.href=\"../vistas/colaborador.php\"   </script>";		
+echo"<script language='javascript'>location.href=\"../co/colaborador.php\"   </script>";		
 
 }else { echo"ERORRRR UPDATE FOTO";}
 /* 

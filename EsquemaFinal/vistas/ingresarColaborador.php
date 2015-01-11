@@ -159,9 +159,9 @@
                 </td>
             </tr>   
     <tr><br>
-  <script language="JavaScript">function insertarDatos(){ document.form.txtoperacion.value = 'insertarDatos';}</script>    
+  <script language="JavaScript">function insertarDatosCol(){ document.form.txtoperacion.value = 'insertarDatoscol';}</script>    
   <td colspan="4" align="center" class="registr"> 
-      <input type="submit" name="Submit" value="Insertar Información" onClick="insertarDatos()" >
+      <input type="submit" name="Submit" value="Insertar Información" onClick="insertarDatosCol()" >
     <input type='hidden' name='txtoperacion' value=''>
     </td></td>
     </tr>			   

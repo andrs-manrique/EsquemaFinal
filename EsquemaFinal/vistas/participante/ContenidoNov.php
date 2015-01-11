@@ -1,25 +1,16 @@
 <?php include('header.php'); ?>
 <?php include("BarrNavAsp.php"); ?>			
 <?php include("../../3modelo/autenticacion.php"); ?>
-
 <?php
-
 include("../../3modelo/conexion.php");
-
 //  $identificadorNovedad = $_GET['id'];
 ?>
 <br><br>
- 
 <?php
-
 $identificadorNovedad = $_GET['id'];
 $consulta = mysql_query("select * from t_novedad where id='$identificadorNovedad'");
-while ($fila = mysql_fetch_array($consulta)) {
-    
-    
-    //http://www.bienestarbogota.unal.edu.co/ver_noticia.php?id_noticia=319
-    
-    
+while ($fila = mysql_fetch_array($consulta)) { 
+    //http://www.bienestarbogota.unal.edu.co/ver_noticia.php?id_noticia=319   
     echo " <h6 aling ='LEFT'>". $fila['Fecha_novedad']."</h6><br>";
     echo "<center>";
     echo "<table width='900' border='0' cellspacing='6' > ";
@@ -35,5 +26,4 @@ while ($fila = mysql_fetch_array($consulta)) {
     echo "   </table></center>";
 }
 ?>
-
-<?php include("../footer.php"); ?>		
+<?php include("../footer.php"); ?>

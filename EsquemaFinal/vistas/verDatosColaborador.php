@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include("./BarrNavCol.php"); ?>			
+<?php include("./BarraNavegacionadmin.php"); ?>			
 <?php include("../3modelo/autenticacion.php"); ?>
 <div align="center">
     <section>
@@ -7,7 +7,7 @@
             <aside id="articuloss">
                 <?php
                 include("../3modelo/conexion.php");
-                $identificacion = $_SESSION['identificacion'];
+                $identificacion = $_GET['id'];
                 $consulta = mysql_query("select *from t_usuario where (dni_user='$identificacion')");
                 if ($row = mysql_fetch_array($consulta)) {
                     $dni = $row["dni_user"];
@@ -111,10 +111,15 @@
                                 <td class="registr">Estado  Civil:</td>
                                 <td class="registr"><input type="text" name="civil_user" title="Estado Civil"  value='<?php echo $civil_user; ?>' disabled=""></td>
 
-                                <td class="registr"> Estado</td>
-                                <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado; ?>' disabled></td>
-
-
+                                <td class="registr">Estado actual</td>
+                                <td class="registr"><input type="text" name="id_estado" title="¿Activado?" 
+                                                           value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$id_estado;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['nom_estado'];
+                                                           }
+                                                           ?>         'disabled></td>
                             </tr>
 
                             <tr>

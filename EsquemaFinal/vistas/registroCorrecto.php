@@ -12,9 +12,9 @@
                      <?php $variable = $_GET["id"]; ?>
                     <div class="text_content">
                         <div class="controls" align="center"> 
-                            <?php echo 'Numero: ' . $variable; ?>
+                            <?php //echo 'Numero: ' . $variable; ?>
                             <br>
-                  <h2>  <a href='<?php echo "Formulario.php?identificador=".$variable;?>'> Link Formulario de Registro</a> </h2>
+                  <h2>  <a target='_blank' href='<?php echo "Formulario.php?identificador=". base64_encode($variable);?>'> Link Formulario de Registro</a> </h2>
 
                             <IMG SRC="../img/bien.jpg"  width='100' height='100' /><br>
                         </div>

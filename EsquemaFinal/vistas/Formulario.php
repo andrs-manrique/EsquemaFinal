@@ -1,5 +1,4 @@
 <?php include('header.php'); ?>
-<?php include('BarraNavegacion.php'); ?>
 <div class="container">
     <div class="margin-top">
  
@@ -8,9 +7,8 @@
 <table>
         <table align="center" border="0">
             <tr>
-                <?php $variable= $_GET["identificador"];?>
-                <td class="registr">No. Documento:</td>                                                   
-                <td class="registr"><input type="text" name="dni_user"  autocomplete="off" maxlength="11" value="<?php echo $variable ;?>" readonly="readonly"></td>
+                <?php $variable=base64_decode($_GET["identificador"]);?>
+              <input type="hidden" name="dni_user"  autocomplete="off" maxlength="11" value="<?php echo $variable ;?>" readonly="readonly">
                 <td class="registr">Tipo de documento:</td>
                 <td class="registr"><select name="tipodni_user" >
                         <option value="">Seleccione</option>
@@ -26,9 +24,9 @@
             </tr>
             <tr>
                 <td class="registr">Nombre(s):</td>
-                <td class="registr"><input type="text" name="nom_user" title="nombre" required></td>
+                <td class="registr"><input type="text" name="nom_user" title="Nombre Completo Por favor" required></td>
                 <td class="registr">Apellido(s):</td>
-                <td class="registr"><input type="text" name="apell_user" title="apellido"required ></td>
+                <td class="registr"><input type="text" name="apell_user" title="Apellidos Por favor"required ></td>
             </tr>
             <tr>  
                 <td class="registr">Sexo</td>
@@ -44,7 +42,7 @@
                 <td class="registr"><input type="email" name="mail_user" title="correo electronico de contacto" required></td>
 
                 <td class="registr">Clave</td>
-                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso"></td>
+                <td class="registr"><input type="password" name="clave_user" title="clavde de Ingreso" value="0000"></td>
             </tr>      
 
             <tr>
@@ -170,6 +168,7 @@
 	<input type="file" name="archivo_usuario"  required/><br/>
 </th>
 </tr>
+
             <tr>
                 <td class="registr"> </td>
                 <td class="registr">
@@ -180,9 +179,121 @@
                 <td class="registr">
                     <input name="rol_user" id="Rolusuario" value="3" type="hidden">
                                       </td>
-
-
             </tr>
+        </table>
+    <table  align="center">
+            <tr>
+		<td>
+<textarea name="Terminos" style="width: 800px; height: 150px;  resize: vertical;" disabled>
+Terminos y Condiciones 
+Por su seguridad realice sus consultas por Internet desde un sitio seguro. 
+Utilice siempre el computador personal de su casa u ofícina. 
+Toda la información sumisnistrada debe ser veridica y correctamente digitada.
+Aceptar los siguientes términos legales: 
+Entiendo que, en consecuencia, Aspiantes UN es un grupo sin ánimo de lucro que surgue en el año 2010 con
+el ánimo de fortalecer  debilidades academicas de los estudiantes a nivel distrital,por ello Aspirantes UN
+no guarda ningun tipo de relación formal e informal con la Universidad Nacional de Colombia,así 
+responsable por asegurar la concordancia entre los datos que le han sido suministrados y los que registra/divulga, 
+pero no tiene ninguna responsabilidad por la veracidad de tales datos. 
+
+Entiendo que, por medio del presente sistema informático, la ASpirantes UN está poniendo a mi alcance los mecanismos necesarios para que 
+pueda vincularme de manera presencial al proyecto, 
+
+Declaro conocer que, además del presente sistema informático, la Aspirantes UN Bogotá ha puesto a mi disposición otros mecanismos para facilitarme
+ el ejercicio del habeas data, tanto presencialmente como por escrito. 
+
+ En consecuencia, reconozco que si por motivos técnicos o de cualquier otra índole, 
+ no pudiere acceder a mi información personal por este sistema informático, no se me está impidiendo ni limitando el ejercicio del habeas data. 
+Acepto que en cualquier momento y sin previo aviso, Aspirantes UN puede modificar o actualizar el servicio de este sistema informático
+ de la manera que estime conveniente, y que Aspirantes UN Bogotá no tiene ninguna obligación de continuar el servicio en sus actuales condiciones 
+ Declaro que Únicamente solicitaré información relativa a mi persona y que no obtendré beneficios económicos con este servicio. 
+
+
+ 
+
+Al ingresar al sitio web www.aspirantesun.com y al utilizar nuestros servicios gratuitos, usted está aceptando automáticamente los términos y condiciones establecidos en esta página, para hacer uso de la misma o de los servicios que en ella se ofrecen y que pueden ser o no modificados en cualquier momento.
+
+La identificación y la clave de acceso son personales e intransferibles y el USUARIO será el único responsable por su uso adecuado. Cualquier violación a esta disposición dará lugar a que ASPIRANTES UN BOGOTÁ pueda terminar la correspondiente licencia, sin perjuicio del cobro de las indemnizaciones a las que hubiere lugar.
+
+Autorizaciones
+
+EL USUARIO autoriza de manera voluntaria y expresa a ASPIRANTES UN BOGOTÁ para recolectar, registrar, procesar, difundir y comercializar todos los datos e información que el USUARIO de forma voluntaria suministre en el momento del registro o al usar el sitio web. Con base en lo anterior, ASPIRANTES UN BOGOTÁ podrá reproducir, publicar, traducir, adaptar, extraer o compendiar los datos o la información suministrada, así como disponer de los datos o la información a título oneroso o gratuito.
+
+
+Responsabilidad
+
+La información que aparece en www.aspirantesun.com no constituye siquiera un mero consejo y por ello ASPIRANTES UN BOGOTÁ no asume ninguna responsabilidad por eventuales pérdidas, costos, perjuicios o daños que pueda sufrir el USUARIO por el uso o la imposibilidad de uso de dicha información.
+
+ASPIRANTES UN BOGOTÁ no otorga garantía alguna sobre la exactitud, confiabilidad u oportunidad de la información, los servicios, los textos, el software, las gráficas y los vínculos a otras páginas.
+
+El sitio www.aspirantesun.com contiene vínculos a sitios de terceras personas, los cuales se suministran a modo de referencia pues ASPIRANTES UN BOGOTÁ no respalda, recomienda, patrocina o asume responsabilidad alguna sobre la disponibilidad de dichos sitios y su contenido.
+
+ASPIRANTES UN BOGOTÁ no garantiza que la conexión y la operación del sitio www.aspirantesun.com estén exentas de errores, y el USUARIO manifiesta expresamente que conoce estas circunstancias, y que en el evento de un error, la responsabilidad de ASPIRANTES UN BOGOTÁ se limitará exclusivamente a corregirlo en un tiempo prudencial.
+
+ASPIRANTES UN BOGOTÁ no será responsable por daños que los programas sobre los cuales corren sus sitios, ni por los archivos que se bajen del mismo, ocasionen en el equipo o los archivos del USUARIO, incluyendo virus.
+
+ASPIRANTES UN BOGOTÁ no será responsable por los perjuicios que el USUARIO pueda causar a terceros en la utilización del sitio www.aspirantesun.com.
+
+ASPIRANTES UN BOGOTÁ no guarda ningún tipo de relación personal o comercial con la Universidad Nacional de Colombia.
+
+Restricciones
+
+El USUARIO únicamente podrá ingresar a las secciones que le sea autorizadas por ASPIRANTES UN BOGOTÁ por lo tanto se abstendrá de utilizar cualquier medio para violar la seguridad y restricciones, así como cualquier medida tecnológica y la sola intención de hacerlo evidenciada por ASPIRANTES UN BOGOTÁ será causal para dar por terminada esta licencia e informar a las autoridades correspondientes de este hecho.
+
+El USUARIO no podrá reproducir, adaptar, distribuir, alquilar, vender, otorgar licencia o ejecutar cualquier otra forma de transferencia, del sitio www.aspirantesun.com o cualquiera de sus partes, incluyendo los códigos de programación.
+
+El USUARIO no podrá reversar la ingeniería, descompilar, desensamblar, modificar, crear trabajos derivados de, traducir la información o usar la información publicada en el sitio www.aspirantesun.com con fines comerciales o de lucro.
+
+El USUARIO no podrá remover u ocultar los derechos de autor, las marcas o cualquier otra información o leyenda relacionada con la propiedad y derechos deASPIRANTES UN BOGOTÁ o de sus proveedores de información y de servicios. 
+
+El USUARIO reconoce y acepta que podrá descargar guías (información particular sobre situaciones concretas), documentos, disponibles en esta página en formato Word o Excel u otros formatos disponibles para ser usadas solo en su proceso de estudio.
+
+
+Derechos de autor 
+
+De conformidad con las disposiciones legales vigentes, (Art. 61 Constitución Política de Colombia, Art. 671 Código Civil y Ley 23 de 1982) y los diseños, redacciones , contenidos e información aquí presentada, está protegidos por las leyes de derechos de autor, según las cuales, salvo licencia o autorización de su titular, no pueden ser fotocopiadas, reproducidas digital o físicamente, modificadas total o parcialmente o comunicadas públicamente, so pena de ser responsable civil y penalmente de infracción de derechos patrimoniales y/o morales de autor.
+
+Marcas y propiedad intelectual
+
+ASPIRANTES UN BOGOTÁ es el legítimo propietario de los derechos marcarios de las marcas ASPIRANTES UN BOGOTÁ, y otras que aparezcan que no estén identificadas como de propiedad de los proveedores de información y servicios o de terceros. Las marcas que aparezcan a nombre de las empresas proveedoras de información y servicios o de terceros son de su propiedad o están autorizados para explotarlas.
+
+La información que aparece en www.aspirantesun.com , el diseño gráfico, la presentación, la compilación de la información, así como el look and feel del sitio son propiedad exclusiva de ASPIRANTES UN BOGOTÁ y están protegidos por las normas sobre derechos de autor nacionales y por los tratados internacionales que sobre la materia ha suscrito y ratificado la República de Colombia.
+
+EL USUARIO no podrá utilizar, comercializar, explotar o modificar de ninguna manera, la información suministrada por www.aspirantesun.com, las marcas de ASPIRANTES UN BOGOTÁ, de los proveedores de información y de servicios o de terceros y se obliga a informar a ASPIRANTES UN BOGOTÁ cualquier hecho sobre el cual tenga conocimiento y que pueda considerarse como lesivo de los derechos que legalmente éste o los proveedores de información y servicios que se estén ejerciendo de manera irregular.
+
+Terminación
+
+ASPIRANTES UN BOGOTÁ se reserva el derecho, a su exclusiva discreción, de borrar toda la información que EL USUARIO ha incluido en www.aspirantesun.com y de terminar su registro y acceso a ésta página, ante el incumplimiento por parte del USUARIO de estos términos y condiciones sin previo aviso.
+	</textarea>
+	<br>
+</td>
+</tr>
+            <tr>
+<td style="text-align:center;">                  
+<?php
+    $row_terminos = array();
+    $row_terminos['terminos'] = 'v';
+?>
+ <script type="text/javascript">
+            // Selecciono los elementos <input /> por su atributo "terminos"
+            var boton = document.getElementsByName('submit');
+            function habilitarb() {
+                // Habilito los elementos
+                boton[0].disabled = false;
+            } 
+            function deshabilitarb() {
+                // Deshabilito los elementos
+                boton[0].disabled = true;               
+            }
+        </script>
+Acepta termino y Condiciones: <br>
+  <input type="radio" name="terminos" value="v"<?php echo $row_terminos['terminos'] == "v" ? ' checked="checked"' : '';?> onclick="habilitarb();"/> <b>Si</b>
+  <input type="radio" name="terminos" value="f"<?php echo $row_terminos['terminos'] == "f" ? ' checked="checked"' : '';?> onclick="deshabilitarb();"> <b>No </b>
+ <br/>
+</td>
+	</tr>
+            
+            
 <tr><br>
   <td colspan="4" align="center" class="registr"> 
    <button name="submit" type="submit" class="btn btn-success" ><i class="icon-save icon-large"></i>&nbsp;Registrar Información Personal</button>

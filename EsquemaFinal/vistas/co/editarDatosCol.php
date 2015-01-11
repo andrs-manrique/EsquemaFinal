@@ -75,12 +75,12 @@ if ($row = mysql_fetch_array($consulta)) {
                           <td class="registr">Correo</td>
                         <td class="registr"><input type="text" name="mail_user" title="correo electronico de contacto" value='<?php echo $mail_user; ?>'></td>
 
-                    </tr><tr>
+                   
                         <td class="registr">Sexo</td>
                         <td class="registr">
                             <select name="sex_user" id="tipodni_user">
                                 <option value='<?php echo $sex_user; ?>'><?php echo $sex_user; ?></option>
-                                <option value="Msculino">Masculino</option>
+                                <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
                             </select>
 
@@ -96,8 +96,7 @@ if ($row = mysql_fetch_array($consulta)) {
                     <tr>
                         <td class="registr">Contacto:</td>
                         <td class="registr"><input type="number" name="tel_user" title="Telefono de Contacto" value='<?php echo $tel_user; ?>'></td>
-                    </tr>
-                    <tr>
+                    
                         
                         <td class="registr"> Estado Civil</td>	
                         <td class="registr"><select name="civil_user" id="civil_user" readonly="readonly" >
@@ -150,8 +149,7 @@ if ($row = mysql_fetch_array($consulta)) {
                     <tr>
                         <td class="registr">Universidad </td>
                         <td class="registr"><input type="text" name="universidad_user" title="localidad vive" value='<?php echo $universidad_user; ?>'></td>
-                    </tr>
-                    <tr> 
+                    
                         <td class="registr">Pregrado:</td>
                         <td class="registr"><input type="text" name="carrera_user" title="localidad vive"  value='<?php echo $carrera_user; ?>'></td>
                     </tr>

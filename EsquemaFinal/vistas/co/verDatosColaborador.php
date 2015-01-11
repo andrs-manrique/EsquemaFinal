@@ -82,8 +82,14 @@
                                 <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>' disabled></td>
 
                                 <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>' disabled></td>
-
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  
+                                                           value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta2 = mysql_query("select * from t_rol where identificador_rol=$rol_user;");
+                                                           while ($row = mysql_fetch_array($consulta2)) {
+                                                               echo $row['rol_de_usuario'];
+                                                           }
+                                                           ?> 'disabled></td>
     <!--  <td class="registr">clave</td>-->
                                 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
                             </tr>
@@ -111,9 +117,15 @@
                                 <td class="registr">Estado  Civil:</td>
                                 <td class="registr"><input type="text" name="civil_user" title="Estado Civil"  value='<?php echo $civil_user; ?>' disabled=""></td>
 
-                                <td class="registr"> Estado</td>
-                                <td class="registr"><input type="text" name="id_estado" title="¿Ativado?"  value='<?php echo $id_estado; ?>' disabled></td>
-
+                               <td class="registr">Estado actual</td>
+                                <td class="registr"><input type="text" name="id_estado" title="¿Activado?" 
+                                                           value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$id_estado;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['nom_estado'];
+                                                           }
+                                                           ?>         'disabled></td>
 
                             </tr>
 

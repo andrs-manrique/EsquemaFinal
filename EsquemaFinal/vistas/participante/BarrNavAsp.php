@@ -3,7 +3,7 @@
     <ul>
         <li class='active'><a href='aspirante.php'>Inicio</a></li>
 
-        <li class='has-sub '><a href='datosAspirante.php'>Mis datos</a>
+        <li class='has-sub '><a href='#S'>Mis datos</a>
             <ul>
                 <li class='has-sub '><a href='#'>Información</a>
                     <ul>
@@ -70,7 +70,7 @@
         </li>
        
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
-        <li><a>Bienvenido: Aspirante</a></li>
+        <li><a href="aspirante.php">Bienvenido: Aspirante</a></li>
     </ul>
 </div>
 

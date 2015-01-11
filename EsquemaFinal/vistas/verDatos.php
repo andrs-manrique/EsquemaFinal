@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include("./BarrNavCol.php"); ?>			
+<?php include("./BarraNavegacionadmin.php"); ?>			
 <?php include("../3modelo/autenticacion.php"); ?>
 <div align="center">
     <section>
@@ -92,9 +92,15 @@ while ($fila = mysql_fetch_array($consulta)) {
                                 <td class="registr">Contacto:</td>
                                 <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>' disabled></td>
 
-                                <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>' disabled></td>
-
+                                 <td class="registr">Rol:</td>
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  
+                                                           value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta2 = mysql_query("select * from t_rol where identificador_rol=$rol_user;");
+                                                           while ($row = mysql_fetch_array($consulta2)) {
+                                                               echo $row['rol_de_usuario'];
+                                                           }
+                                                           ?> 'disabled></td>
     <!--  <td class="registr">clave</td>-->
                                 <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
 

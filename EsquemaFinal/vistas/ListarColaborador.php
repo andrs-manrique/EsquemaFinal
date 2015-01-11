@@ -37,7 +37,15 @@
                                     <td><?php echo $row['apell_user']; ?></td>
                                     <td><?php echo $row['sex_user']; ?></td><td>
     <?php echo $row['tel_user']; ?></td>
-                                    <td><?php echo $row['id_estado']; ?></td>
+                                    <td><?php echo $row['id_estado']; ?>
+                                  <?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$row[id_estado];;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['nom_estado'];
+                                                           }
+                                                           ?>   
+                                    </td>
                                     <td><?php echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>"; ?></td>
                                     <td width="100">
 

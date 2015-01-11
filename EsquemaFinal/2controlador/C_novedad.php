@@ -1,6 +1,4 @@
-
 <?php
-
 require_once("../3modelo/M_novedad.php");
 $fechahoy=getdate();
 $FechaActual= $fechahoy["mday"]."-".$fechahoy["mon"]."-".$fechahoy["year"];

@@ -92,6 +92,12 @@ switch ($operacion) {
       echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
         	$objUsuario->insertarDatos();
         break;
+    
+    case "insertarDatoscol":
+      echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
+        	$objUsuario->insertarDatosCol();
+        break;
+
 
 }
 

@@ -84,9 +84,15 @@
 
                             </tr>
                             <tr>
-                                 <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>'disabled></td>
-                                
+                                <td class="registr">Rol:</td>
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  
+                                                           value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta2 = mysql_query("select * from t_rol where identificador_rol=$rol_user;");
+                                                           while ($row = mysql_fetch_array($consulta2)) {
+                                                               echo $row['rol_de_usuario'];
+                                                           }
+                                                           ?> 'disabled></td>
                               <input type="hidden" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>'disabled>
 
                                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'disabled></td>
@@ -134,16 +140,34 @@
                 <tr><td  colspan="4" align="center"><hr></td></tr>
 
                             <tr>
-                                <td class="registr">Tipo Colegio</td> 
-                                <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"  value='<?php echo $id_colegio; ?>'disabled></td>
-
-                                <td class="registr">Jornada </td>
-                                <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php echo $id_jornada; ?>'disabled></td>
-                            </tr>
+                               <td class="registr">Tipo Colegio</td> 
+                                <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"
+                                                           
+                                                           value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_colegio where id_colegio=$id_colegio;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['tipo_colegio'];
+                                                           }
+                                                           ?>         'disabled></td>
+                             <td class="registr">Jornada </td>
+                                <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_jornada where id_jornada=$id_jornada;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['tipo_jornada'];
+                                                           }
+                                                           ?>         'disabled></td> </tr>
                             <tr>
                                 <td class="registr">Estado actual</td>
-                                <td class="registr"><input type="text" name="id_estado" title="¿Activado?"  value='<?php echo $id_estado; ?>'disabled></td>
-
+                                <td class="registr"><input type="text" name="id_estado" title="¿Activado?" 
+                                                           value='<?php
+                                                           include("../../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$id_estado;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['nom_estado'];
+                                                           }
+                                                           ?>         'disabled></td>
                             </tr>
                             <tr>
                                 <td class="registr"></td>
