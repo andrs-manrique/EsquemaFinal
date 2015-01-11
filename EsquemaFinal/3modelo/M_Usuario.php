@@ -287,6 +287,19 @@ public function modificarPar() { //                                             
     }
     
     
+    //----------
+    public function modificarParADMIN() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
+        $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
+       if (mysql_query($consulta)) {
+            echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
+              
+                echo"<script language='javascript'>location.href=\"../vistas/listarAspirante.php\"   </script>";
+       }else{
+            echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
+            echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
+        }
+    }
+    
     
     
     //------------------------------------
@@ -372,20 +385,27 @@ if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")){
     
     
     public function desactivar() {
-
-
-
         $consulta = " update t_usuario set id_estado = '2' WHERE dni_user='$this->dni'";
-
         if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Desactivacion es un EXITO');</script>";
-            echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"</script>";
+            echo"<script language='javascript'>location.href=\"../vistas/listarAspirante.php\"</script>";
         } else {
             echo"<script language='javascript'> alert('ERROR, No se Desactivo'); </script>";
             echo"<script language='javascript'> location.href=\"../vistas/d.php\" </script>";
         }
     }
 
+    public function Activar() {
+        $consulta = " update t_usuario set id_estado = '1' WHERE dni_user='$this->dni'";
+        if (mysql_query($consulta)) {
+            echo"<script language='javascript'> alert('La Activacion es un EXITO');</script>";
+            echo"<script language='javascript'>location.href=\"../vistas/listarAspirante.php\"</script>";
+        } else {
+            echo"<script language='javascript'> alert('ERROR, No se Desactivo'); </script>";
+        }
+    }
+    
+    
 }
 
 ?>

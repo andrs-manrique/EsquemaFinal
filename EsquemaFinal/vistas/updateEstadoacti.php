@@ -34,11 +34,11 @@
                                          
                    <tr>  			    
                    <script language="JavaScript">
-                       function desactivar(){if (confirm('¿Estas seguro de Desactivar el Colaborador?')){ document.form.txtoperacion.value = 'desac';} 
+                       function Activar(){if (confirm('¿Estas seguro de Desactivar el Colaborador?')){ document.form.txtoperacion.value = 'Activar';} 
                            else {} } </script>  
 						    <td class="registr" colspan="2" align="center">
-                                                        <input type="submit" name="Submit" value="Desactivar" onClick="desactivar()" >
-                                                        <input type='hidden' name='txtoperacion' value='desac'></td>
+                                                        <input type="submit" name="Submit" value="Activar" onClick="Activar()" >
+                                                        <input type='hidden' name='txtoperacion' value='Activar'></td>
 						    </tr>
 						</table>        
 					</form>		                       

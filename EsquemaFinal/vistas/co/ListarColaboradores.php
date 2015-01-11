@@ -20,7 +20,7 @@
                                 <th>Correo </th>     
                                 <th>Universidad</th>  
                                 <th>Consultar</th> 
-                                                        
+
                             </tr>
                         </thead>
                         <tbody>
@@ -31,23 +31,23 @@
                                 $id = $row['dni_user'];
                                 ?>
                                 <tr class="del<?php echo $id ?>">
-                                   <td><?php echo $row['nom_user']; ?></td> 
+                                    <td><?php echo $row['nom_user']; ?></td> 
                                     <td><?php echo $row['apell_user']; ?></td>
                                     <td><?php echo $row['sex_user']; ?></td><td>
-    <?php echo $row['mail_user']; ?></td>
+                                        <?php echo $row['mail_user']; ?></td>
                                     <td> <?php echo $row['universidad_user']; ?></td>
 
-                                           <td><?php  echo"<a href=\"verDatosColaboradores.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
-
-                                   
+                                    <td><?php echo"<a href=\"verDatosColaboradores.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
 
 
 
-    <?php //include('toolttip_edit_delete.php');   ?>
+
+
+                                    <?php //include('toolttip_edit_delete.php');   ?>
                                     <!-- Modal edit user -->
 
                                 </tr>
-<?php } ?>
+                            <?php } ?>
 
                         </tbody>
                     </table>

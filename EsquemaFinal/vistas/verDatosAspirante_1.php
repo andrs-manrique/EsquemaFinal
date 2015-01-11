@@ -50,10 +50,11 @@
                     <form name="form" method="post" action="../2controlador/C_Usuario.php" > 
                         <table align="center" >
                             <tr>
+                                <td class="registr">No. Identificación:</td>
+                                <td class="registr"><input type="text" name="dni" title="usuario"  value='<?php echo $idaspi ?>' disabled></td>
 
-                                <td class="registr"><input type="hidden" name="dni" title="usuario"  value='<?php //echo $idaspi  ?>' disabled></td>
-
-                                <td class="registr"><input type="hidden" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
+                                <td class="registr">Tipo DNI:</td>
+                                <td class="registr"><input type="text" name="tipodni_user" title="usuario" value='<?php echo $tipodni_user; ?>' disabled></td>
                                 <?php
                                 $consulta = mysql_query("select * from t_usuario where dni_user='$idaspi'");
                                 while ($fila = mysql_fetch_array($consulta)) {
@@ -62,7 +63,6 @@
                                 }
                                 ?>
                             </tr>
-                <tr><td  colspan="4" align="center"><hr></td></tr>
 
                             <tr>
                                 <td class="registr">Nombre:</td>
@@ -90,57 +90,95 @@
                             </tr>
                             <tr>
                                 <td class="registr">Contacto:</td>
-                                <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>'></td>
+                                <td class="registr"><input type="text" name="tel_user" title="Telefono " value='<?php echo $tel_user; ?>'disabled></td>
 
                                 <td class="registr">Rol:</td>
-                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  value='<?php echo $rol_user; ?>'></td>
-    <!--  <td class="registr">clave</td>-->
-                                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
+                                <td class="registr"><input type="text" name="rol_user" title="¿Col o Aspi?"  
+                                                           value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta2 = mysql_query("select * from t_rol where identificador_rol=$rol_user;");
+                                                           while ($row = mysql_fetch_array($consulta2)) {
+                                                               echo $row['rol_de_usuario'];
+                                                           }
+                                                           ?> 'disabled></td>
+
+                                <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'disabled></td>
                             </tr>
-                <tr><td  colspan="4" align="center"><hr></td></tr>
+                            <tr>
+                                <td class="registr">Fecha Nacimiento:</td> 
+                                <td class="registr"><input type="text" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'disabled></td>
+
+                                <td class="registr">Estado Civil:</td>
+                                <td class="registr"><input type="text" name="civil_user" title="barrio" value='<?php echo $civil_user; ?>'disabled></td>
+
+                            </tr>
                             <tr>
                                 <td class="registr">Lugar Nacimiento:</td> 
-                                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'></td>
-                                <td class="registr">Fecha Nacimiento:</td> 
-                                <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'></td>
+                                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'disabled></td>
+                                <td class="registr">Estrato:</td>
+                                <td class="registr"><input type="text" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user; ?>'disabled></td>
+
                             </tr>
+                            <tr><td  colspan="4" align="center"><hr></td></tr>
 
                             <tr>
                                 <td class="registr">localidad:</td>
-                                <td class="registr"><input type="text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user; ?>'></td>
-                                <td class="registr">estrato:</td>
-                                <td class="registr"><input type="text" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user; ?>'></td>
+                                <td class="registr"><input type="text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user; ?>'disabled></td>
                             </tr> 
                             <tr>
-                                <td class="registr">barrio:</td>
-                                <td class="registr"><input type="text" name="barrio_user" title="barrio" value='<?php echo $barrio_user; ?>'></td>
-                                <td class="registr">Tipo Colegio</td> 
-                                <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"  value='<?php echo $id_colegio; ?>'></td>
+                                <td class="registr">Barrio:</td>
+                                <td class="registr"><input type="text" name="barrio_user" title="barrio" value='<?php echo $barrio_user; ?>'disabled></td>
 
                             </tr>
 
                             <tr>
 
                                 <td class="registr">Archivo</td> 
-                                <td class="registr"><input type="text" name="archivo_usuario" title="localidad vive" value='<?php echo $archivo_usuario; ?>'></td>
+                                <td class="registr"><input type="text" name="archivo_usuario" title="localidad vive" value='<?php echo $archivo_usuario; ?>'disabled></td>
 
                             </tr>
-
+                            <tr><td  colspan="4" align="center"><hr></td></tr>
                             <tr>
-                                <td class="registr"><input type="hidden" name="responsable_user" title=" Nombre"  value='<?php echo $responsable_user; ?>'></td>
-
-                                <td class="registr"><input type="hidden" name="cel_respon_user" title="Telefono de Contacto"  value='<?php echo $cel_respon_user; ?>'></td>
-
+                                <td class="registr">Acudiente Nombre</td>
+                                <td class="registr"><input type="text" name="responsable_user" title=" Nombre"  value='<?php echo $responsable_user; ?>'disabled></td>
                             </tr>
                             <tr>
+                                <td class="registr">Cel acudiente</td>
+                                <td class="registr"><input type="text" name="cel_respon_user" title="Telefono de Contacto"  value='<?php echo $cel_respon_user; ?>'disabled></td>
 
-                                <td class="registr"> </td>
-                                <td class="registr"><input type="hidden" name="id_jornada" title="Jornada Interes"  value='<?php echo $id_jornada; ?>'></td>
                             </tr>
-                            <tr>
-                                <td class="registr"></td>
-                                <td class="registr"><input type="hidden" name="id_estado" title="¿Activado?"  value='<?php echo $id_estado; ?>'></td>
+                            <tr><td  colspan="4" align="center"><hr></td></tr>
 
+                            <tr>
+                                <td class="registr">Tipo Colegio</td> 
+                                <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"
+                                                           
+                                                           value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_colegio where id_colegio=$id_colegio;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['tipo_colegio'];
+                                                           }
+                                                           ?>         'disabled></td>
+
+                                <td class="registr">Jornada </td>
+                                <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_jornada where id_jornada=$id_jornada;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['tipo_jornada'];
+                                                           }
+                                                           ?>         'disabled></td>
+                            <tr>
+                                <td class="registr">Estado actual</td>
+                                <td class="registr"><input type="text" name="id_estado" title="¿Activado?" 
+                                                           value='<?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$id_estado;");
+                                                           while ($row = mysql_fetch_array($consulta)) {
+                                                               echo $row['nom_estado'];
+                                                           }
+                                                           ?>         'disabled></td>
                             </tr>
                             <tr>
                                 <td class="registr"></td>

@@ -77,11 +77,22 @@ switch ($operacion) {
        	$objUsuario->modificarPar();
         break;
     
+    
+    
+    
+    
     case "actualizarCol":
        	$objUsuario->actualizarCol();
         break;
     
-    
+    case "modificarParADMIN":
+       	$objUsuario->modificarParADMIN();
+        break;
+       
+   
+     case "Activar":
+       	$objUsuario->Activar();
+        break;
     
     
     case "desac":

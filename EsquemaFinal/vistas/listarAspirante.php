@@ -18,11 +18,11 @@
                                     <th>Identificacion</th>
                                     <th>Nombre</th>                                 
                                     <th>Apellido</th>     
-                                    <th>Sexo</th>  
-                                    <th>Telefono </th>     
+
                                     <th>Estado</th>  
                                     <th>Documento</th>
-                                    <th>Consultar</th> 
+                                    <th>Consultar</th>
+                                     <th>Estado</th>
                                     <th>Acciones</th>                             
                                 </tr>
                             </thead>
@@ -37,33 +37,59 @@
                                         <td><?php echo $row['dni_user']; ?></td> 
                                         <td><?php echo $row['nom_user']; ?></td> 
                                         <td><?php echo $row['apell_user']; ?></td>
-                                        <td><?php echo $row['sex_user']; ?></td>
-                                        <td><?php echo $row['tel_user']; ?></td>
-                                        <td><?php echo $row['id_estado']; ?></td>
-                                        <td> <?php echo "<a href='../Archivos/{$row['archivo_usuario']}'>" . $row['archivo_usuario'] . "</a> " ?></td>
+
+                                        <td><?php
+                                            echo $row['id_estado'] . " ";
+                                            include("../3modelo/conexion.php");
+                                            $consulta = mysql_query("select * from t_estado_user where id_estado=$row[id_estado];");
+                                            while ($r = mysql_fetch_array($consulta)) {
+                                                echo $r['nom_estado'];
+                                            }
+                                            ?></td>
+
+                                        <td> <?php echo "<a href='../Archivos/{$row['archivo_usuario']}'> Descargar </a> " ?></td>
 
 
-                            <td><?php  echo"<a href=\"verDatosAspirante_1.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
-                                        <td width="100">
+                                        <td><?php echo"<a href=\"verDatosAspirante_1.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
+                                        <td width="70">
+ <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+                                               <?php
+                                               echo"<a href='updateEstado.php?dni=$id'>  "
+                                               . " <img src='../img/lock.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   
+                                               ?>
 
+                                            <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+                                               <?php
+                                               echo"<a href='updateEstadoacti.php?dni=$id'>  "
+                                               . " <img src='../img/acti.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   
+                                               ?>
+                                        </td>
+                                        <td>
+                                            
                                             <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
                                                href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='modif_colaborador.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
+                                               <?php
+                                               echo"<a href='modif_asp.php?dni=$id'>  "
+                                               . " <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   
+                                               ?>
+
+                                           
+
 
                                             <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                                href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='updateEstado.php?dni=$id'>   <img src='../img/bloqueado.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   ?>
-
-
-                                            <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='eliminarPart.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   ?>
+    <?php
+    echo"<a href='eliminarPart.php?dni=$id'>  "
+    . " <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   
+    ?>
 
                                         </td>
 
 
 
-    <?php //include('toolttip_edit_delete.php');   ?>
+                                    <?php //include('toolttip_edit_delete.php');    ?>
                                         <!-- Modal edit user -->
 
                                     </tr>
