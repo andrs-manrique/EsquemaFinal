@@ -49,7 +49,7 @@
             </ul>
 
         </li>
-        <li><a href='materiales.php'>Material de Estudio</a> </li>
+        <li><a href='Material.php'>Material de Estudio</a> </li>
 
         <li><a href='listaNovedades.php'>Novedades</a>
         </li>
