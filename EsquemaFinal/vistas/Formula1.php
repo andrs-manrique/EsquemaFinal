@@ -2,18 +2,18 @@
 <div class="container">
     <div class="margin-top">
 
-        <div class="details" align="center" >FORMULARIO DE REGISTRO <?php echo "<br>" ?> Ingrese los siguientes Datos</div>		
+        <div class="details" align="center" >FORMULARIO DE REGISTRO <?php echo "<br>" ?> Ingrese los siguientes Datos</div>     
         <form class="form-horizontal" method="POST"  action="save2.php" enctype="multipart/form-data">
             <table>
                 <table align="center" border="0">
                     <tr>
                         <td class="registr">No. Documento:</td>
                         <td class="registr">   
-                            <input type="number" name="dni_user"  autocomplete="off" maxlength="11" value="">
+                            <input type="text" name="dni_user" pattern="^[0-9_]{7,11}$"  autocomplete="off" maxlength="11" value=""required>
                         </td>
 
                         <td class="registr">Tipo de documento:</td>
-                        <td class="registr"><select name="tipodni_user" >
+                        <td class="registr"><select name="tipodni_user" required>
                                 <option value="">Seleccione</option>
                                 <option value="Cedula Ciudadania">CC</option>
                                 <option value="Tarjeta Identidad">TI</option>
@@ -27,13 +27,13 @@
                     </tr>
                     <tr>
                         <td class="registr">Nombre(s):</td>
-                        <td class="registr"><input type="text" name="nom_user" title="Nombre Completo Por favor" required></td>
+                        <td class="registr"><input type="text"  min="5" max="30" name="nom_user" pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="Nombre Completo Por favor" required></td>
                         <td class="registr">Apellido(s):</td>
-                        <td class="registr"><input type="text" name="apell_user" title="Apellidos Por favor" required ></td>
+                        <td class="registr"><input type="text"  min="5" max="20" name="apell_user" pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="Ingrese los Apellidos Por favor" required ></td>
                     </tr>
                     <tr>  
                         <td class="registr">Sexo</td>
-                        <td class="registr"><select name="sex_user" id="tipodni_user">
+                        <td class="registr"><select name="sex_user" id="tipodni_user" required>
                                 <option value="">Seleccione</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
@@ -50,9 +50,9 @@
 
                     <tr>
                         <td class="registr">Telefono Usuario</td>
-                        <td class="registr"><input type="number"  name="tel_user"  placeholder="3133556565" title="Telefono de Contacto" required></td>
+                        <td class="registr"><input type="text"  name="tel_user" pattern="^[0-9_]{10}" placeholder="3133556565" title="Telefono de Contacto" required></td>
                         <td class="registr">Estado Civil</td>
-                        <td class="registr"><select name="civil_user" id="civil_user" >
+                        <td class="registr"><select name="civil_user" id="civil_user" required>
                                 <option value="">Seleccione</option>
                                 <option value="Solter@">Solter@</option>
                                 <option value="union_Libre">Union_Libre</option>
@@ -77,7 +77,7 @@
 
                     <tr>
                         <td class="registr">Localidad:</td>
-                        <td class="registr"><select  name="localidad_user" >
+                        <td class="registr"><select  name="localidad_user" required>
                                 <option></option>
                                 <option value="1.Usaquen" >1.Usaquen</option>
                                 <option value="2. Chapinero" >2. Chapinero</option>
@@ -96,23 +96,23 @@
                     </tr>
                     <tr>
                         <td class="registr">Estrato:</td>
-                        <td class="registr"><input type="number" min="1" max="6" value="0" name="estrato_user" title="estrato de Vivienda" required ></td>
+                        <td class="registr"><input type="text" min="1" max="6" value="0" name="estrato_user" title="estrato de Vivienda" required></td>
                     </tr>
                     <tr>
                         <td class="registr">Barrio:</td>
-                        <td class="registr"><input type="text" name="barrio_user" title="barrio" ></td>
+                        <td class="registr"><input type="text" name="barrio_user"  pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="barrio" required></td>
 
                     </tr>
 
                     <tr>
 
                         <td class="registr">Acudiente Nombre</td>
-                        <td class="registr"><input type="text" name="responsable_user" title=" Nombre" ></td>
+                        <td class="registr"><input type="text" name="responsable_user" pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title=" Nombre" required></td>
                     </tr>
                     <tr>
 
-                        <td class="registr">Cel acudiente</td>
-                        <td class="registr"><input type="text" name="cel_respon_user" title="Telefono de Contacto" ></td>
+                        <td class="registr">Telefono acudiente</td>
+                        <td class="registr"><input type="text" name="cel_respon_user" pattern="^[0-9_]{7,10}" title="Telefono de Contacto" ></td>
 
                     </tr>           <input type="hidden" name="fecha_registro_user" title="Fecha de registro ">
                     <input type="hidden" name="carrera_user" title=" Carrera"  >
@@ -121,7 +121,7 @@
 
                         <td class="registr">Tipo Colegio</td>
                         <td>
-                            <select name="id_colegio" id="id_colegio">
+                            <select name="id_colegio" id="id_colegio"required>
                                 <option value="">Seleccione Colegio</option>
                                 <?php
                                 include("../3modelo/conexion.php");
@@ -136,14 +136,14 @@
 
                         <td class="registr">Estado Usuario</td>
                         <td class="registr">
-                            <select name="id_estado" id="id_colegio" >
+                            <select name="id_estado" id="id_colegio" required>
                                 <option value="1">Activado </option>
                             </select>
                         </td>
 
                         <td class="registr">Jornada </td>
                         <td class="registr">
-                            <select name="id_jornada" id="id_colegio">
+                            <select name="id_jornada" id="id_colegio"required>
                                 <option value="">Seleccione </option>
                                 <?php
                                 include("../3modelo/conexion.php");
