@@ -10,7 +10,7 @@
         <table align="center" >
             <tr>
                 <td class="registr">No. Documento:</td> 
-                <td class="registr"><input type="text" name="dni_user" title="Numero de documento identificacion Nacional"required></td> 
+                <td class="registr"><input type="text" name="dni_user" pattern="^[0-9_]{7,11}$" title="Numero de documento identificacion Nacional"required></td> 
 
 
                 <td class="registr">Tipo de documento:</td>
@@ -26,10 +26,10 @@
 
             <tr>
                 <td class="registr">Nombre(s):</td>
-                <td class="registr"><input type="text" name="nom_user" title="nombre"required></td>
+                <td class="registr"><input type="text"  name="nom_user" pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="nombre"required></td>
 
                 <td class="registr">Apellido(s):</td>
-                <td class="registr"><input type="text" name="apell_user" title="apellido" required></td>
+                <td class="registr"><input type="text" name="apell_user" pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="apellido" required></td>
             </tr>
             <tr>  
                 <td class="registr">Sexo</td>
@@ -57,7 +57,7 @@
 
 
                 <td class="registr">Estado Civil</td>
-                <td class="registr"><select name="civil_user" id="civil_user">
+                <td class="registr"><select name="civil_user" id="civil_user" required>
                         <option value="">Seleccione</option>
                         <option value="Solter@">Solter@</option>
                         <option value="union_Libre">Union_Libre</option>
@@ -73,20 +73,20 @@
 
             <tr>
                 <td class="registr">Lugar Nacimiento:</td>
-                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?" ></td>
+                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?" required></td>
 
                 <td class="registr">Fecha Nacimiento:</td>
-                <td class="registr"><input type="date" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" ></td>
+                <td class="registr"><input type="date" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" required></td>
             </tr>
 
             <tr>
 
                 <td class="registr">Carrera</td>
-                <td class="registr"><input type="text" name="carrera_user" title="Carrrera "></td>
+                <td class="registr"><input type="text" name="carrera_user"  pattern="^[A-Za-záéíóúñ]{2,}([\s][A-Za-záéíóúñ]{2,})+$" title="Carrrera " required></td>
 
 
                 <td class="registr">Universidad </td>
-                <td class="registr"><input type="text" name="universidad_user" title="Universidad " ></td>
+                <td class="registr"><input type="text" name="universidad_user" pattern="[A-Za-z]{5,15}" title="Universidad " required></td>
 
 
             </tr>
@@ -100,7 +100,7 @@
 
                 <td class="registr">Estado Usuario</td>
                 <td class="registr">
-                    <select name="id_estado" id="id_colegio">
+                    <select name="id_estado" id="id_colegio" required>
                         <option value="">Seleccione </option>
                         <?php
                         include("../3modelo/conexion.php");
@@ -113,7 +113,7 @@
 
                 <td class="registr">Materia </td>
                 <td class="registr">
-                    <select name="id_materia_user" id="id_colegio">
+                    <select name="id_materia_user" id="id_colegio" required>
                         <option value="">Seleccione </option>
                         <?php
                         include("../3modelo/conexion.php");
@@ -127,7 +127,7 @@
             </tr> <tr>
                 <td class="registr"> Rol usuario</td>
                 <td class="registr">
-                    <select name="rol_user" id="id_colegio">
+                    <select name="rol_user" id="id_colegio" required>
                         <option value="">Seleccione </option>
                         <?php
                         include("../3modelo/conexion.php");
