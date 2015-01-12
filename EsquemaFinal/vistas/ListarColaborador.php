@@ -81,7 +81,7 @@
                                             <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
                                                href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
                                                <?php
-                                               echo"<a href='modif_asp.php?dni=$id'>  "
+                                               echo"<a href='modif_colaborador.php?dni=$id'>  "
                                                . " <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   
                                                ?>
 

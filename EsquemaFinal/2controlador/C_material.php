@@ -18,13 +18,13 @@ $operacion=$_POST["txtoperacion"];
 $objMaterial= new mat($id_material,$fechamaterial,$titulo_material,$Contenido,$area_material,$tipo_material,$url,$autor);
 switch ($operacion) {
     case "adicionarMaterial":
-        $objMaterial->agregarMaterial();     break;
-    case "consultarDatos":
-       	
-        
-        
+        $objMaterial->agregarMaterial();   
+        break;
+    case "actualizarMaterial":
+        $objMaterial->actualizarMaterial();   
         break;
 
+    
 }
 
 ?>

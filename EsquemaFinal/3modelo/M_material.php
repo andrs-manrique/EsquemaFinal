@@ -38,5 +38,18 @@ $consulta ="INSERT INTO t_material(id_material,fecha_material, Titulo_material, 
          //   echo"<script language='javascript'>location.href=\"../vistas/listaNovedades.php\"</script>";
         }
     }
+    
+      
+    public function actualizarMaterial() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
+        $consulta = "update t_material set id_material='$this->id_material',Titulo_material='$this->titulomaterial',Contenido='$this->contenido',area_material='$this->area',tipo_material='$this->tipomaterial',url_material='$this->url',autor_material='$this->autor' where(id_material='$this->id_material')";
+       if (mysql_query($consulta)) {
+            echo"<script language='javascript'> alert('La Actualizacion Material es un EXITO');  </script>";
+              
+                echo"<script language='javascript'>location.href=\"../vistas/Material.php\"   </script>";
+       }else{
+            echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
+            echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
+        }
+    }
 }
 
