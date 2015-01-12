@@ -172,7 +172,7 @@
   <td colspan="4" align="center" class="registr"> 
       <input type="submit" name="Submit" value="Modificar Información" onClick="actualizar()" >
     <input type='hidden' name='txtoperacion' value='des'>
-    </td></td>
+    </td>
     </tr>
                             
 

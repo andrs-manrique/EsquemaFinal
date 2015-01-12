@@ -34,10 +34,7 @@
                                     <td><?php echo $row['id_materia']; ?></td> 
                                     <td><?php echo $row['nom_materia']; ?></td> 
                                     <td><?php echo $row['objetivo_materia']; ?></td>
-                                    <td><?php echo $row['desc_materia']; ?></td><td>
-
-
-                                    <td><?php //echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>";  ?></td>
+                                    <td><?php echo $row['desc_materia']; ?></td>
                                     <td width="100">
 
                                         <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  

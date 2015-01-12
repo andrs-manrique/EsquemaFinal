@@ -17,13 +17,7 @@
                     <aside id="articuloss">
  <?php
                 $identificacion = $_SESSION['identificacion'];?>
-   
-             
-             
-             
-        
-                        
-                        <div><br>
+                       <div><br>
                             <h3> <center> Ingresa Material</center></h3><br>
                             <form name="form1" method="post" action="../../2controlador/C_material.php">
                                 <table align="center">  
@@ -37,12 +31,9 @@
                                     <tr><td class="registr"></td>
                                         <td class="registr"><input name="id_novedad" type="hidden" title="Identificacion Novedad" value="0" /></td></tr>
                                     <tr><td class="registr">Titulo</td>
-                                        <td class="registr"><input name="titulo" type="text" title=" " value="" size="80" maxlength="1000" /></td></tr>                          
-                                
+                                        <td class="registr"><input name="titulo" type="text" title=" " value="" size="80" maxlength="1000" /></td></tr>                                                      
                                     <tr><td class="registr">Url</td>
-                                        <td class="registr"><input name="url_material" type="text" title=" " value="" size="90" maxlength="1000" /></td></tr>                          
-                                   
-                                                                      
+                                        <td class="registr"><input name="url_material" type="text" title=" " value="" size="90" maxlength="1000" /></td></tr>                                                                                            
                                     <tr>
                                       <td class="registr">Contenido</td>
                                         <td class="registr"><textarea id="element_3" name="conte_novedad" class="element textarea medium" style="width: 800px; height: 150px;  resize: vertical;"></textarea> 

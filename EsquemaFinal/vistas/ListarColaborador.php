@@ -17,11 +17,11 @@
                                 <th>Identificacion</th>
                                 <th>Nombre</th>                                 
                                 <th>Apellido</th>     
-                                <th>Sexo</th>  
-                                <th>Telefono </th>     
+                                <th>Materia</th>  
                                 <th>Estado</th>  
                                 <th>Consultar</th> 
-                                <th>Acciones</th>                             
+                                <th>Estado</th>
+                                    <th>Acciones</th>                            
                             </tr>
                         </thead>
                         <tbody>
@@ -35,40 +35,67 @@
                                     <td><?php echo $row['dni_user']; ?></td> 
                                     <td><?php echo $row['nom_user']; ?></td> 
                                     <td><?php echo $row['apell_user']; ?></td>
-                                    <td><?php echo $row['sex_user']; ?></td><td>
-    <?php echo $row['tel_user']; ?></td>
-                                    <td><?php echo $row['id_estado']; ?>
-                                  <?php
+                                    <td><?php echo $row['id_materia_user']." "; ?>
+                                         <?php
                                                            include("../3modelo/conexion.php");
-                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$row[id_estado];;");
-                                                           while ($row = mysql_fetch_array($consulta)) {
-                                                               echo $row['nom_estado'];
+                                                           $consulta5 = mysql_query("select * from t_materia where id_materia=$row[id_materia_user];");
+                                                           while ($r = mysql_fetch_array($consulta5)) {
+                                                               echo $r['nom_materia'];
                                                            }
                                                            ?>   
                                     </td>
-                                    <td><?php echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>"; ?></td>
-                                    <td width="100">
-
-                                        <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
-                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='modif_colaborador.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
-
-                                        <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                           href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='updateEstado.php?dni=$id'>   <img src='../img/bloqueado.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   ?>
-
-
-                                        <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                           href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php echo"<a href='Borrar_col.php?dni=$id'>   <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   ?>
-
+                                    <td><?php echo $row['id_estado']; ?>
+                                                 <?php
+                                                           include("../3modelo/conexion.php");
+                                                           $consulta = mysql_query("select * from t_estado_user where id_estado=$row[id_estado];");
+                                                           while ($w = mysql_fetch_array($consulta)) {
+                                                               echo $w['nom_estado'];
+                                                           }
+                                                           ?>   
                                     </td>
+                                   
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <td><?php echo"<a href='verDatosColaborador.php?id=$id'>Ver Más</a>"; ?></td>
+                                   <td width="70">
+ <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+                                               <?php
+                                               echo"<a href='updateEstado.php?dni=$id'>  "
+                                               . " <img src='../img/lock.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   
+                                               ?>
+
+                                            <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+                                               <?php
+                                               echo"<a href='updateEstadoacti.php?dni=$id'>  "
+                                               . " <img src='../img/acti.png' border='0' alt='Link to this page' width= 25px></a>"; //include('modal_edit_Colabor.php');   
+                                               ?>
+                                        </td>
+                                        <td>
+                                            
+                                            <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                               href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
+                                               <?php
+                                               echo"<a href='modif_colaborador.php?dni=$id'>  "
+                                               . " <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   
+                                               ?>
+
+                                           
 
 
+                                            <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                               href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
+    <?php
+    echo"<a href='eliminarPart.php?dni=$id'>  "
+    . " <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   
+    ?>
 
-    <?php //include('toolttip_edit_delete.php');   ?>
-                                    <!-- Modal edit user -->
-
+                                        </td>
                                 </tr>
 <?php } ?>
 
