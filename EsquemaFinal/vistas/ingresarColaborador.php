@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include("BarraNavegacionadmin.php"); ?>			
+<?php include("BarraNavegacionadmin.php"); ?>           
 <?php include("../3modelo/autenticacion.php"); ?>
 
 <div class="container" align="center">
@@ -164,7 +164,7 @@
       <input type="submit" name="Submit" value="Insertar Información" onClick="insertarDatosCol()" >
     <input type='hidden' name='txtoperacion' value=''>
     </td></td>
-    </tr>			   
+    </tr>              
 
         </table>
     </form>
@@ -176,4 +176,4 @@
 
 
 
-<?php include("footer.php"); ?>	
+<?php include("footer.php"); ?> 
