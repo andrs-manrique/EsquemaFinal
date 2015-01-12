@@ -152,7 +152,7 @@
                             <tr>
                                 <td class="registr">Tipo Colegio</td> 
                                 <td class="registr"><input type="text" name="id_colegio" title="¿Publico o Privado?"
-                                                           
+
                                                            value='<?php
                                                            include("../3modelo/conexion.php");
                                                            $consulta = mysql_query("select * from t_colegio where id_colegio=$id_colegio;");
@@ -163,12 +163,12 @@
 
                                 <td class="registr">Jornada </td>
                                 <td class="registr"><input type="text" name="id_jornada" title="Jornada Interes"  value='<?php
-                                                           include("../3modelo/conexion.php");
-                                                           $consulta = mysql_query("select * from t_jornada where id_jornada=$id_jornada;");
-                                                           while ($row = mysql_fetch_array($consulta)) {
-                                                               echo $row['tipo_jornada'];
-                                                           }
-                                                           ?>         'disabled></td>
+                                    include("../3modelo/conexion.php");
+                                    $consulta = mysql_query("select * from t_jornada where id_jornada=$id_jornada;");
+                                    while ($row = mysql_fetch_array($consulta)) {
+                                        echo $row['tipo_jornada'];
+                                    }
+                                    ?>         'disabled></td>
                             <tr>
                                 <td class="registr">Estado actual</td>
                                 <td class="registr"><input type="text" name="id_estado" title="¿Activado?" 
@@ -194,49 +194,49 @@
 
                         </table>
                     </form> 	
-                    
-                    
+
+
                 </div>
             </aside>        </div>
     </section>
 </div>
-    <div class="container">
-        <div class="margin-top">
-            <div class="row">	
-                <div class="span13">
-                    <table cellpadding="0" cellspacing="0" border="1" class="table  table-bordered" id="example"aling='center'>
-                        <div class="alert alert-info">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <strong><i class="icon-user icon-large"></i>&nbsp;DIPAS</strong>
-                        </div>
-                        <thead>
-                            <tr>
-                         <th>Dipa No. </th>                                 
-                                <th>Fecha Ingreso</th>
-                                <th>Ver </th>   
-                                <th>Observaciones</th>   
-                                </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $user_query2 = mysql_query("select * FROM t_dipa WHERE id_participante=$idaspi;") or die(mysql_error());
-                            while ($row = mysql_fetch_array($user_query2)) {
-                                $id = $row['id_dipa'];
-                                ?>
-                                <tr class="del<?php echo $id ?>">
-                                    <td><?php echo $row['id_dipa']; ?></td> 
-                                    <td><?php echo$row['fecha_dipa']; ?></td>
-                                   <td> <?php echo "<a target='_blank' href='../../dipa/{$row['nombre_dipa']}'>" . $row['nombre_dipa'] . "</a> " ?></td>
+<div class="container">
+    <div class="margin-top">
+        <div class="row">	
+            <div class="span13">
+                <table cellpadding="0" cellspacing="0" border="1" class="table  table-bordered" id="example"aling='center'>
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong><i class="icon-user icon-large"></i>&nbsp;DIPAS</strong>
+                    </div>
+                    <thead>
+                        <tr>
+                            <th>Dipa No. </th>                                 
+                            <th>Fecha Ingreso</th>
+                            <th>Ver </th>   
+                            <th>Observaciones</th>   
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $user_query2 = mysql_query("select * FROM t_dipa WHERE id_participante=$idaspi;") or die(mysql_error());
+                        while ($row = mysql_fetch_array($user_query2)) {
+                            $id = $row['id_dipa'];
+                            ?>
+                            <tr class="del<?php echo $id ?>">
+                                <td><?php echo $row['id_dipa']; ?></td> 
+                                <td><?php echo$row['fecha_dipa']; ?></td>
+                                <td> <?php echo "<a target='_blank' href='../../dipa/{$row['nombre_dipa']}'>" . $row['nombre_dipa'] . "</a> " ?></td>
                                 <td><?php echo $row['obs_dipa']; ?></td> 
-                                                              </tr>
-                            <?php } ?>
+                            </tr>
+                        <?php } ?>
 
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
 
-                </div>		
-            </div>
+            </div>		
         </div>
+    </div>
 </div>
 
 <?php include("footer.php"); ?>

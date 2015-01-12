@@ -22,14 +22,14 @@
                                     <th>Estado</th>  
                                     <th>Documento</th>
                                     <th>Consultar</th>
-                                     <th>Estado</th>
+                                    <th>Estado</th>
                                     <th>Acciones</th>                             
                                 </tr>
                             </thead>
                             <tbody>
 
                                 <?php
-                                $user_query2 = mysql_query("select *FROM t_usuario where rol_user='3' ORDER BY dni_user ASC")or die(mysql_error());
+                                $user_query2 = mysql_query("select *FROM t_usuario where rol_user='3' ORDER BY dni_user ASC") or die(mysql_error());
                                 while ($row = mysql_fetch_array($user_query2)) {
                                     $id = $row['dni_user'];
                                     ?>
@@ -52,7 +52,7 @@
 
                                         <td><?php echo"<a href=\"verDatosAspirante_1.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
                                         <td width="70">
- <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
+                                            <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                                href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
                                                <?php
                                                echo"<a href='updateEstado.php?dni=$id'>  "
@@ -67,7 +67,7 @@
                                                ?>
                                         </td>
                                         <td>
-                                            
+
                                             <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
                                                href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
                                                <?php
@@ -75,25 +75,34 @@
                                                . " <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   
                                                ?>
 
-                                           
-
 
                                             <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                                href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-    <?php
-    echo"<a href='eliminarPart.php?dni=$id'>  "
-    . " <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   
-    ?>
+                                            
+                                            
+                                  
+                                            
+                                       <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                     href="#delete_user<?php echo $id; ?>" data-toggle="modal"><img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 25px></a>
+                                     <?php include('borrarPart.php'); ?>
+                                            
+                                            
+                                               <?/*php
+                                               echo"<a href='eliminarPart.php?dni=$id'>  "
+                                               . " <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   
+                                                include('borrarPart.php');
+                                              */     ?>
+                                             
 
                                         </td>
 
 
 
-                                    <?php //include('toolttip_edit_delete.php');    ?>
+                                        <?php //include('toolttip_edit_delete.php');    ?>
                                         <!-- Modal edit user -->
 
                                     </tr>
-<?php } ?>
+                                <?php } ?>
 
                             </tbody>
                         </table>
