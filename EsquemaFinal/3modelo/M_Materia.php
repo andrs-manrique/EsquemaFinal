@@ -33,7 +33,7 @@ function __construct($materia_id, $materia_nom, $materia_obj, $materia_des) {
 
         if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('El registro es un EXITO ');  </script>";
-            echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";
+            echo"<script language='javascript'>location.href=\"../vistas/listarMaterias.php\"   </script>";
         } else {
             /* echo mysql_error(); */
             echo"<script language='javascript'>location.href=\"../vistas/ingresarColaborador.php\"</script>";
@@ -43,11 +43,17 @@ function __construct($materia_id, $materia_nom, $materia_obj, $materia_des) {
     
     
     
-   /* public function modifcarMateria() {
-        
-        $consulta=
-        
-        
-    }*/
+  public function modificar()
+          {                                                                                                                                                                                                                       
+        $consulta = "update t_materia set id_materia='$this->materia_id',nom_materia='$this->materia_nom',objetivo_materia='$this->materia_obj',desc_materia='$this->materia_des' where(id_materia='$this->materia_id')";
+        if (mysql_query($consulta)) {
+            echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
+            echo"<script language='javascript'> location.href=\"../vistas/listarMaterias.php\" </script>";
+            
+        } else {
+             echo"<script language='javascript'> alert('No fue posible la actualizacion');  </script>";
+           
+        }
+    }
 
 }

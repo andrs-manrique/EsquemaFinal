@@ -39,7 +39,7 @@
 
                                         <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
                                            href="#delete_user<?php echo $id; ?>" data-toggle="modal"></a>
-                                           <?php echo"<a href='modif_colaborador.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
+                                           <?php echo"<a href='modifMateria.php?dni=$id'>   <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   ?>
 
                                         <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
                                            href="#edit<?php echo $id; ?>" data-toggle="modal"></a>

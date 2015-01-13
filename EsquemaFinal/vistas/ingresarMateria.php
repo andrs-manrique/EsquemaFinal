@@ -44,9 +44,14 @@
                                     <tr><td class="registr">Materia: </td><td class="registr"><input name="Materia" type="text" title="Materia" value="" size="20" maxlength="2048" /></td></tr>
                                     <tr><td class="registr">Objetivos de la Materia: </td><td class="registr"><textarea id="element_3" name="obj_materia" class="element textarea medium"></textarea> 
                                         </td></tr>
-                                    <tr><td class="registr">Descripcion de la Materia: </td><td class="registr"><textarea id="element_3" name="desc_materi" class="element textarea medium"></textarea> 
+                                    <tr><td class="registr">Descripcion de la Materia: </td><td class="registr"><textarea id="element_3" name="desc_materia" class="element textarea medium"></textarea> 
                                             </div> 
-                                    <tr><td class="registr" colspan="2" align="center"><input type="submit" name="Submit" value="Guardar Materia" onClick="insertarMateria()" > 
+
+                                    <script language="JavaScript">function ingresar() {
+                                          document.form1.txtoperacion.value = 'ingresar';
+                                      }</script>  
+                                    <td colspan="2" align="center" class="registr"><input type="submit" name="Submit" value="ingresar" onClick="ingresar()" > <input type='hidden' name='txtoperacion' value='des'></td>
+                                    </tr>   
                                 </table>
                             </form>
                         </div>
