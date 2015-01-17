@@ -1,10 +1,10 @@
 <?php
 ob_start();
         include("../3modelo/conexion.php");
-$sql = mysql_query("SELECT * from t_usuario") or die(mysql_error()); 
+$sql = mysql_query("SELECT * from t_usuario where rol_user='2'") or die(mysql_error()); 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
-<html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="STYLESHEET" href="../dompdf/www/test/css/print_static.css" type="text/css" />
@@ -24,11 +24,11 @@ $sql = mysql_query("SELECT * from t_usuario") or die(mysql_error());
     <tr>
       <td><img src="../img/banner.png" height="150" width="692" /></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
+   <tr>
+      <td>&nbsp;ASPIRANTES</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
+      <td>&nbsp;RED INVESTIGATIVA DE EDUCACION ALTERNATIVA Y AUTONOMA</td>
     </tr>
     <tr></tr>
 </table>
@@ -55,6 +55,8 @@ $sql = mysql_query("SELECT * from t_usuario") or die(mysql_error());
           <th width="13%"><span class="Estilo58">Documento</span></th>
           <th width="27%"><span class="Estilo58">Nombre</span></th>
           <th width="12%"><span class="Estilo58">Sexo</span></th>
+           <th width="12%"><span class="Estilo58">Contacto</span></th>
+
           <th width="41%"><span class="Estilo58">Correo</span></th>
         </tr>
 		 <?php 
@@ -66,6 +68,8 @@ $sql = mysql_query("SELECT * from t_usuario") or die(mysql_error());
           <td style="text-align: center"><span class="Estilo3"><?php echo $array['dni_user']; ?></span></td>
           <td><div align="center"><span class="Estilo3"><span class="Estilo3"><?php echo $array['nom_user']; ?>&nbsp;-&nbsp;<?php echo $array['apell_user']; ?></span></td>
           <td style="text-align: center"><span class="Estilo3"><?php echo $array['sex_user']; ?></span></td>
+                    <td style="text-align: center"><span class="Estilo3"><?php echo $array['tel_user']; ?></span></td>
+
           <td style="text-align: center"><div align="center"><span class="Estilo3"><?php echo $array['mail_user']; ?></span></div></td>
         </tr>
       </tbody>

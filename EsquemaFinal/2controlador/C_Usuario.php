@@ -39,8 +39,6 @@ $id_materia_user=$_POST["id_materia_user"];
 $operacion=$_POST["txtoperacion"];
 //-------------
 
-
-
 $objUsuario = new usuario(
         $dni,$tipodni_user,$nom_user,$apell_user,$clave_user,
         $sex_user,$mail_user,$tel_user,$civil_user,$lugarnac_user,
@@ -48,7 +46,7 @@ $objUsuario = new usuario(
         $responsable_user,$cel_respon_user,$foto_user,$fecha_registro_user,$carrera_user,
         $universidad_user,$id_colegio,$id_estado,$id_jornada,$rol_user,$id_materia_user);
     
-            echo"<script language='javascript'> alert('..:: Entra al Switch::..');  </script>";
+           // echo"<script language='javascript'> alert('..:: Entra al Switch::..');  </script>";
 
  //$objUsuario->insertarDatos();
 switch ($operacion) {
@@ -61,12 +59,12 @@ switch ($operacion) {
         break;
     
      case "consultarDatosCol":
-      echo"<script language='javascript'> alert('..Entro:..');  </script>";
+      //echo"<script language='javascript'> alert('..Entro:..');  </script>";
        	$objUsuario->consultarDatosCol();
         break; 
     
     case "consultarDatosPar":
-      echo"<script language='javascript'> alert('..Entro:..');  </script>";
+    //  echo"<script language='javascript'> alert('..Entro:..');  </script>";
        	$objUsuario->consultarDatosPar();
         break; 
 
@@ -100,12 +98,12 @@ switch ($operacion) {
         break;
     
     case "insertarDatos":
-      echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
+    //  echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
         	$objUsuario->insertarDatos();
         break;
     
     case "insertarDatoscol":
-      echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
+     // echo"<script language='javascript'> alert('..Registrando Informacion.');  </script>";
         	$objUsuario->insertarDatosCol();
         break;
 

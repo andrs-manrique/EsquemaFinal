@@ -58,7 +58,7 @@
      
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
         
-        <li><a>Bienvenido: Colaborador </a></li>
+        <li><a href="colaborador.php">Bienvenido: Colaborador </a></li>
     </ul>
 </div>
 

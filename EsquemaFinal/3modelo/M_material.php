@@ -10,8 +10,9 @@ class mat{
     private $tipomaterial;
     private $url;
     private $autor;
-    
-    function __construct($id_material, $fechamaterial, $titulomaterial, $contenido, $area, $tipomaterial, $url, $autor) {
+    private $taller;
+            
+    function __construct($id_material, $fechamaterial, $titulomaterial, $contenido, $area, $tipomaterial, $url, $autor,$taller) {
         $this->id_material = $id_material;
         $this->fechamaterial = $fechamaterial;
         $this->titulomaterial = $titulomaterial;
@@ -20,6 +21,7 @@ class mat{
         $this->tipomaterial = $tipomaterial;
         $this->url = $url;
         $this->autor = $autor;
+        $this->taller=$taller;
     }
     
         public function __destruct() { } 
@@ -28,7 +30,7 @@ class mat{
 
 public function agregarMaterial() {
     
-$consulta ="INSERT INTO t_material(id_material,fecha_material, Titulo_material, Contenido,area_material,tipo_material, url_material, autor_material) values ('$this->id_material','$this->fechamaterial','$this->titulomaterial','$this->contenido','$this->area','$this->tipomaterial','$this->url','$this->autor')";
+$consulta ="INSERT INTO t_material(id_material,fecha_material, Titulo_material, Contenido,area_material,tipo_material, url_material, autor_material,material) values ('$this->id_material','$this->fechamaterial','$this->titulomaterial','$this->contenido','$this->area','$this->tipomaterial','$this->url','$this->autor','$this->taller')";
         if (mysql_query($consulta)) {
             
             echo"<script language='javascript'> alert('El registro es un EXITO ');  </script>";

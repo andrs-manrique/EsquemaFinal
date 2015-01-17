@@ -10,7 +10,7 @@
 	<!-- Bootstrap -->
 			<link href="../../css/bootstrap.css" rel="stylesheet" media="screen">
 			
-			<link href="../../css/docs.css" rel="stylesheet" media="screen">
+	<!--		<link href="../../css/docs.css" rel="stylesheet" media="screen"> -->
 			<link href="../../css/diapo.css" rel="stylesheet" media="screen">
 			<link href="../../css/font-awesome.css" rel="stylesheet" media="screen">
 			<link rel="stylesheet" type="text/css" href="../../css/style.css" />

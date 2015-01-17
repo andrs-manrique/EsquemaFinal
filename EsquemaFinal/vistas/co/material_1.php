@@ -1,15 +1,23 @@
 <?php include('header.php'); ?>
 <?php include("./BarrNavCol.php"); ?>			
 <?php include("../../3modelo/autenticacion.php"); ?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <link rel=stylesheet href="../css/pc1.css" type="text/css" />
+    </head>
+    <body>
         <section>
             <div id="contieneblog">
                 <aside id="articuloss">
                     <?php $identificacion = $_SESSION['identificacion']; ?>
-                    <div>
-                        <h3> <center> Ingresa Material</center></h3>
+                    <div><br>
+                        <h3> <center> Ingresa Material</center></h3><br>
                         <form name="form1" method="post" action="../../2controlador/C_material.php" enctype="multipart/form-data">
-                            <table align="center" border="1">  
-                                <input name="autor_material" type="hidden" title=" " value='<?php include("../../3modelo/conexion.php");
+                            <table align="center">  
+                                <input name="autor_material" type="text" title=" " value='<?php
+                                include("../../3modelo/conexion.php");
                                 $consulta = mysql_query("select * from t_usuario where dni_user=$identificacion;");
                                 while ($row = mysql_fetch_array($consulta)) {
                                     echo $row['nom_user'];
@@ -62,6 +70,8 @@
                                         </select>
                                     </td>
                                 </tr>
+                                </div> 
+
                                 <tr>
                                 <script language="JavaScript">function agregarNovedad() {
                                         document.form1.txtoperacion.value = 'adicionarMaterial';

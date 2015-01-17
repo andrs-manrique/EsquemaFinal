@@ -203,7 +203,6 @@
 <div class="container">
     <div class="margin-top">
         <div class="row">	
-            <div class="span13">
                 <table cellpadding="0" cellspacing="0" border="1" class="table  table-bordered" id="example"aling='center'>
                     <div class="alert alert-info">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -237,6 +236,4 @@
             </div>		
         </div>
     </div>
-</div>
-
 <?php include("footer.php"); ?>

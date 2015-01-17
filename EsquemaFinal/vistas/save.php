@@ -1,5 +1,4 @@
 <?php 
-
                 include("../3modelo/conexion.php");
 //Obtiene la hora y la fecha actuales
 $fechahoy=getdate();
@@ -63,17 +62,6 @@ if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")){
 
 	echo " El registro se realizo pero el documento <B> NO CONTIENE LA EXTENSION DESEADA </B> <br>Su registro será Anulado <br> Contacte al ADMINISTRADOR "; 
 }
-//$insertar =("insert into aspirante (Fech_reg,id_aspi,tipodoc_aspi,Nom_aspi,Apell_aspi,gen_aspi,estado_aspi,fechaNac_Aspi,archivo_aspi)
-  //       values('$FechaRegistro','$id_doc','$Tipo_doc','$txtnombre','$txtapellido','$genero','$txtEstadoCivl','$txtnac','$nombreArchivo')") 
-
-
-/* insert into aspirante (Fech_reg, id_aspi,tipodoc_aspi,Nom_aspi, Apell_aspi,gen_aspi,estado_aspi,fechaNac_Aspi,lugarNac_aspi,edad_aspi,vive_bgt_aspi, 
-	       localidad_aspi, estrato_aspi, barrio_aspi, plantel_Aspi,archivo_aspi,tipocol_aspi, icfes_aspi,estudiosup_aspi,estuactualmente_aspi, jornada_aspi,cel_Aspi,correo_aspi,correoconf_aspi,clave_aspi,clvae2_aspi,puntaje_aspi)
-
-
-values ('2004-10-10','123456','cc','txtnombre','txtapellido','genero','txtEstadoCivl','2000-10-18','lugacimiento','10','Vi',
-	'localidad_aspi','2','barrio_aspi','plantel_aspi','nombreArchivo','tipocol_aspi','100','udio_aspi','pi','ornada_aspi','12222','correo_aspi','txtcorreoconf_aspi','1020','1020','0')*/
-
 
 $inserta= "INSERT into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values('$dni','$tipodni_user','$nom_user','$apell_user','$clave_user','$sex_user','$mail_user','$tel_user','$civil_user','$lugarnac_user','$nac_user','$localidad_user','$estrato_user','$barrio_user','$archivo_usuario','$responsable_user','$cel_respon_user','$foto_user','$FechaRegistro','$carrera_user','$universidad_user','$id_colegio','$id_estado','$id_jornada','$rol_user','$id_materia_user')";         
 

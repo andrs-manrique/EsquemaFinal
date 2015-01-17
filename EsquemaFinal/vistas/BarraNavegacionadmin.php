@@ -31,11 +31,7 @@
         <li><a href='#'>Aspirantes</a>
 
             <ul>
-                <li><a href='importExcel.php'>ImportarLista</a></li> 
-                <li><a href='Formula1.php'>Ingresar Aspirante</a></li>
                 <li><a href='listarAspirante.php'>Listar Aspirantes</a></li>
-
-
             </ul>
 
         </li>
@@ -53,7 +49,13 @@
 
         <li><a href='listaNovedades.php'>Novedades</a>
         </li>
-                <li><a href='#'>Base de Datos</a> </li>
+        <li><a href='#'>Base de Datos</a> 
+            <ul>
+                        <li><a href='importExcel.php'>Importar Lista Seleccionados</a></li> 
+                        <li><a href='bd.php'>Exportar Datos</a></li> 
+                        <li><a href='#.php'>Reiniciar Sistema</a></li> 
+            </ul>
+        </li>
 
         <li><a href='../3modelo/cerrar.php'>Cerrar</a></li>
         <li><a href='administrador.php'>Bienvenido: Admin</a></li>

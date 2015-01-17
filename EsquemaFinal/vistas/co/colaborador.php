@@ -2,18 +2,13 @@
 <?php include("BarrNavCol.php"); ?>			
 <?php include("../../3modelo/autenticacion.php"); ?>
 <div  align="center" >
-
     <div>
-
-
         <li>COLABORADOR</li> 
         <li><?php
             //session_start();
             include("../../3modelo/conexion.php");
             $identificacion = $_SESSION['identificacion'];
-
             $consulta = mysql_query("select * from t_usuario where dni_user='$identificacion'");
-
             while ($fila = mysql_fetch_array($consulta)) {
                 echo "<h3> <font color=''>Bienvenido:  " . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h3>";
                 echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
@@ -31,10 +26,6 @@
                 <tr><td><input type="submit" value="Subir archivo"  /> </td></tr>
             </table>
         </form>
-        <li><a href="datosColaborador.php">Datos personales</a></li>
-        <li><a href="cambiarContrasena.php">Cambiar Contraseña</a></li>
-
-
     </div>
 </div>
 <?php include("../footer.php"); ?>		
