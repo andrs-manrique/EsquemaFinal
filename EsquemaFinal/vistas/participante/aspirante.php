@@ -19,7 +19,7 @@
                 <tr>
                     <td class="registr">Modificar Foto</td> 
                     <td class="registr" >
-                        <input type="file" name="fotografia" />
+                        <input type="file" name="fotografia" required="" />
                     </td>
                 </tr>
                 <tr><td><input type="submit" value="Subir archivo" /> </td></tr>

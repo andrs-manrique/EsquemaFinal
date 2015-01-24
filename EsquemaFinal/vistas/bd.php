@@ -9,8 +9,10 @@
         <li><a href='#'>Exportar </a>
 
             <ul>
-                <li><a target='_blank' href=' listado_generalA.php'> Colaborador</a></li>
-                <li><a target='_blank' href='listado_generalB.php'> Aspirante </a></li>
+                <li><a target='_blank' href=' listado_generalA.php'> R. Colaborador</a></li>
+                <li><a target='_blank' href='listado_generalB.php'>R. Aspirante </a></li>
+                <li><a target='' href='export.php'> Aspirante  Excel </a></li>
+
             </ul>
 
         </li>

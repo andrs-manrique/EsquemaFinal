@@ -33,8 +33,7 @@
                                          <input type="hidden" name="civil_user" title="Estado Civil" readonly="readonly" value="">
                                          <input type="hidden" name="lugarnac_user" title=" " readonly="readonly" value="">
                                          <input type="hidden" name="clave_user" title=" " readonly="readonly" value="">
-            
-					 <input type="hidden" name="mail_user" title="mail_user" readonly="readonly" value="">
+ 					 <input type="hidden" name="mail_user" title="mail_user" readonly="readonly" value="">
 					 <input type="hidden" name="nac_user" title="nac_user " readonly="readonly" value="">
 					 <input type="hidden" name="localidad_user" name="localidad_user " readonly="readonly" value="">
                                          <input type="hidden" name="estrato_user" title="mail_user" readonly="readonly" value="">
@@ -51,7 +50,8 @@
 					 <input type="hidden" name="id_jornada" title="clave_user" readonly="readonly" value="">
 					 <input type="hidden" name="rol_user"  readonly="readonly" value="">
                                          <input type="hidden" name="id_materia_user"  readonly="readonly" value="">
-                                                                                
+                                         <input type="hidden" name="clasificacion_usuario"  readonly="readonly" value="">
+                                         <input type="hidden" name="ultimo_acceso"  readonly="readonly" value="">                                                                                
                                                                      <tr>    
 		 <script language="JavaScript">
                  function   consultarDatos(){ document.form.txtoperacion.value = 'consultarDatos';}

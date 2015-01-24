@@ -43,6 +43,8 @@
                     $id_jornada = $row["id_jornada"];
                     $rol_user = $row["rol_user"];
                     $id_materia_user = $row["id_materia_user"];
+                     $clasificacion_usuario=$row["clasificacion_usuario"];
+                    $ultimo_acceso=$row["ultimo_acceso"];
                 }
                 ?>
                 <div>
@@ -179,6 +181,12 @@
                                                                echo $row['nom_estado'];
                                                            }
                                                            ?>         'disabled></td>
+                            </tr>
+                              <tr>
+                                <td class="registr">Clasificacion:</td>
+                                <td class="registr"><input type="text" name="clasificacion_usuario" title=" "  value='<?php echo $clasificacion_usuario; ?>'disabled></td>
+                           <td class="registr">Ultimo Acceso:</td>
+                                <td class="registr"><input type="text" name="ultimo_acceso" title="¿ ?" value='<?php echo $ultimo_acceso; ?> ' disabled></td>
                             </tr>
                             <tr>
                                 <td class="registr"></td>

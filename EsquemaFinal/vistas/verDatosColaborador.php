@@ -36,6 +36,8 @@
                     $id_jornada = $row["id_jornada"];
                     $rol_user = $row["rol_user"];
                     $id_materia_user = $row["id_materia_user"];
+                    $clasificacion_usuario = $row["clasificacion_usuario"];
+                    $ultimo_acceso = $row["ultimo_acceso"];
                 }
                 ?>
                 <div>
@@ -121,6 +123,10 @@
                                                            }
                                                            ?>         'disabled></td>
                             </tr>
+                            <tr>
+
+                                <td class="registr">Ultimo Acceso:</td>
+                                <td class="registr"><input type="text" name="ultimo_acceso" title="localidad vive"  value='<?php echo $ultimo_acceso; ?>' disabled=""></td>
 
                             <tr>
                             <!--  <td class="registr">localidad:</td>-->

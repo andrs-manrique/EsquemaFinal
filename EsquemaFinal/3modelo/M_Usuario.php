@@ -3,7 +3,6 @@
 include("conexion.php");
 
 class usuario {
-
     public $dni;
     private $tipodocumento;
     private $nom_user;
@@ -30,8 +29,11 @@ class usuario {
     private $id_jornada;
     private $rol_user;
     private $id_materia_user;
-
-    function __construct($dni, $tipodocumento, $nom_user, $apell_user, $clave_user, $sex_user, $mail_user, $tel_user, $civil_user, $lugarnac_user, $nac_user, $localidad_user, $estrato_user, $barrio_user, $archivo_usuario, $responsable_user, $cel_respon_user, $foto_user, $fecha_registro_user, $carrera_user, $universidad_user, $id_colegio, $id_estado, $id_jornada, $rol_user, $id_materia_user) {
+    private $clasificacion_usuario;
+    private $ultimo_acceso;
+    
+    
+    function __construct($dni, $tipodocumento, $nom_user, $apell_user, $clave_user, $sex_user, $mail_user, $tel_user, $civil_user, $lugarnac_user, $nac_user, $localidad_user, $estrato_user, $barrio_user, $archivo_usuario, $responsable_user, $cel_respon_user, $foto_user, $fecha_registro_user, $carrera_user, $universidad_user, $id_colegio, $id_estado, $id_jornada, $rol_user, $id_materia_user, $clasificacion_usuario, $ultimo_acceso) {
         $this->dni = $dni;
         $this->tipodocumento = $tipodocumento;
         $this->nom_user = $nom_user;
@@ -58,85 +60,82 @@ class usuario {
         $this->id_jornada = $id_jornada;
         $this->rol_user = $rol_user;
         $this->id_materia_user = $id_materia_user;
+        $this->clasificacion_usuario = $clasificacion_usuario;
+        $this->ultimo_acceso = $ultimo_acceso;
     }
-
-    public function __destruct() {
-        
-    }
-
-    public function getDni() {
+    function getDni() {
         return $this->dni;
     }
 
-    public function getTipodocumento() {
+    function getTipodocumento() {
         return $this->tipodocumento;
     }
 
-    public function getNom_user() {
+    function getNom_user() {
         return $this->nom_user;
     }
 
-    public function getApell_user() {
+    function getApell_user() {
         return $this->apell_user;
     }
 
-    public function getClave_user() {
+    function getClave_user() {
         return $this->clave_user;
     }
 
-    public function getSex_user() {
+    function getSex_user() {
         return $this->sex_user;
     }
 
-    public function getMail_user() {
+    function getMail_user() {
         return $this->mail_user;
     }
 
-    public function getTel_user() {
+    function getTel_user() {
         return $this->tel_user;
     }
 
-    public function getCivil_user() {
+    function getCivil_user() {
         return $this->civil_user;
     }
 
-    public function getLugarnac_user() {
+    function getLugarnac_user() {
         return $this->lugarnac_user;
     }
 
-    public function getNac_user() {
+    function getNac_user() {
         return $this->nac_user;
     }
 
-    public function getLocalidad_user() {
+    function getLocalidad_user() {
         return $this->localidad_user;
     }
 
-    public function getEstrato_user() {
+    function getEstrato_user() {
         return $this->estrato_user;
     }
 
-    public function getBarrio_user() {
+    function getBarrio_user() {
         return $this->barrio_user;
     }
 
-    public function getArchivo_usuario() {
+    function getArchivo_usuario() {
         return $this->archivo_usuario;
     }
 
-    public function getResponsable_user() {
+    function getResponsable_user() {
         return $this->responsable_user;
     }
 
-    public function getCel_respon_user() {
+    function getCel_respon_user() {
         return $this->cel_respon_user;
     }
 
-    public function getFoto_user() {
+    function getFoto_user() {
         return $this->foto_user;
     }
 
-    public function getFecha_registro_user() {
+    function getFecha_registro_user() {
         return $this->fecha_registro_user;
     }
 
@@ -168,7 +167,15 @@ class usuario {
         return $this->id_materia_user;
     }
 
-    public function verificar() {
+    function getClasificacion_usuario() {
+        return $this->clasificacion_usuario;
+    }
+
+    function getUltimo_acceso() {
+        return $this->ultimo_acceso;
+    }
+
+        public function verificar() {
         session_start();
         $consulta = mysql_query("select*from t_usuario where dni_user='$this->dni' and clave_user='$this->clave_user' and id_estado='1'");
 
@@ -180,6 +187,8 @@ class usuario {
             } else if ($fila['rol_user'] == '3') {
                 header("location: ../vistas/participante/aspirante.php");
             } else if ($fila['rol_user'] == '1') {
+                $fechahoy = getdate();
+                //$ultimo_acceso = $fechahoy["year"] . "-" . $fechahoy["mon"] . "-" . $fechahoy["mday"];
 
                 echo"<script language='javascript'> alert('ADMINISTRADOR');  </script>";
                 header("location: ../vistas/administrador.php");
@@ -232,8 +241,9 @@ class usuario {
             echo"<script language='javascript'> location.href=\"../vistas/co/editarDatosColaborador.php?dni=" . base64_encode($row['dni_user']) . "\"</script>";
         }
     }
+
 //------------------------consultar datos Participante
- public function consultarDatosPar() {
+    public function consultarDatosPar() {
         $peticion = mysql_query("select * from t_usuario where nom_user='$this->nom_user'");
 
         while ($fila = mysql_fetch_array($peticion)) {
@@ -260,11 +270,11 @@ class usuario {
         $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
         if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
-            if ($this->rol_user =1) {
+            if ($this->rol_user = 1) {
                 echo"<script language='javascript'>location.href=\"../vistas/administrador.php\"   </script>";
-            } elseif ($this->rol_user =2) {
+            } elseif ($this->rol_user = 2) {
                 echo"<script language='javascript'>location.href=\"../vistas/colaborador.php\"   </script>";
-            } else { 
+            } else {
                 echo"<script language='javascript'>location.href=\"../vistas/aspirante.php\"   </script>";
             }
         } else {
@@ -272,78 +282,74 @@ class usuario {
             echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
         }
     }
+
 //------------------
 //
-public function modificarPar() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
+    public function modificarPar() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
         $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
-       if (mysql_query($consulta)) {
+        if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
-              
-                echo"<script language='javascript'>location.href=\"../vistas/participante/verDatosAspirante.php\"   </script>";
-       }else{
+
+            echo"<script language='javascript'>location.href=\"../vistas/participante/verDatosAspirante.php\"   </script>";
+        } else {
             echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
             echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
         }
     }
-    
-    
+
     //----------
     public function modificarParADMIN() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
-        $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
-       if (mysql_query($consulta)) {
+        $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user',clasificacion_usuario='$this->clasificacion_usuario' where(dni_user='$this->dni')";
+        if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
-              
-                echo"<script language='javascript'>location.href=\"../vistas/listarAspirante.php\"   </script>";
-       }else{
+
+            echo"<script language='javascript'>location.href=\"../vistas/listarAspirante.php\"   </script>";
+        } else {
             echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
             echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
         }
     }
-    
-    
-    
+
     //------------------------------------
     //
 
     public function actualizarCol() { //                                                                                                                                                                                                                                      usuario_nombre='$this->nombre',usuario_apellido='$this->apellido',usuario_correo='$this->email',
         $consulta = "update t_usuario set dni_user='$this->dni',tipodni_user='$this->tipodocumento',nom_user='$this->nom_user',apell_user='$this->apell_user',sex_user='$this->sex_user',mail_user='$this->mail_user',tel_user='$this->tel_user',civil_user='$this->civil_user',lugarnac_user='$this->lugarnac_user',nac_user='$this->nac_user',localidad_user='$this->localidad_user',estrato_user='$this->estrato_user',barrio_user='$this->barrio_user',archivo_usuario='$this->archivo_usuario',responsable_user='$this->responsable_user',cel_respon_user='$this->cel_respon_user',foto_user='$this->foto_user',fecha_registro_user='$this->fecha_registro_user',carrera_user='$this->carrera_user',universidad_user='$this->universidad_user',id_colegio='$this->id_colegio',id_estado='$this->id_estado',id_jornada='$this->id_jornada',rol_user='$this->rol_user',id_materia_user='$this->id_materia_user' where(dni_user='$this->dni')";
-       if (mysql_query($consulta)) {
+        if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
-              
-                echo"<script language='javascript'>location.href=\"../vistas/co/verDatosColaborador.php\"   </script>";
-       }else{
+
+            echo"<script language='javascript'>location.href=\"../vistas/co/verDatosColaborador.php\"   </script>";
+        } else {
             echo"<script language='javascript'> alert('ERROR, No se Actualizo'); </script>";
             echo"<script language='javascript'> location.href=\"../vistas/editarUsuario.php\" </script>";
         }
     }
-    
-    
+
     //INSERTAR
     ///////////////////////////////////////////
 
     public function insertarDatos() {
-        $consulta = "INSERT into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values('$this->dni','$this->tipodocumento','$this->nom_user','$this->apell_user','$this->clave_user','$this->sex_user','$this->mail_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";         
+        $consulta = "INSERT into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values('$this->dni','$this->tipodocumento','$this->nom_user','$this->apell_user','$this->clave_user','$this->sex_user','$this->mail_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";
 // Recibo los datos de la archivo 
-$directorio ="Archivos";
-$formatos = array ('.doc', '.xlsx','.pdf','.docx');
-$archivo_usuario=$_FILES[$this->archivo_usuario]['name'];
-$nombreTmparchivo =$_FILES[$this->archivo_usuario]['tmp_name'];
+        $directorio = "Archivos";
+        $formatos = array('.doc', '.xlsx', '.pdf', '.docx');
+        $archivo_usuario = $_FILES[$this->archivo_usuario]['name'];
+        $nombreTmparchivo = $_FILES[$this->archivo_usuario]['tmp_name'];
 // obtener la extension del archivo
 // manejar la cadena o extraer dps lo del PUNTO
-$ext = substr($archivo_usuario, strrpos($archivo_usuario, '.'));
-if (in_array($ext, $formatos)){
-if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")){
+        $ext = substr($archivo_usuario, strrpos($archivo_usuario, '.'));
+        if (in_array($ext, $formatos)) {
+            if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")) {
 
-	echo "Felicidades , Archivo $archivo_usuario  subido <br> ";
-} else {
+                echo "Felicidades , Archivo $archivo_usuario  subido <br> ";
+            } else {
 
-	echo "Ocurrio un error.";
-}
-}else {
+                echo "Ocurrio un error.";
+            }
+        } else {
 
-	echo " El registro se realizo pero el documento <B> NO CONTIENE LA EXTENSION DESEADA </B> <br>Su registro será Anulado <br> Contacte al ADMINISTRADOR "; 
-
-}
+            echo " El registro se realizo pero el documento <B> NO CONTIENE LA EXTENSION DESEADA </B> <br>Su registro será Anulado <br> Contacte al ADMINISTRADOR ";
+        }
 
 
 
@@ -371,19 +377,18 @@ if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")){
         }
     }
 
-    
     //------------------------
-     public function insertarDatosCol() {
-        $consulta = "INSERT into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values('$this->dni','$this->tipodocumento','$this->nom_user','$this->apell_user','$this->clave_user','$this->sex_user','$this->mail_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";         
+    public function insertarDatosCol() {
+        $consulta = "INSERT into t_usuario(dni_user,tipodni_user,nom_user,apell_user,clave_user,sex_user,mail_user,tel_user,civil_user,lugarnac_user,nac_user,localidad_user,estrato_user,barrio_user,archivo_usuario,responsable_user,cel_respon_user,foto_user,fecha_registro_user,carrera_user,universidad_user,id_colegio,id_estado,id_jornada,rol_user,id_materia_user) values('$this->dni','$this->tipodocumento','$this->nom_user','$this->apell_user','$this->clave_user','$this->sex_user','$this->mail_user','$this->tel_user','$this->civil_user','$this->lugarnac_user','$this->nac_user','$this->localidad_user','$this->estrato_user','$this->barrio_user','$this->archivo_usuario','$this->responsable_user','$this->cel_respon_user','$this->foto_user','$this->fecha_registro_user','$this->carrera_user','$this->universidad_user','$this->id_colegio','$this->id_estado','$this->id_jornada','$this->rol_user','$this->id_materia_user')";
 
         if (mysql_query($consulta)) {
             echo"<script language='javascript'> alert('El registro es un EXITO');  </script>";
             echo"<script language='javascript'>location.href=\"../vistas/ListarColaborador.php\"   </script>";
-        } else { echo " " . mysql_error();
+        } else {
+            echo " " . mysql_error();
         }
     }
-    
-    
+
     public function desactivar() {
         $consulta = " update t_usuario set id_estado = '2' WHERE dni_user='$this->dni'";
         if (mysql_query($consulta)) {
@@ -404,8 +409,7 @@ if (move_uploaded_file($nombreTmparchivo, "../Archivos/$archivo_usuario")){
             echo"<script language='javascript'> alert('ERROR, No se Desactivo'); </script>";
         }
     }
-    
-    
+
 }
 
 ?>

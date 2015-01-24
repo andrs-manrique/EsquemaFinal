@@ -168,10 +168,23 @@
                         <td class="registr">
                             <input name="id_materia_user" id="id_colegio" value="0" type="hidden">
                         </td>
-                    </tr> <tr>
+                    </tr> 
+                    <tr>
                         <td class="registr"> </td>
                         <td class="registr">
                             <input name="rol_user" id="Rolusuario" value="3" type="hidden">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="registr"> </td>
+                        <td class="registr">
+                            <input name="clasificacion_usuario" id="" value="0" type="hidden">
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td class="registr"> </td>
+                        <td class="registr">
+                            <input name="ultimo_acceso" id="" value="3" type="hidden">
                         </td>
                     </tr>
                 </table>

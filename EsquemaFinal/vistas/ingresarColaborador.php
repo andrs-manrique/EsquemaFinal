@@ -155,6 +155,8 @@
                     <input type="hidden" name="foto_user" title="" value="profesor.png">
                     <input type="hidden" name="id_colegio" title="" value="0">
                     <input type="hidden" name="id_jornada" title="" value="0">
+                     <input type="hidden" name="clasificacion_usuario" title="" value="0">
+                    <input type="hidden" name="ultimo_acceso" title="">
 
                 </td>
             </tr>   

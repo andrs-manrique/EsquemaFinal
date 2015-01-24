@@ -36,6 +36,8 @@
                     $id_jornada = $row["id_jornada"];
                     $rol_user = $row["rol_user"];
                     $id_materia_user = $row["id_materia_user"];
+                    $clasificacion_usuario=$row["clasificacion_usuario"];
+                    $ultimo_acceso=$row["ultimo_acceso"];
                 }
                 ?>
                 <div>
@@ -120,14 +122,23 @@
                                                                        }
                                                                        ?> 'disabled></td>
                 <!--  <td class="registr">clave</td>-->
-                                            <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'></td>
-
+                                            <td class="registr"><input type="hidden" name="clave_user" title="clavde de Ingreso" value='<?php echo $clave_user; ?>'>
+                                            </td>
+                                        </tr>
                                         <tr>
                                       <!-- <td class="registr">Lugar Nacimiento:</td> -->
                                             <td class="registr"><input type="hidden" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'></td>
 
 <!--  <td class="registr">Fecha Nacimiento:</td> -->
                                             <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'></td>
+                                        </tr>
+                                        
+                                          <tr>
+                                      <!-- <td class="registr">Clasificacion:</td> -->
+                                            <td class="registr"><input type="hidden" name="clasificacion_usuario" title="¿CLasi?"  value='<?php echo $clasificacion_usuario; ?>'></td>
+
+<!--  <td class="registr">Fecha acceso:</td> -->
+                                            <td class="registr"><input type="hidden" name="ultimo_acceso" title="Cuando  (AAAA-MM-DD)" value='<?php echo $ultimo_acceso; ?>'></td>
                                         </tr>
 
                                         <tr>

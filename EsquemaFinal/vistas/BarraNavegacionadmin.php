@@ -20,9 +20,7 @@
 
 
             <ul>
-                <li><a href='ingresarColaborador.php'>Ingresar Colaborador</a></li>
-                <!--<li><a href='Consultar_Colaborador.php'>Consultar Colaborador</a></li> -->
-                <li><a href='ListarColaborador.php'>Listar Colaborador</a></li>
+                   <li><a href='ListarColaborador.php'>Listar Colaborador</a></li>
             </ul>
 
 
@@ -35,7 +33,7 @@
             </ul>
 
         </li>
-        <li><a href='#'>Materias</a>
+       <!-- <li><a href='#'>Materias</a>
 
             <ul>
                 <li><a href='ingresarMateria.php'>Ingresar </a></li>
@@ -44,7 +42,7 @@
 
             </ul>
 
-        </li>
+        </li> -->
         <li><a href='Material.php'>Material de Estudio</a> </li>
 
         <li><a href='listaNovedades.php'>Novedades</a>
