@@ -82,11 +82,11 @@
             <tr>
 
                 <td class="registr">Carrera</td>
-                <td class="registr"><input type="text" name="carrera_user"  pattern="^[A-Za-záéíóúñ]{2,}[A-Za-záéíóúñ]{2,})+$" title="Carrrera " required></td>
+                <td class="registr"><input type="text" name="carrera_user"  title="Carrrera " required></td>
 
 
                 <td class="registr">Universidad </td>
-                <td class="registr"><input type="text" name="universidad_user" pattern="[A-Za-z]{5,15}" title="Universidad " required></td>
+                <td class="registr"><input type="text" name="universidad_user"  title="Universidad " required></td>
 
 
             </tr>
