@@ -32,7 +32,7 @@ function __construct($materia_id, $materia_nom, $materia_obj, $materia_des) {
         $consulta = "insert into t_materia (id_materia,nom_materia,objetivo_materia,desc_materia) values ('$this->materia_id','$this->materia_nom','$this->materia_obj','$this->materia_des')";
 
         if (mysql_query($consulta)) {
-            echo"<script language='javascript'> alert('El registro es un EXITO ');  </script>";
+            echo"<script language='javascript'> alert('Registro Exitoso ');  </script>";
             echo"<script language='javascript'>location.href=\"../vistas/listarMaterias.php\"   </script>";
         } else {
             /* echo mysql_error(); */
