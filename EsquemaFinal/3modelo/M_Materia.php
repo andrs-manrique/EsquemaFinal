@@ -47,7 +47,7 @@ function __construct($materia_id, $materia_nom, $materia_obj, $materia_des) {
           {                                                                                                                                                                                                                       
         $consulta = "update t_materia set id_materia='$this->materia_id',nom_materia='$this->materia_nom',objetivo_materia='$this->materia_obj',desc_materia='$this->materia_des' where(id_materia='$this->materia_id')";
         if (mysql_query($consulta)) {
-            echo"<script language='javascript'> alert('La Actualizacion es un EXITO');  </script>";
+            echo"<script language='javascript'> alert(' Actualizacion Exitosa');  </script>";
             echo"<script language='javascript'> location.href=\"../vistas/listarMaterias.php\" </script>";
             
         } else {
