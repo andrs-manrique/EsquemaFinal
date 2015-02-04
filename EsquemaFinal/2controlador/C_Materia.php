@@ -17,8 +17,7 @@ switch ($operacion) {
     case "ingresar":
     $objMateria->insertarMateria();
         
-    echo 'entroooooooooooooo';
-    break;
+ 
 
     case "modificar":
         $objMateria->modificar();
