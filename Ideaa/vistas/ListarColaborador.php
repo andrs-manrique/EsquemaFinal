@@ -85,15 +85,10 @@
                                        . " <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; // include('modal_delete_Colabor.php');   
                                        ?>
 
-
-
-
-                                    <a rel="tooltip"  title="Edit" id="e<?php echo $id; ?>" 
-                                       href="#edit<?php echo $id; ?>" data-toggle="modal"></a>
-                                       <?php
-                                       echo"<a href='eliminarPart.php?dni=$id'>  "
-                                       . " <img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 28px></a>"; //include('modal_edit_Colabor.php');   
-                                       ?>
+ <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal">
+                                       <img src='../img/Delete_Icon.png' border='0' width= 25px> </a>
+                                           <?php include('borrarPart2.php'); ?>
 
                                 </td>
                             </tr>

@@ -50,9 +50,11 @@
                                     <td><?php echo $row['autor_material']; ?></td> 
                                     <td><?php echo"<a href='infoMaterial.php?id=$id'> <img src='../img/update.png' border='0' alt='Link to this page' width= 25px></a>"; ?>                                                                     
 
-                                        <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
-                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal"><img src='../img/Delete_Icon.png' border='0' alt='Link to this page' width= 25px></a>
-                                           <?php include('borrarMat.php'); ?>
+                                        
+ <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                           href="#delete_user<?php echo $id; ?>" data-toggle="modal">
+                                       <img src='../img/Delete_Icon.png' border='0' width= 25px> </a>
+  <?php include('borrarMat.php'); ?>
 
                                     </td>
 
