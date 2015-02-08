@@ -63,12 +63,12 @@
         <li><a href='#'>DIPA</a>
 
             <ul>
-                <li><a href='Dipa.php'>Mostrar</a></li>
+                <li><a href='dipa.php'>Mostrar</a></li>
              
             </ul>
 
         </li>
-       
+        <li><a href='../../Archivos/manual_Aspirantes.pdf' target="_black">Manual</a></li>
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
         <li><a href="aspirante.php">Bienvenido: Aspirante</a></li>
     </ul>

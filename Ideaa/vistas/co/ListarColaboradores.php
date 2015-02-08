@@ -4,7 +4,6 @@
 <br><br><br>
 <div aling="center">
     <div class="container">
-        <div class="margin-top">
             <div class="row">	
                 <!-- <div class="span13">   -->
                     <table cellpadding="0" cellspacing="0" border="0" class="table  table-bordered" id="example">
@@ -39,10 +38,6 @@
 
                                     <td><?php echo"<a href=\"verDatosColaboradores.php?id=" . base64_encode($row['dni_user']) . "\">Consultar</a>"; ?></td>
 
-
-
-
-
                                     <?php //include('toolttip_edit_delete.php');   ?>
                                     <!-- Modal edit user -->
 
@@ -54,6 +49,4 @@
                 </div>		
             </div>
         </div>
-    </div>
-</div>
-<?php include('../footer.php') ?>
+<?php include('..//footer.php') ?>

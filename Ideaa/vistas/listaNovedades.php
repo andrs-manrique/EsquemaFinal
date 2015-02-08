@@ -6,7 +6,7 @@
 <div aling="center">
     <div class="container">
       <div align="left">
-                <a target="_blank" href="#.php">
+          <a target="_blank" href="Novedad.php">
                     <img src='../img/file_add.png' border='0' alt='Link to this page' width= 25px>Registrar Novedad</a> 
             </div>
             <div class="row">	

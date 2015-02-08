@@ -13,7 +13,7 @@ while ($fila = mysql_fetch_array($consulta)) {
     //http://www.bienestarbogota.unal.edu.co/ver_noticia.php?id_noticia=319
     
       echo "<center>";
-          echo "<table width='900' border='1' cellspacing='90' >";
+          echo "<table width='900' border='0' cellspacing='90' >";
           echo "<tr>"   ;
           echo "<th colspan='1'>";
            echo"<h6 >";
@@ -27,7 +27,7 @@ while ($fila = mysql_fetch_array($consulta)) {
     echo "<th colspan='2'><h4>";
     echo $fila['Titulo_Novedad']."</h4></th></tr>";
     echo " <tr align='center' valign='middle'>"; 
-    echo " <th rowspan='3'><img src='../fotos/" . $fila['Imagen_novedad'] ." ' width=300px></th>";
+    echo " <th rowspan='3'><img src='../img/" . $fila['Imagen_novedad'] ." ' width=300px></th>";
     echo "<tr><th><i><h6>";
     echo $fila['Descripcion_novedad'] . "<h6></i></th></tr>";      
     echo "<tr> <th colspan='6'><p align=justify> 

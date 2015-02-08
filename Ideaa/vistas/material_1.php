@@ -1,15 +1,15 @@
 <?php include('header.php'); ?>
-<?php include("./BarrNavCol.php"); ?>			
-<?php include("../../3modelo/autenticacion.php"); ?>
+<?php include("./BarraNavegacionadmin.php"); ?>			
+<?php include("../3modelo/autenticacion.php"); ?>
         <section>
             <div id="contieneblog">
                 <aside id="articuloss">
                     <?php $identificacion = $_SESSION['identificacion']; ?>
                     <div>
                         <h3> <center> Ingresa Material</center></h3>
-                        <form name="form1" method="post" action="../../2controlador/C_material.php" enctype="multipart/form-data">
+                        <form name="form1" method="post" action="../2controlador/C_material.php" enctype="multipart/form-data">
                             <table align="center" border="0">  
-                                <input name="autor_material" type="hidden" title=" " value='<?php include("../../3modelo/conexion.php");
+                                <input name="autor_material" type="hidden" title=" " value='<?php include("../3modelo/conexion.php");
                                 $consulta = mysql_query("select * from t_usuario where dni_user=$identificacion;");
                                 while ($row = mysql_fetch_array($consulta)) {
                                     echo $row['nom_user'];
@@ -80,4 +80,4 @@
                 </aside>
             </div>
         </section>
-        <?php include("../footer.php"); ?>	
+        <?php include("./footer.php"); ?>	

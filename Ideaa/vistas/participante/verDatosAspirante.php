@@ -46,7 +46,7 @@
                 }
                 ?>
                 <div>
-                    <font color="white"><h3>DATOS PERSONALES ASPIRANTE</h3></font>
+                    <font color=""><h3>DATOS PERSONALES ASPIRANTE</h3></font>
                     <form name="form" method="post" action="../../2controlador/C_Usuario.php" > 
                         <table align="center" >
                             <tr>
@@ -58,7 +58,7 @@
                                 <?php
                                 $consulta = mysql_query("select * from t_usuario where dni_user='$idaspi'");
                                 while ($fila = mysql_fetch_array($consulta)) {
-                                    echo "<h1> <font color='white'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h1>";
+                                    echo "<h3> <font color='black'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h3>";
                                     echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
                                 }
                                 ?>

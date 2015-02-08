@@ -6,11 +6,9 @@
         <meta content="text/html; charset=ISO-8859-1" />
         <!-- Icono AUN --> <link rel='shorcut icon' href='../../img/URL_AUN.png' type='image/png'>
         <link rel=stylesheet href="../../css/estilo.css" type="text/css" />
-
 	<!-- Bootstrap -->
 			<link href="../../css/bootstrap.css" rel="stylesheet" media="screen">
-			
-	<!--		<link href="../../css/docs.css" rel="stylesheet" media="screen"> -->
+			<link href="../../css/docs.css" rel="stylesheet" media="screen"> 
 			<link href="../../css/diapo.css" rel="stylesheet" media="screen">
 			<link href="../../css/font-awesome.css" rel="stylesheet" media="screen">
 			<link rel="stylesheet" type="text/css" href="../../css/style.css" />

@@ -9,6 +9,7 @@ echo $FechaActual;
 if (isset($_POST['submit'])){
 $id=$_POST["id"];
 $id_participante=$_POST["id_participante"];
+$puntaje_dipa=$_POST["puntaje_dipa"];
 $obs_dipa=$_POST["obs_dipa"];
 //Ruta donde se guardarán las imágenes
    
@@ -32,8 +33,8 @@ if (move_uploaded_file($nombreTmparchivo, "../../dipa/$archivo_usuario")){
 
 	echo " El registro se realizo pero el documento <B> NO CONTIENE LA EXTENSION DESEADA </B> <br>Su registro será Anulado <br> Contacte al ADMINISTRADOR "; 
 }
-
-$insertaDipa= "INSERT into t_dipa(id_dipa,fecha_dipa,nombre_dipa,obs_dipa,id_participante) values('$id','$FechaRegistro','$archivo_usuario','$obs_dipa','$id_participante')";         
+//INSERT INTO `t_dipa`(`id_dipa`, `fecha_dipa`, `nombre_dipa`, `puntaje_dipa`, `obs_dipa`, `id_participante`, `id_clasificacion`
+$insertaDipa= "INSERT into t_dipa(id_dipa,fecha_dipa,nombre_dipa,puntaje_dipa,obs_dipa,id_participante,id_clasificacion) values('$id','$FechaRegistro','$archivo_usuario','$puntaje_dipa','$obs_dipa','$id_participante','0')";         
 
 if ( mysql_query($insertaDipa)){
 echo " <br> Envio correcto de informacion  a la BD";

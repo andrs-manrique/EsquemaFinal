@@ -53,8 +53,9 @@
             </ul>
 
         </li>
-        <li><a href='listaNovedades1.php'>Novedades</a>
-        </li>
+        <li><a href='listaNovedades1.php'>Novedades</a></li>
+        <li><a href='../../Archivos/CertificadoCuentaAV.pdf' target="_black">Manual</a></li>
+
      
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
         

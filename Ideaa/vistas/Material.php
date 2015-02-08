@@ -6,7 +6,7 @@
     <div class="container">
        
             <div align="left">
-                <a target="_blank" href="#.php">
+                <a target="_blank" href="material_1.php">
                     <img src='../img/file_add.png' border='0' alt='Link to this page' width= 25px>Registrar Material</a> 
             </div>
 

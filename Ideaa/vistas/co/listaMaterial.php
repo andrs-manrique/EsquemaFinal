@@ -4,7 +4,6 @@
 <br><br><br>
 <div aling="center">
     <div class="container">
-        <div class="margin-top">
             <div class="row">	
                 <div align="left"> <a href="material.php"> <img src='../../img/file_add.png' border='0' alt='Link to this page' width= 25px>Adicionar Material</a> </div>
                 <!-- <div class="span13">   -->
@@ -50,6 +49,4 @@
                 </div>		
             </div>
         </div>
-    </div>
-</div>
 <?php include('../footer.php') ?>

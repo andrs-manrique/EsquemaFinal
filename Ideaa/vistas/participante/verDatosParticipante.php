@@ -43,7 +43,7 @@
                 }
                 ?>
                 <div>
-                    <font color="white"><h3>DATOS PERSONALES ASPIRANTE</h3></font>
+                    <font color=""><h3>DATOS PERSONALES ASPIRANTE</h3></font>
                     <form name="form" method="post" action="../../2controlador/C_Usuario.php" > 
                         <table align="center" >
                             <tr>
@@ -53,7 +53,7 @@
                                 <?php
                                 $consulta = mysql_query("select * from t_usuario where dni_user='$idaspi'");
                                 while ($fila = mysql_fetch_array($consulta)) {
-                                    echo "<h1> <font color='white'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h1>";
+                                    echo "<h3> <font color='black'>" . $fila['nom_user'] . " " . $fila['apell_user'] . "</font></h3>";
                                     echo "<img src='../../fotos/" . $fila['foto_user'] . "' width=150px></td>";
                                 }
                                 ?>
@@ -101,25 +101,24 @@
                                 <td class="registr">Estado Civil:</td>
                                 <td class="registr"><input type="text" name="civil_user" title="barrio" value='<?php echo $civil_user; ?>'disabled></td>
 
-                                <td class="registr"></td> 
-                                <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'disabled></td>
-
+                                <td class="registr">Lugar Nacimiento:</td> 
+                                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'disabled></td>
+                               
                                 
                             </tr>
                             <tr>
-                                <td class="registr">Lugar Nacimiento:</td> 
-                                <td class="registr"><input type="text" name="lugarnac_user" title="¿Donde nacio?"  value='<?php echo $lugarnac_user; ?>'disabled></td>
                                 <td class="registr"></td>
                                 <td class="registr"><input type="hidden" name="estrato_user" title="estrato de vivenci"  value='<?php echo $estrato_user; ?>'disabled></td>
+ <td class="registr"></td> 
+                                <td class="registr"><input type="hidden" name="nac_user" title="Cuando nacio (AAAA-MM-DD)" value='<?php echo $nac_user; ?>'disabled></td>
 
                             </tr>
                             <tr><td  colspan="4" align="center"><hr></td></tr>
 
                             <tr>
-                                <td class="registr">localidad:</td>
+                                <td class="registr">ocalidad:</td>
                                 <td class="registr"><input type="text" name="localidad_user" title="localidad vive"  value='<?php echo $localidad_user; ?>'disabled></td>
-                            </tr> 
-                            <tr>
+                          
                                 <td class="registr">Barrio:</td>
                                 <td class="registr"><input type="text" name="barrio_user" title="barrio" value='<?php echo $barrio_user; ?>'disabled></td>
 

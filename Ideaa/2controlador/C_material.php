@@ -1,5 +1,5 @@
 <?php
-require_once("../3modelo/M_material.php");
+require_once("../3modelo/novedad.php");
 $fechahoy=getdate();
 $FechaActual= $fechahoy["mday"]."-".$fechahoy["mon"]."-".$fechahoy["year"];
 //$fechare=$_POST['fecha_novedad'];
@@ -11,7 +11,6 @@ $area_material=$_POST['area_material'];
 $tipo_material=$_POST['tipo_material']; 
 $url=$_POST['url_material'];
 $autor=$_POST['autor_material'];
-      
 //Ruta donde se guardarán las imágenes
 // Recibo los datos de la archivo 
 $directorio ="../../material";
