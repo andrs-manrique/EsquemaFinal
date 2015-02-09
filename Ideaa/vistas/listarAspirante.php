@@ -19,11 +19,11 @@
                                 <th>foto </th>
                                 <th>Nombre</th>                                 
                                 <th>Apellido</th>     
-                                <th>Estado</th>  
+                                <th>Estado..</th>  
                                 <th>Documento</th>
                                 <th>Clasificacion</th>
                                 <th>Modificacion</th>
-                                <th>Acciones</th>  
+                                <th>Acciones..</th>  
                                 
                             </tr>
                         </thead>

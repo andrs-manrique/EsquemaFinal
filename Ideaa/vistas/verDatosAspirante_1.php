@@ -243,7 +243,8 @@
                         <th>Fecha Ingreso</th>
                         <th>Ver </th>   
                         <th>puntaje</th>   
-                        <th>Observaciones</th>  
+                        <th>Observaciones</th>
+                        <th>Acciones </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -258,6 +259,12 @@
                             <td> <?php echo "<a target='_blank' href='../../dipa/{$row['nombre_dipa']}'>" . $row['nombre_dipa'] . "</a> " ?></td>
                             <td><?php echo $row['puntaje_dipa']; ?></td>
                             <td><?php echo $row['obs_dipa']; ?></td> 
+                            <td>
+                             <a rel="tooltip"  title="Delete" id="<?php echo $id; ?>"  
+                                       href="#delete_user<?php echo $id; ?>" data-toggle="modal">
+                                        <img src='../img/Delete_Icon.png' border='0' width= 25px> </a>
+    <?php include('./Borrar_dipa.php'); ?>
+                            </td>
                         </tr>
                     <?php } ?>
 

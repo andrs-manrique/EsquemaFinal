@@ -24,8 +24,30 @@
 	<script src="../../js/jquery.hoverdir.js"></script>
 	<script type="text/javascript" charset="utf-8" language="javascript" src="../../js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8" language="javascript" src="../../js/DT_bootstrap.js"></script>
-			 	
+	<script language="JavaScript">
+    var msg="¡El botón derecho está desactivado para este sitio!";
+    function disableIE() {
+        if (document.all) {
+            alert(msg);return false;
+        }
+    }
+    function disableNS(e) {
+        if (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {
+                alert(msg);return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown=disableNS;
+    } 
+    else {
+        document.onmouseup=disableNS;
+        document.oncontextmenu=disableIE;
+    }
+    document.oncontextmenu=new Function("alert(msg);return false")
+</script>		 	
 </head>
 <?php //include('head.php'); ?>
-
 <body>

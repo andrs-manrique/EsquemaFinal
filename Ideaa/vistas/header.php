@@ -2,6 +2,7 @@
     <head>
         <title>Ideaa</title>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
         <!-- Icono AUN --> 
         <link rel='shorcut icon' href="./img/URL_AUN.png" type='image/png'>
         <link rel=stylesheet href="../css/estilo.css" type="text/css" />

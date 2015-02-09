@@ -1,6 +1,7 @@
 <?php include('header.php'); ?>
 <?php include("BarrNavAsp.php"); ?>			
 <?php include("../../3modelo/autenticacion.php"); ?>
+
 <div  align="center" >
     
         <font color="black"><h1>Participante</h1>

@@ -68,7 +68,7 @@
             </ul>
 
         </li>
-        <li><a href='../../Archivos/manual_Aspirantes.pdf' target="_black">Manual</a></li>
+        <li><a href='../../Archivos/ManualAspiranteFinal.pdf' target="_black">Manual</a></li>
         <li><a href='../../3modelo/cerrar.php'>Cerrar</a></li>
         <li><a href="aspirante.php">Bienvenido: Aspirante</a></li>
     </ul>

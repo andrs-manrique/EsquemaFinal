@@ -3,7 +3,7 @@
 <footer class="footer">
     <div class="container" align="center">
         <div class="foot-margin">
-            <h2>Página </h2>
+            <h2>Pagina </h2>
             <h3>Contacta con nosotros: email <a href="mailto:aspirantesun@gmail.com">aspirantesun@gmail.com</a></h3>
             <p><a>2014 todos los derechos reservados AUN </a></p>
             <br/>   
